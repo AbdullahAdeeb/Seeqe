@@ -1,0 +1,11 @@
+{
+  "vars": {},
+  "css": [
+    "grid.less",
+    "responsive-utilities.less",
+    "component-animations.less",
+    "dropdowns.less"
+  ],
+  "js": [],
+  "customizerUrl": "http://getbootstrap.com/customize/?id=cd75b12761c3b92ca6dd"
+}

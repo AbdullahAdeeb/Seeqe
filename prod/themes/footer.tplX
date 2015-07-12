@@ -1,0 +1,55 @@
+	<div class="foot">
+        <div class="footer_style">
+            <div class="copyright" style="text-align:center">
+			{if $skyfallblue == "1"}
+                <table width="100%" border="0" cellspacing="0" cellpadding="10">
+                  <tr>
+                    <td width="20%" valign="top">
+                    	<h4>{$lang250}</h4>
+                        <p>
+                        	<ul class="footer">
+                        		<li><a href="{$baseurl}/termsofuse">{$lang80}</a></li>
+                                <li><a href="{$baseurl}/privacypolicy">{$lang50}</a></li>
+                        	</ul>
+                        </p>
+                    </td>
+                    <td width="20%" valign="top">
+                    	<h4>{$lang156}</h4>
+                        <p>
+                        	<ul class="footer">
+                            	<li><a href="{$baseurl}/advertising">{$lang2}</a></li>
+                                <li><a href="{$baseurl}/aboutus">{$lang0}</a></li>
+                                <li><a href="{$baseurl}/contactus">{$lang31}</a></li>
+                      		</ul>
+                        </p>
+                    </td>
+                    <td width="20%" valign="top">
+                    	<h4>{$lang249}</h4>
+                        <p>
+                        	<ul class="footer">
+                            	<li><a href="{$baseurl}/rss/recent" class="rssImg">{$lang65}</a></li>
+								<li><a href="{$baseurl}/rss/popular" class="rssImg">{$lang49}</a></li>
+                      		</ul>
+                        </p>
+                    </td>
+                    <td width="20%" valign="top">
+					{if $skyfallblue == "1"}
+                    	<h4>{$site_name}</h4>
+                        <p>
+                        	<ul class="footer">
+                            	<li>{$lang251}</li>
+                                <li>{$lang147}</li>
+                            </ul>
+                        </p>
+					{/if}
+                    </td>
+                  </tr>
+                </table>
+				{/if}
+                <p>&copy; 2014 {$site_name}. All Rights Reserved.{if $skyfallblue == "1"} |  <a href="http://www.answerquestionscript.com/" target="_blank">Powered by AnswerQuestionScript.com</a>{/if}</p>
+          </div>
+        </div>
+		<div align="center"><a href="http://www.skyfallblue.com" target="_blank"><img src="Skyfall-Blue-logo5.png" border="0" /></a>
+    </div>
+</body>
+</html>

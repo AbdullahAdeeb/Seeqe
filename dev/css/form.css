@@ -1,0 +1,165 @@
+div.Center9001n{padding:10px}
+div.Center9001LeftU{width:380px;float:right;text-align:left;overflow:hidden}
+div.Center9001RightU{width:900px;float:left;text-align:left;overflow:hidden}
+Input.Input_Big,Textarea.Input_Big,Input.Input_BigP,Textarea.Input_BigP{FONT-SIZE:18px;border:1px #ccc solid}
+Input.Input_BigP,Textarea.Input_BigP{width:220px;ime-moda:disable}
+Input.Input_Big,Textarea.Input_Big{width:400px}
+.login_area{ margin:0px 0px 0px 15px}
+.login_area div.row{ margin:0px 0px 30px 0px}
+.signup_recommend{border-top:1px #ccc solid; padding-top:10px}
+.signup_recommend p{ margin:15px 0px 15px 0px}
+.notice_text{border-top:1px #ccc solid; padding-top:10px}
+.notice_text ul{ padding:0px 0px 0px 20px}
+.notice_text li{ list-style:disc; margin-bottom:10px}
+.resetemail_area{ width:auto; padding:10px; margin:10px 0px 10px 0px; background-color:#f8f8f8}
+.return_mail{ text-align:center}
+.cosline{margin:20px 0px 20px 0px!important;margin:0px 0px 20px 0px}
+div.right_layerA{margin:0px 0px 15px 0px;background-color:#fff}
+div.layer_contentA{padding:0px 14px 10px 15px;border-left:1px #ddd solid;background-color:#fff}
+div.layer_contentA h4{font-size:16px;color:#333;margin-bottom:10px}
+div.right_col{margin:15px 0px 15px 0px;background-color:#fff}
+div.col_contentA{padding:0px 14px 10px 15px;border-left:1px #ddd solid}
+div.col_row{padding-bottom:20px}
+ul.register_st li{ list-style:disc; margin:0px 0px 5px 20px}
+img{vertical-align:-2px}
+
+
+/*Ashraf Updates*/
+.login_area{ margin:0px 0px 0px 0px; }
+
+Input.Input_Big,Textarea.Input_Big{
+	width: 350;
+	padding: 10px 15px;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	border: 1px solid #ff7e00;
+	border-bottom: 3px solid #D37134;
+}
+
+Input.Input_Big:focus ,Textarea.Input_Big:focus {
+	outline: 0;
+	background: rgba(255, 255, 255, 0.75);
+}
+
+input.button, input.button:active {
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	float: none;
+	padding: 15px 40px;
+	line-height: 1em;
+	width: auto;
+	height: auto;
+	background: #fff;
+	color: #ff7e00;
+	border: 0;
+	border-radius: 5px;
+	border-bottom: 3px solid #ddd;
+	text-shadow: none;
+}
+
+input.button:hover {
+	background-color: #ddd;
+}
+
+input.button:after{
+    content: "";
+    height: 50px;
+    width: 80px;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*HOMEPAEG SEEQE BUTTON*/
+
+button.seeque-button, button.seeque-button:focus, button.seeque-button:visited  {
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	float: left;
+	padding: 15px 40px;
+	line-height: 1em;
+	width: auto;
+	height: auto;
+	background-color: #fff;
+	background-image: url(http://www.seeqe.com/images/logo.png);
+	background-size: 70%;
+	background-position: 50%;
+    background-repeat: no-repeat;
+	color: transparent;
+	border-radius: 5px;
+	border: 0; 
+	border-bottom: 3px solid #ddd;
+	text-shadow: none;
+}
+button.seeque-button:hover {
+	background-color: #ddd;
+}
+button.seeque-button:after{
+    content: "";
+    height: 50px;
+    width: 80px;
+    position: absolute;
+    background-image: url(http://www.seeqe.com/images/logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+button.seeque-button:before {
+	content: '';
+	position: absolute;
+	border-width: 8px 8px 8px 0;
+	border-style: solid solid solid none;
+	border-color: transparent #fff transparent;
+	top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+	-webkit-transform: rotateZ(90deg);
+	-moz-transform: rotateZ(90deg);
+	-ms-transform: rotateZ(90deg);
+	transform: rotateZ(90deg);
+}
+
+
+.scriptolutionconnect, .scriptolutionconnect a:link, .scriptolutionconnect a:visited, .scriptolutionconnect a:active {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 21px !important;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 15px 40px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #4f6aa3;
+	text-decoration: none !important;
+	border-radius: 5px;
+	border: 0; 
+	border-bottom: 3px solid #435984;
+}
+
+.connectbyscriptolution a:hover{
+	background: #435984;
+}
+
+input, textarea {
+	padding: 10px 15px;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	border: 1px solid #ff7e00;
+	border-bottom: 3px solid #D37134;
+}
+
+input:active, input:focus, textarea:active, textarea:focus, input#autocomplete.location:focus{
+	background: rgba(255, 255, 255, 0.75);
+	outline: 0;
+}

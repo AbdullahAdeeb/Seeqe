@@ -1,0 +1,549 @@
+@font-face{
+    font-family: bodyfont;
+    src: url("../fonts/avnr/AvenirNextLTPro-Regular.otf");
+    
+}
+
+@font-face{ 
+    font-family: headerfont;
+    src: url("../fonts/ProximaNovaSoft-Regular.otf");
+}
+
+
+
+.container{
+    text-align: center;
+}
+
+body{
+    font-family: bodyfont;
+}
+
+header{
+    background-color: dimgrey;
+    background-image: url("../img/Byward_Market_Night.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+/*    width: 100%;*/
+    height: 100vh;
+/*    overflow: auto;*/
+    color: #f36f21;
+    font-family: headerfont;  
+}
+
+header .shadow{
+    background-color: rgba(0,0,0,0.5);
+/*    height: 100vh;*/
+    height: 100vh;
+    overflow: auto;
+}
+
+h1 {
+    color: #f36f21; 
+/*    font-size: 3.4em;*/
+    font-size: 4em;
+}
+h2 {
+    color:white;
+/*    font-size: 2em;*/
+    font-size: 2.5em;
+}
+
+a{
+    z-index: 999;
+}
+
+h1,h2,h3,p{
+    font-family: inherit;
+}
+
+.orange{
+    background-color: #f36f21;
+    color: white;
+}
+
+.orange h1,.orange h2,.orange p{
+    color: white;
+}
+
+/*------------------*/
+/*NAVIGATION MENU*/
+/*------------------*/
+
+.navbar{
+/*    margin-top: 10px;*/
+/*    padding:30px;*/
+}
+
+.navbar div img{
+    height: 70px;
+/*    float: left;*/
+    margin-left: 4em;
+    margin-top: 2em;
+}
+
+.navbar div a{
+    background-color: rgba(0,0,0,0);
+    font-size: 1.2em;
+    color: #f36f21;
+}
+
+a.menu-link {
+    float: right;
+    display: block;
+    padding: 1em;
+    margin-top: -3.0em;
+}
+nav[role=navigation] {
+    clear: both;
+    -webkit-transition: all 0.3s ease-out;  
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.js nav[role=navigation] {
+    overflow: hidden;
+    max-height: 0;
+}
+nav[role=navigation].active {
+    max-height: 15em;
+}
+nav[role=navigation] ul {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #f36f21;
+}
+nav[role=navigation] li {
+    padding: 0.8em;
+    border: 0;
+    cursor: hand;
+    cursor: pointer;
+
+}
+nav[role=navigation] li a {
+    width: 100%;
+    text-align: center;
+    
+    display: block;
+/*    padding: 0em;*/
+    border-bottom: 1px solid #f36f21;
+    text-decoration: none; 
+
+}
+
+@media screen and (min-width: 48.25em) {
+    a.menu-link {
+        display: none;
+        margin-top: -100px;
+    }
+    .js nav[role=navigation] {
+        max-height: none;
+    }
+    nav[role=navigation] ul {
+        margin: 0 0 0 -0.25em;
+/*        margin-top: -30px;*/
+        top: 50px;
+        position: absolute;
+        width: 100%;
+        padding-right: 20px;
+        z-index: 999;
+/*        border-top-style: none;*/
+        border: 0;
+    }
+
+    nav[role=navigation]  li {
+        float: right;
+        display: inline-block;
+        width: 200px;
+        z-index: 999;
+        padding: 0px;
+        margin-top: 0.3em;
+    }
+    
+    nav[role=navigation]  .btn-demo {
+        border-style: solid;
+        border-color: #f36f21;
+        border-width: 2px;
+        border-radius: 15px;
+        width: 11em;
+        padding: 0px;
+        padding-left: 22px;
+        padding-right: 8px;
+/*        margin-top: 0.1em;*/
+
+/*        margin: 0px;*/
+        
+    }
+    
+    #btn-demo{
+        width: auto;
+        font-size: 1.2em;
+
+    }
+    
+    nav[role=navigation] li a, nav[role=navigation] li a:hover {
+        z-index: 999;
+        border: 0;
+        padding: 0px;
+        margin: 0px;
+        float: left;
+        width: 200px;
+        text-align: center;
+    }
+}
+
+/*-------------------*/
+
+
+#mobile{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 500px;
+    width: auto;
+
+}
+
+.row{
+    width: 100%;
+}
+
+.title{
+    /*    margin-top: 100px;*/
+    margin-top: 10vh;
+
+    /*  background overlay  */
+    /*    background-color: rgba(0,0,0,0.7);*/
+    border-color: red;
+    border-radius: 20px;
+    padding: 10px; 
+    width: 100%;
+}
+
+.title h1{
+/*    font-size: 3.2em;   */
+}
+
+
+
+.subscribe{
+    margin-top: 15vh;
+    color:white;
+
+    /*  background overlay  */
+    /*    background-color: rgba(0,0,0,0.7);*/
+    border-color: red;
+    border-radius: 20px;
+    padding: 10px; 
+}
+
+
+.subscribe form img{
+    height:45px;
+    margin-top: 10px;
+
+    /*    margin-right: 15px;*/
+
+}
+
+.subscribe form input{
+    height:45px;
+    min-width: 40%;
+    margin-top: 10px;
+
+    /*    max-width: 9px;*/
+    /*    width: 999px;*/
+}
+
+.subscribe form button{
+    height:45px;
+    margin-top: 10px;
+}
+.subscribe form button:hover{
+    background-color: #f36f21;
+    border-color: white;
+    color: white;
+}
+
+::-webkit-input-placeholder { color:#000; }
+::-moz-placeholder { color:#000; } /* firefox 19+ */
+:-ms-input-placeholder { color:#000; } /* ie */
+input:-moz-placeholder { color:#000; }
+
+.subscribe form input{
+    background-color:rgba(0,0,0,0);
+    color: white;
+    border-color: white;
+    border-width: 0.2em;
+    border-radius: 0px;
+    font-weight: bolder
+
+}
+
+
+.subscribe button{
+    background-color: rgba(0,0,0,0);
+    border-color: white;
+    color: white;
+    border-width: 0.2em;
+    border-radius: 0px;
+    font-weight: bolder
+
+}
+
+
+.arrow{
+    /*    position:absolute;*/
+
+    /*
+    top: 0px;
+    height: 15vh;
+    padding-top: 100vh;
+    */
+    /*    margin-top: 20vh;*/
+    /*    padding-bottom: 15px;*/
+/*    position: absolute;*/
+/*    top: 87vh;*/
+    width: 100%;
+    z-index: 999;
+    margin-top: 12vh;
+}
+
+.arrow a,.arrow i{
+    color: #fff;
+    z-index: 999;
+}
+
+.arrow a:hover, .arrow i:hover{
+/*        color: #f36f21;*/
+    color: lightgray;
+}
+
+
+
+
+/* starging the how section*/
+section{
+    margin-top: 10px;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 60px;
+
+}
+
+.how img{
+    width:  240px;
+    /*    height: 400px;*/
+    /*    align-content: center;*/
+    margin-top: 40px;
+    margin-bottom: 0px;
+    /*    padding:*/
+}
+
+.how p{
+    font-size: 1.5em;
+/*    width:  240px;*/
+
+    /*    font-size: 30px;*/
+}
+
+.app img{
+    padding: 5%;
+}
+.app .right{
+    margin-bottom: 80px;
+    margin-top: 160px;
+    /*    margin-top: 20vh;*/
+    text-align: left;
+    
+/*    left: 8%;*/
+    
+/*    max-width: 450px;*/
+    
+}
+
+.app .right h1{
+    font-size: 3em;
+}
+
+.app .right h3{
+    font-size: 1.5em;
+}
+/*
+.app .right div{
+    width: 60%;
+}
+*/
+
+/*FOOTER STARTS HERE*/
+footer{
+    background-color: #f36f21;
+    color: white;
+    padding-bottom: 10px;
+}
+
+footer h1, footer h2, footer h3, footer p{
+    color: white;
+}
+
+footer h3{
+    font-size: 1.5em;
+}
+
+.btn-social i{
+    font-size: 3em;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer .footer-bottom img{
+    height: 20px;
+}
+
+footer .made{
+    display: inline-block;
+    /*    font-size: 1.5em;*/
+}
+footer .made p{
+    display: inline;
+    padding-top: 50px;
+    font-size: 1.1em;
+}
+
+footer .made img{
+    display: inline;
+    margin-bottom: 10px;
+}
+
+footer .heart{
+    -webkit-animation: pulsate 2s ease-out infinite;
+    opacity: 1.0;
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(1, 1)}
+    /*    33% {opacity: 1.0;}*/
+    50% {-webkit-transform: scale(1.4, 1.4);}
+    100% {-webkit-transform: scale(1, 1); }
+}
+
+
+
+/*------------------*/
+/*   SMALL SCREENS  */
+/*------------------*/
+
+@media only screen and (max-height: 767px) {
+    
+    header{
+        overflow: auto;
+    }
+
+    h1{
+        font-size: 3em; 
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+    .title{
+        margin-top: 5vh
+    }
+
+    .subscribe{
+        margin-top: 5vh;
+        /*        margin-bottom: 100px;*/
+    }
+
+    .arrow{
+        position: relative;
+        top: 0px;
+        margin-top:15vh;
+        margin-bottom: 15px;
+
+        /*        margin-top:5vh; */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        /* The file size of this background image is 93% smaller
+        to improve page load speed on mobile internet connections */
+        background-image: url("../img/Byward_Market_Night_small.jpg");
+        background-position: bottom bottom;
+        /*    height: 100vh;*/
+        /*      overflow: auto;*/
+    }
+
+    h1{
+        font-size: 3em; 
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+    .title{
+        margin-top: 5vh
+    }
+
+    .subscribe{
+        margin-top: 5vh;
+        /*        margin-bottom: 100px;*/
+    }
+
+    .arrow{
+/*
+        position: relative;
+        top: 0px;
+        margin-bottom: 15px;
+*/
+
+        /*        margin-top:5vh; */
+    }
+
+    .navbar div img{
+        height: 60px;
+        float: center;
+    }
+
+    .subscribe form input{
+        width:65%;
+    }
+    .lft-btn-div, .rgt-btn-div{
+        align-content: center;
+        text-align: center;
+    }
+    .lft-btn-div, .rgt-btn-div{
+        align-content: center;
+        text-align: center;
+    }
+    
+    .app .right{
+        left: 0%;
+        margin-bottom: 80px;
+        margin-top: 10px;
+        /*    margin-top: 20vh;*/
+        text-align: center;
+
+        max-width: 100%;
+        width: 100%;
+        align-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .app .right div p{
+        max-width: 200px;
+    }
+  
+}
+
+
+
+
+
+

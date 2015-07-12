@@ -1,0 +1,255 @@
+<?php
+$config = array();
+
+// Begin Configuration
+$config['basedir']     =  '/var/www/html';
+$config['baseurl']     =  'http://ec2-52-6-95-156.compute-1.amazonaws.com';
+
+$DBTYPE = 'mysql';
+$DBHOST = 'localhost';
+$DBUSER = 'root';
+$DBPASSWORD = 'seeqe123';
+$DBNAME = 'seeqe_dev';
+// End Configuration
+
+session_start();
+date_default_timezone_set('America/New_York');
+$config['adminurl']      =  $config['baseurl'].'/administrator';
+$config['cssurl']      =  $config['baseurl'].'/css';
+$config['imagedir']      =  $config['basedir'].'/images';
+$config['imageurl']      =  $config['baseurl'].'/images';
+$config['membersprofilepicdir']      =  $config['imagedir'].'/membersprofilepic';
+$config['membersprofilepicurl']      =  $config['imageurl'].'/membersprofilepic';
+$config['postpicdir']                =  $config['imagedir'].'/postpic';
+$config['postpicurl']                =  $config['imageurl'].'/postpic';
+
+require_once($config['basedir'].'/smarty/libs/Smarty.class.php');
+require_once($config['basedir'].'/libraries/mysmarty.class.php');
+require_once($config['basedir'].'/libraries/SConfig.php');
+require_once($config['basedir'].'/libraries/SError.php');
+require_once($config['basedir'].'/libraries/adodb/adodb.inc.php');
+require_once($config['basedir'].'/libraries/phpmailer/class.phpmailer.php');
+require_once($config['basedir'].'/libraries/SEmail.php');
+
+function strip_mq_gpc($arg)
+{
+  	$arg = str_replace('"',"'",$arg);
+  	$arg = stripslashes($arg);
+    return $arg;
+}
+
+$conn = &ADONewConnection($DBTYPE);
+$conn->PConnect($DBHOST, $DBUSER, $DBPASSWORD, $DBNAME);
+@mysql_query("SET NAMES 'UTF8'");
+$sql = "SELECT * from config";
+$rsc = $conn->Execute($sql);
+
+if($rsc){while(!$rsc->EOF)
+{
+$field = $rsc->fields['setting'];
+$config[$field] = $rsc->fields['value'];
+STemplate::assign($field, strip_mq_gpc($config[$field]));
+@$rsc->MoveNext();
+}}
+
+if (isset($_REQUEST['language']) && $_REQUEST['language'] != "")
+{
+	if ($_REQUEST['language'] == "english")
+	{
+		$_SESSION['language'] = "english";
+	}
+	elseif ($_REQUEST['language'] == "spanish")
+	{
+		$_SESSION['language'] = "spanish";
+	}
+	elseif ($_REQUEST['language'] == "french")
+	{
+		$_SESSION['language'] = "french";
+	}
+}
+
+
+if ($_SESSION['language'] == "english")
+{
+	include("lang/english.php");
+}
+elseif ($_SESSION['language'] == "spanish")
+{
+	include("lang/spanish.php");
+}
+elseif ($_SESSION['language'] == "french")
+{
+	include("lang/french.php");
+}
+else
+{
+    $_SESSION['language'] = "english";
+	include("lang/english.php");
+}
+
+for ($i=0; $i<= count($lang); $i++)
+{
+	STemplate::assign('lang'.$i, $lang[$i]);
+}
+
+STemplate::assign('baseurl',       $config['baseurl']);
+STemplate::assign('basedir',       $config['basedir']);
+STemplate::assign('adminurl',       $config['adminurl']);
+STemplate::assign('cssurl',       $config['cssurl']);
+STemplate::assign('imagedir',        $config['imagedir']);
+STemplate::assign('imageurl',        $config['imageurl']);
+STemplate::assign('membersprofilepicdir',        $config['membersprofilepicdir']);
+STemplate::assign('membersprofilepicurl',        $config['membersprofilepicurl']);
+STemplate::assign('postpicdir',        $config['postpicdir']);
+STemplate::assign('postpicurl',        $config['postpicurl']);
+STemplate::setCompileDir($config['basedir']."/temporary");
+STemplate::setTplDir($config['basedir']."/themes");
+
+function generateCode($length) {
+	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ0123456789";
+    $code = "";
+    $clen = strlen($chars) - 1;
+    while (strlen($code) < $length) {
+        $code .= $chars[mt_rand(0,$clen)];
+    }
+    return $code;
+}
+
+function getCurrentPageUrl(){
+     static $pageURL = '';
+     if(empty($pageURL)){
+          $pageURL = 'http';
+          if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')$pageURL .= 's';
+          $pageURL .= '://';
+          if($_SERVER['SERVER_PORT'] != '80')$pageURL .= $_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
+          else $pageURL .= $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+     }
+     return $pageURL;
+}
+
+
+if(isset($config['enable_fc']) && $config['enable_fc'] == "1"){
+	if($_SESSION['USERID'] == ""){
+		$A = $config['FACEBOOK_APP_ID'];
+		$B = $config['FACEBOOK_SECRET'];
+		define('FACEBOOK_APP_ID', $A);
+		define('FACEBOOK_SECRET', $B);
+		STemplate::assign('FACEBOOK_APP_ID',$A);
+		STemplate::assign('FACEBOOK_SECRET',$B);
+		
+		function get_facebook_cookie($app_id, $application_secret) {
+            $args = array();
+            parse_str(trim($_COOKIE['fbs_' . $app_id], '\\"'), $args);
+            ksort($args);
+            $payload = '';
+            foreach ($args as $key => $value) {
+                if ($key != 'sig') {
+                  $payload .= $key . '=' . $value;
+                }
+            }
+            if (md5($payload . $application_secret) != $args['sig']) {
+                return null;
+            }
+            return $args;
+		}
+		
+		$code = $_REQUEST['code'];
+		if($code != "")
+		{
+			$my_url = $config['baseurl']."/";
+			$token_url = "https://graph.facebook.com/oauth/access_token?"
+			. "client_id=" . $A . "&redirect_uri=" . urlencode($my_url)
+			. "&client_secret=" . $B . "&code=" . $code;
+			$response = @file_get_contents($token_url);
+			$params = null;
+			parse_str($response, $params);
+			$graph_url = "https://graph.facebook.com/me?access_token=" 
+			. $params['access_token'];
+			$user = json_decode(file_get_contents($graph_url));
+			//print_r($user);
+			$fname = htmlentities(strip_tags($user->name), ENT_COMPAT, "UTF-8");
+			$femail = htmlentities(strip_tags($user->email), ENT_COMPAT, "UTF-8");
+			$fsex = htmlentities(strip_tags($user->gender), ENT_COMPAT, "UTF-8");
+			
+			$query="SELECT USERID FROM members WHERE email='".mysql_real_escape_string($femail)."' limit 1";
+			$executequery=$conn->execute($query);
+			$FUID = intval($executequery->fields['USERID']);
+			
+			//echo "ddd".$FUID;
+			
+			
+			if($FUID > 0){									
+				$query="SELECT USERID,email,username,verified from members WHERE USERID='".mysql_real_escape_string($FUID)."' and status='1'";
+				$result=$conn->execute($query);
+				if($result->recordcount()>0){
+					$query="update members set lastlogin='".time()."', lip='".$_SERVER['REMOTE_ADDR']."' WHERE USERID='".mysql_real_escape_string($FUID)."'";
+					$conn->execute($query);
+					$_SESSION['USERID']=$result->fields['USERID'];
+					$_SESSION['EMAIL']=$result->fields['email'];
+					$_SESSION['USERNAME']=$result->fields['username'];
+					$_SESSION['VERIFIED']=$result->fields['verified'];
+					$_SESSION['FB']="1";			
+					header("Location:$config[baseurl]/account");exit;
+				}
+			}
+			else
+			{
+				$md5pass = md5(generateCode(5).time());
+				//echo "<br/>fname=".$fname;
+				//echo "<br/>femail=".$femail;
+				if($fname != "" && $femail != "")
+				{
+					$query="INSERT INTO members SET email='".mysql_real_escape_string($femail)."',username='".mysql_real_escape_string($femail)."', password='".mysql_real_escape_string($md5pass)."', addtime='".time()."', lastlogin='".time()."', verified='1'";
+					//echo "<br/>query:".$query;
+					$result=$conn->execute($query);
+					$userid = mysql_insert_id();
+					//echo "<br/>userid:".$userid;
+					if($userid != "" && is_numeric($userid) && $userid > 0)
+					{
+						$query="SELECT USERID,email,username,verified from members WHERE USERID='".mysql_real_escape_string($userid)."'";
+						$result=$conn->execute($query);
+						
+						$SUSERID = $result->fields['USERID'];
+						$SEMAIL = $result->fields['email'];
+						$SVERIFIED = $result->fields['verified'];
+						$_SESSION['USERID']=$SUSERID;
+						$_SESSION['EMAIL']=$SEMAIL;
+						$_SESSION['VERIFIED']=$SVERIFIED;
+						$_SESSION['FB']="1";				
+						header("Location:$config[baseurl]/connect.php");exit;
+					}
+				}
+				
+			}
+		}
+	}
+	if($_SESSION['USERNAME'] == "" && $_SESSION['FB'] == "1")
+	{	
+		$url = getCurrentPageUrl();
+		$myurl = $config['baseurl']."/connect.php";
+		$cssurl = $config['baseurl']."/css/style.php";
+		$cssurl2 = $config['baseurl']."/css/css.php";
+		$cssurl3 = $config['baseurl']."/css/custom.css";
+		$myurl2 = $config['baseurl']."/logout.php";
+		if(($url != $myurl) && ($url != $cssurl) && ($url != $cssurl2) && ($url != $myurl2) && ($url != $cssurl3))
+		{
+			header("Location:$config[baseurl]/connect.php");exit;
+		}
+	}
+	
+	
+	if ((!isset($_SESSION['USERID'])) || (!is_numeric($_SESSION['USERID'])) || ($_SESSION['USERID']<=1) ){
+		//echo "not logged in";
+		if (isset($_COOKIE['k']) && $_COOKIE['k'] && $_COOKIE['u']) {
+			$sql = "SELECT k.user_id
+				FROM rememberme_session_keys k
+				WHERE user_id = " . $_COOKIE['u'] . "
+					AND key_id = '" . $_COOKIE['k'] . "'";
+					//echo $sql;
+					//exit;
+			$result=$conn->execute($sql);
+			$_SESSION['USERID'] = $result->fields['user_id'];
+		}
+	}
+}
+?>

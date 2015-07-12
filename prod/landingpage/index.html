@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Landing page for seeqe.com">
+        <meta name="author" content="Abdullah Adeeb">
+
+        <title>Seeqe</title>
+
+        <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+        <link href="/ProdEnv/landingpage/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="/ProdEnv/landingpage/css/seeqe.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="/ProdEnv/landingpage/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    </head>
+
+    <body id="page-top" class="index">
+        
+                
+        <!--  POPUP MODLE -->
+        <a style="display:none;" id="successmodel" href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"></a>
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>-->
+                    <h4 class="modal-title" id="popheader">title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3 id="popbody">Body</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- Header -->
+        <header>
+            <div class="shadow">
+                <div class="navbar" >
+                    <div class="row">
+                        <img class="" src="/ProdEnv/landingpage/img/seeqe_logo.png" alt="seeqe logo">
+                        <div id="pattern" class="pattern">
+                            <a href="#menu" class="menu-link"> <i class="fa fa-bars fa-2x"></i></a>
+                            <nav id="menu" role="navigation">
+                                <ul>
+                                    <li class="btn-demo"><a id="btn-demo" onclick="alert('Please contact us at support@seeqe.com to request demo access.');popup();location.href='demo/';">Request Demo</a></li>
+                                    <li class="btn-how" ><a href="#how">How it works</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container title">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h1>Find Products Locally</h1>
+                            <h2>Seeqe is the first community-based product&nbsp;finding&nbsp;platform<br>specific to offline retail</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container subscribe">
+                    <div class="row">
+                        <center>
+                            <h2>Subscribe today to get early beta&nbsp;access</h2>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <center>
+                            <form action="javascript:insertSubscriber();" class="form-inline">
+                                <center>
+                                    <!--                        <div class="form-group">-->
+                                    <label for="email">
+                                        <img src="/ProdEnv/landingpage/img/mini_mail_logo.png" >
+                                    </label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                    <button id="btnSubmit" type="submit" class="btn btn-default">Subscribe</button>
+                                    <!--                        </div>-->
+                                </center>
+                            </form>
+                        </center>
+                    </div>
+                </div>
+                <div class="container arrow">
+<!--                    <div class="row">-->
+                        <a href="#how">
+<!--                            <img src="img/arrow_button.png"/>-->
+                            <i class="fa fa-angle-double-down fa-5x"></i>
+                        </a>
+<!--                    </div>-->
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- What is seeqe Section -->
+        <section  class="how" id="how">
+            <!--        <div class="container">  -->
+            <br>
+            <h1  data-sr>We help you find what you're looking for</h1>
+            <br>
+
+            <div class="row" >
+                <div class="col-sm-4 col-md-4 col-lg-4" data-sr="enter left, wait 0.1s, over 1s,reset">
+                    <center>
+                        <img class="img-responsive" src="/ProdEnv/landingpage/img/laptop.png" alt="">
+                        <p style="padding-left:20px;">Find products in any location</p>
+                    </center>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4"  data-sr="enter top, wait 0.1s, over 1s,reset">
+                    <center>
+                        <img class="img-responsive" src="/ProdEnv/landingpage/img/convo_chat.png" alt="">
+                        <p>The local community helps you find what you're looking for</p>
+                    </center>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4"  data-sr="enter right, wait 0.1s, over 1s,reset">
+                    <center>
+                        <img class="img-responsive" src="/ProdEnv/landingpage/img/polaroid_camera.png" alt="">
+                        <p>Discover cool products around you</p>
+                    </center>
+                </div>
+            </div>
+            <!--        </div>-->
+        </section>
+        <section  class="how">
+            <!--        <div class="container">  -->
+            <div class="row orange app">
+                <!--                <center>-->
+                <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <img class="" id="mobile" src="/ProdEnv/landingpage/img/mobile.png" data-sr="enter left, wait 0.5s, over 1.3s,reset"/>                
+                </div>
+                    <!--                                </center>-->
+                <div class="right col-lg-7 col-md-7 col-sm-6" data-sr="wait 0.1s, over 1s,reset">
+<!--                    <div>-->
+                        <h1  data-sr>Any&nbsp;Product. Any&nbsp;City.<br>At&nbsp;Your&nbsp;Fingertips.</h1>
+                        <br><br>
+                        <h3  data-sr>Finding&nbsp;things&nbsp;has never&nbsp;been&nbsp;easier<br>with&nbsp;the&nbsp;new&nbsp;iOS&nbsp;app. Coming&nbsp;soon.</h3>
+<!--                    </div>-->
+                </div>
+                <!--            </div>-->
+            </div>
+        </section>
+        <section  class="how">
+
+            <br>
+            <h1  data-sr>We help drive traffic to local businesses</h1>
+            <br>
+            <div class="row" >
+                <div class="col-sm-4 col-md-4 col-lg-4" data-sr="enter left, wait 0.1s, over 1s,reset">
+                    <center>
+                        <img class="img-responsive" src="/ProdEnv/landingpage/img/local_store.png" alt="">
+                        <p style="padding-left:20px;">Place your inventory on Seeqe for free</p>
+                    </center>
+                </div> 
+                <div class="col-sm-4 col-md-4 col-lg-4" data-sr="enter bottom, wait 0.1s, over 1s,reset">
+                    <center>
+                        <img class="img-responsive" src="/ProdEnv/landingpage/img/stickers_logo.png" alt="">
+                        <p>Get a sticker</p>
+                    </center>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4" data-sr="enter right, wait 0.1s, over 1s,reset">
+                    <center>
+                        <img class="img-responsive" src="/ProdEnv/landingpage/img/shopping_chart.png" alt="">
+                        <p>Drive traffic to your business</p>
+                    </center>
+                </div>
+            </div>  
+        </section>
+        <!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">                
+                    <div class="row">
+                        <div class="footer-col col-md-12" >
+                            <h2 data-sr="wait 0.5s, over 1s, reset">We'd Love to Hear From You!</h2>
+                            <h3 data-sr="wait 1s, over 1s, reset">contact us at Support@seeqe.com</h3>
+                            <ul class="list-inline" data-sr="wait 1s, over 1s, reset">
+                                <li>
+                                    <a href="https://www.facebook.com/seeqesocial?_rdr" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/seeqe" class="btn-social btn-outline"><i class="fa fa-fw fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/Seeqetweets/" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/seeqe" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                            <!--                        <p>4110 HCI Building<br>Carleton University<br>1125 Colonel By Dr.<br>Ottawa, ON<br>Canada</p>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" data-sr="enter left, wait 0.2s, over 1.3s,reset">
+                            &copy; Seeqe 2015
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 made" data-sr="enter right,reset">
+                            <!--                        <img src="img/made_in.png" />-->
+                            <p>Made with    </p><img class="heart" src="/ProdEnv/landingpage/img/heart.png"/><p>   in  </p><img src="/ProdEnv/landingpage/img/can.png"/>
+
+
+
+
+                            <!--
+<svg class="heart" enable-background="new 0 0 92.515 73.161" height="73.161px" version="1.1" viewBox="0 0 92.515 73.161" width="92.515px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> 
+<g> 
+<path d="M82.32,7.888c-8.359-7.671-21.91-7.671-30.271,0l-5.676,5.21l-5.678-5.21c-8.357-7.671-21.91-7.671-30.27,0
+c-9.404,8.631-9.404,22.624,0,31.255l35.947,32.991L82.32,39.144C91.724,30.512,91.724,16.52,82.32,7.888z" fill="#010101">
+</path> 
+</g> 
+</svg>
+-->
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- jQuery -->
+        <script src="/ProdEnv/landingpage/js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/ProdEnv/landingpage/js/bootstrap.js"></script>
+
+
+        <!-- Plugin JavaScript -->
+        <!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+        <!-- <script src="js/classie.js"></script>
+<!--     <script src="js/cbpAnimatedHeader.js"></script>
+-->
+        <!-- Contact Form JavaScript -->
+        <!-- <script src="js/jqBootstrapValidation.js"></script> --> 
+        <script src="/ProdEnv/landingpage/js/subscribe.js"></script>
+
+        <script src='/ProdEnv/landingpage/js/scrollReveal.js'></script>
+        <script>
+            //        ENABLE Scrollreveal
+            window.sr = new scrollReveal();
+
+            //        SMOOTH SCROLLING
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+            $(document).ready(function() {
+                $('body').addClass('js');
+                var $menu = $('#menu'),
+                    $menulink = $('.menu-link');
+
+                $menulink.click(function() {
+                    $menulink.toggleClass('active');
+                    $menu.toggleClass('active');
+                    return false;
+                });});
+
+        </script>
+
+    </body>
+
+</html>
