@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2015-07-02 21:21:19
+<?php /* Smarty version 2.6.6, created on 2015-07-14 17:44:41
          compiled from popular.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('insert', 'get_member_profilepicture', 'popular.tpl', 29, false),array('insert', 'answer_count2', 'popular.tpl', 30, false),array('insert', 'get_seo_url', 'popular.tpl', 31, false),array('insert', 'get_time_to_days_ago', 'popular.tpl', 41, false),array('modifier', 'stripslashes', 'popular.tpl', 36, false),array('modifier', 'truncate', 'popular.tpl', 40, false),)), $this); ?>

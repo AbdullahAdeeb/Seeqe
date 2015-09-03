@@ -39,6 +39,7 @@ function insert_get_advertisement($var){
 		echo strip_mq_gpc($getad);
 }
 
+
 function verify_login_admin(){
         global $config,$conn;
         if($_SESSION['ADMINID'] != "" && is_numeric($_SESSION['ADMINID']) && $_SESSION['ADMINUSERNAME'] != "" && $_SESSION['ADMINPASSWORD'] != ""){

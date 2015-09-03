@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2015-07-02 20:31:34
+<?php /* Smarty version 2.6.6, created on 2015-08-22 15:24:09
          compiled from question.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('insert', 'clickable_link', 'question.tpl', 78, false),array('insert', 'get_tags', 'question.tpl', 101, false),array('insert', 'get_time_to_days_ago', 'question.tpl', 128, false),array('insert', 'get_username_from_userid', 'question.tpl', 144, false),array('insert', 'get_member_profilepicture', 'question.tpl', 145, false),array('insert', 'get_seo_url', 'question.tpl', 349, false),array('modifier', 'stripslashes', 'question.tpl', 90, false),array('modifier', 'nl2br', 'question.tpl', 93, false),array('modifier', 'substr', 'question.tpl', 156, false),array('modifier', 'replace', 'question.tpl', 161, false),array('modifier', 'date_format', 'question.tpl', 172, false),)), $this); ?>

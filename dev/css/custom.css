@@ -291,7 +291,7 @@ span.main_form {
     height: 50px;
     width: 100px;
     position: absolute;
-    background-image: url(http://www.seeqe.com/images/logo.png);
+    background-image: url("../images/logo.png");
     background-size: 100%;
     background-repeat: no-repeat;
     top: 11px;

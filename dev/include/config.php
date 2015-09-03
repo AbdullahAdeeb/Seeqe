@@ -2,8 +2,8 @@
 $config = array();
 
 // Begin Configuration
-$config['basedir']     =  '/var/www/html';
-$config['baseurl']     =  'http://ec2-52-6-95-156.compute-1.amazonaws.com';
+$config['basedir']     =  '/var/www/dev';
+$config['baseurl']     =  'http://dev.seeqe.com';
 
 $DBTYPE = 'mysql';
 $DBHOST = 'localhost';

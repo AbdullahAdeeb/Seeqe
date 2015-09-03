@@ -19,7 +19,7 @@ STemplate::assign('mainmenu',"2");
 $thebaseurl = $config['baseurl'];
 $filter = cleanit($_REQUEST['filter']);
 
-$config[items_per_page] = 20; // roxie added to limit to 20 items per page
+$config['items_per_page'] = 20; // roxie added to limit to 20 items per page
 $cats = insert_get_categories();
 
 if($filter=="" || $filter=="unanswered") {
@@ -31,7 +31,7 @@ if($filter=="" || $filter=="unanswered") {
     $filter = "all";
 }
 STemplate::assign('filter',$filter);
-$page = intval($_REQUEST[page]);
+$page = intval($_REQUEST['page']);
 if($page=="")
 {
     $page = "1";
@@ -40,40 +40,62 @@ $currentpage = $page;
 //$chosenCategory = intval($_REQUEST[cat]);
 
 if ($page >=2){
-    $pagingstart = ($page-1)*$config[items_per_page];
+    $pagingstart = ($page-1)*$config['items_per_page'];
 }else{
     $pagingstart = "0";
 }
 
 if($filter=="recent") {
     //echo "recent";
-    $query1 = "SELECT count(*) as total FROM posts A, members B, categories C WHERE A.active='1' AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount = 0 order by A.PID desc limit $config[maximum_results]";
-    $query2 = "SELECT A.PID, A.USERID, A.city, A.country, B.username, A.title, C.name, C.seo, A.time_added, A.open FROM posts A, members B, categories C WHERE A.active='1' AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount = 0 order by A.PID desc limit $pagingstart, $config[items_per_page]";
+    $query1 = "SELECT count(*) as total FROM posts A, members B, categories C WHERE A.active='1' AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount = 0 order by A.PID desc limit ".$config['maximum_results'];
+    $query2 = "SELECT A.PID, A.USERID, A.city, A.country, B.username, A.title, C.name, C.seo, A.time_added, A.open FROM posts A, members B, categories C WHERE A.active='1' AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount = 0 order by A.PID desc limit $pagingstart, ".$config['items_per_page'];
 } else if($filter=="found") {
     //echo "found";
-    $query1 = "SELECT count(*) as total FROM posts A, members B, categories C WHERE A.active='1' AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount > 0 order by A.PID desc limit $config[maximum_results]";
+    $query1 = "SELECT count(*) as total FROM posts A, members B, categories C WHERE A.active='1' AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount > 0 order by A.PID desc limit ".$config['maximum_results'];
     
     
     //	$query2 = "SELECT A.PID, A.USERID, A.city, A.country, B.username, A.title, C.name, C.seo, A.time_added, A.open, (SELECT pc.time_added FROM posts_comments pc  WHERE pc.PID=A.PID ORDER BY pc.time_added DESC LIMIT 1) as lastfounddate FROM posts A, members B, categories C WHERE A.active='1'  AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount > 0 order by A.PID desc limit $pagingstart, $config[items_per_page]";
     //Adding lasfounddate
-    $query2 = "SELECT A.PID, IF (A.anonymous =0, A.USERID, 100) as USERID, A.city, A.country, IF (A.anonymous =0, B.username, 'Anonymous') as username, A.title, C.name, C.seo, A.time_added, A.open, A.anonymous, (SELECT FROM_UNIXTIME(pc.time_added) as lastfound FROM posts_comments pc WHERE pc.PID=A.PID UNION SELECT pc.thumbedtime as lastfound FROM posts_comments pc WHERE pc.PID=A.PID ORDER BY lastfound DESC LIMIT 1) as lastfounddate FROM posts A, members B, categories C WHERE A.active='1'  AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount > 0 order by A.PID desc limit $pagingstart, $config[items_per_page]";
-
+//    $query2 = "SELECT A.PID, IF (A.anonymous =0, A.USERID, 100) as USERID, A.city, A.country, IF (A.anonymous =0, B.username, 'Anonymous') as username, A.title, C.name, C.seo, A.time_added, A.open, A.anonymous, (SELECT FROM_UNIXTIME(pc.time_added) as lastfound FROM posts_comments pc WHERE pc.PID=A.PID UNION SELECT pc.thumbedtime as lastfound FROM posts_comments pc WHERE pc.PID=A.PID ORDER BY lastfound DESC LIMIT 1) as lastfounddate FROM posts A, members B, categories C WHERE A.active='1'  AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount > 0 order by A.PID desc limit $pagingstart, $config[items_per_page]";
+    if(isset($_SESSION['USERID'])){
+        $userID = $_SESSION['USERID'];
+    }else{
+        $userID = 0;
+    }
+    $query2 = "SELECT 
+        A.PID, 
+        IF (A.anonymous =0, A.USERID, 100) as USERID,
+        IF (A.anonymous =0, B.username, 'Anonymous') as username,
+        A.city, 
+        A.country,
+        A.title,
+        A.time_added,
+        A.open,
+        A.anonymous,
+        C.name,
+        C.seo,
+	   (SELECT FROM_UNIXTIME(pc.time_added) as lastfound FROM posts_comments pc WHERE pc.PID=A.PID UNION SELECT pc.thumbedtime as lastfound FROM posts_comments pc WHERE pc.PID=A.PID ORDER BY lastfound DESC LIMIT 1) as lastfounddate,
+        IF ((SELECT D.uid FROM stars D WHERE D.PID=A.PID AND D.uid=".$userID." LIMIT 1)>0, 'true','false') as starred
+    FROM posts A, members B, categories C
+    WHERE A.active='1' AND A.USERID=B.USERID AND A.category=C.CATID AND A.commentcount > 0 order by A.PID desc limit ".$pagingstart.", ".$config['items_per_page'];    
+    
 } else {
-    $query1 = "SELECT count(*) as total FROM posts A, members B, categories C WHERE A.active='1' $fadd AND A.USERID=B.USERID AND A.category=C.CATID order by A.PID desc limit $config[maximum_results]";
-    $query2 = "SELECT A.PID, A.USERID, A.city, A.country, B.username, A.title, C.name, C.seo, A.time_added, A.open FROM posts A, members B, categories C WHERE A.active='1' $fadd AND A.USERID=B.USERID AND A.category=C.CATID order by A.PID desc limit $pagingstart, $config[items_per_page]";
+    $query1 = "SELECT count(*) as total FROM posts A, members B, categories C WHERE A.active='1' $fadd AND A.USERID=B.USERID AND A.category=C.CATID order by A.PID desc limit ".$config['maximum_results'];
+    $query2 = "SELECT A.PID, A.USERID, A.city, A.country, B.username, A.title, C.name, C.seo, A.time_added, A.open FROM posts A, members B, categories C WHERE A.active='1' $fadd AND A.USERID=B.USERID AND A.category=C.CATID order by A.PID desc limit ".$pagingstart.", ".$config['items_per_page'];
 }	
+
 
 $executequery1 = $conn->Execute($query1);
 
 $totalques = $executequery1->fields['total'];
 if ($totalques > 0){
-    if($executequery1->fields['total']<=$config[maximum_results]){
+    if($executequery1->fields['total']<=$config['maximum_results']){
         $total = $executequery1->fields['total'];
     }else{
-        $total = $config[maximum_results];
+        $total = $config['maximum_results'];
     }
 
-    $toppage = ceil($total/$config[items_per_page]);
+    $toppage = ceil($total/$config['items_per_page']);
     if($toppage==0){
         $xpage=$toppage+1;
     }else{

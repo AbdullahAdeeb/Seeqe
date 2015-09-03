@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2015-07-02 21:20:58
+<?php /* Smarty version 2.6.6, created on 2015-08-22 15:24:09
          compiled from error.tpl */ ?>
 <?php if ($this->_tpl_vars['error'] != ""): ?>
 <div id="MessagesBox" style="padding-bottom:10px;"><div class="FailPanel"><?php echo $this->_tpl_vars['error']; ?>

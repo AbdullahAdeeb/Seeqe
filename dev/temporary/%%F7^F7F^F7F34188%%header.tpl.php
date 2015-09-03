@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2015-07-11 18:59:15
+<?php /* Smarty version 2.6.6, created on 2015-09-02 23:39:37
          compiled from header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'stripslashes', 'header.tpl', 67, false),)), $this); ?>
@@ -12,7 +12,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'stripslashe
  - <?php endif;  if ($this->_tpl_vars['metadescription'] != ''):  echo $this->_tpl_vars['metadescription']; ?>
  - <?php endif;  echo $this->_tpl_vars['site_name']; ?>
 />
-                                          <meta name="keywords" content="<?php if ($this->_tpl_vars['pagetitle'] != ''):  echo $this->_tpl_vars['pagetitle']; ?>
+        <meta name="keywords" content="<?php if ($this->_tpl_vars['pagetitle'] != ''):  echo $this->_tpl_vars['pagetitle']; ?>
 ,<?php endif;  if ($this->_tpl_vars['metakeywords'] != ''):  echo $this->_tpl_vars['metakeywords']; ?>
 ,<?php endif;  echo $this->_tpl_vars['site_name']; ?>
 />

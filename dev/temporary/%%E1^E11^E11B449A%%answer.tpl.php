@@ -1,7 +1,20 @@
-<?php /* Smarty version 2.6.6, created on 2015-07-02 21:20:43
+<?php /* Smarty version 2.6.6, created on 2015-08-22 15:23:33
          compiled from answer.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('insert', 'get_member_profilepicture', 'answer.tpl', 61, false),array('insert', 'answer_count2', 'answer.tpl', 62, false),array('insert', 'get_seo_url', 'answer.tpl', 63, false),array('insert', 'get_time_to_days_ago', 'answer.tpl', 71, false),array('modifier', 'stripslashes', 'answer.tpl', 66, false),array('modifier', 'truncate', 'answer.tpl', 70, false),array('modifier', 'date_format', 'answer.tpl', 74, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('insert', 'get_member_profilepicture', 'answer.tpl', 71, false),array('insert', 'answer_count2', 'answer.tpl', 72, false),array('insert', 'get_seo_url', 'answer.tpl', 73, false),array('insert', 'get_time_to_days_ago', 'answer.tpl', 81, false),array('modifier', 'stripslashes', 'answer.tpl', 76, false),array('modifier', 'truncate', 'answer.tpl', 80, false),array('modifier', 'date_format', 'answer.tpl', 84, false),)), $this); ?>
+<?php echo '
+<script>
+function starpost(pid) {
+        $.post("';  echo $this->_tpl_vars['baseurl'];  echo '/star.php",{"pid":pid},function(res) {
+            $(\'#star\'+pid).attr(\'class\',\'filled-\'+res); // switch the star class between filled and unfilled
+            $(\'#star\'+pid).html(\'star: \'+res);  // just for testing.. might not be needed when the front end change
+        });
+}
+    
+
+
+</script>
+'; ?>
 
 <div class="common">
 	<div id="new_body">
@@ -19,9 +32,7 @@ smarty_core_load_plugins(array('plugins' => array(array('insert', 'get_member_pr
 						<?php if (( $this->_tpl_vars['isfound'] )): ?>
 							<?php echo ' 
 							<script type="text/javascript">
-								function categoryChange() { 
-									
-									
+								function categoryChange() { 									
 									var catFilter = document.getElementById("category_filter");
 									var catFilterVal = catFilter.options[catFilter.selectedIndex].text;
 									console.log(catFilterVal);
@@ -108,7 +119,8 @@ echo smarty_core_run_insert_handler(array('args' => array('name' => 'get_seo_url
 										<div class="right"><a class="list_nn" href="<?php echo $this->_tpl_vars['baseurl']; ?>
 /<?php echo $this->_tpl_vars['qtitle']; ?>
 "><?php echo ((is_array($_tmp=$this->_tpl_vars['ques'][$this->_sections['i']['index']]['title'])) ? $this->_run_mod_handler('stripslashes', true, $_tmp) : stripslashes($_tmp)); ?>
-</a>
+</a><button href="javascript:;" onclick="starpost('<?php echo $this->_tpl_vars['ques'][$this->_sections['i']['index']]['PID']; ?>
+');">Star Me</button>
 											<span class="silver_nn">
 											<ul class="sortby">
 												<li><a href="<?php echo $this->_tpl_vars['baseurl']; ?>
@@ -131,10 +143,14 @@ echo smarty_core_run_insert_handler(array('args' => array('name' => 'get_time_to
                                                 <?php endif; ?>
                                                 
                                                 <li>City: <?php if ($this->_tpl_vars['ques'][$this->_sections['i']['index']]['city'] != ""):  echo $this->_tpl_vars['ques'][$this->_sections['i']['index']]['city'];  endif;  if ($this->_tpl_vars['ques'][$this->_sections['i']['index']]['city'] != "" && $this->_tpl_vars['ques'][$this->_sections['i']['index']]['country'] != ""): ?>, <?php endif;  if ($this->_tpl_vars['ques'][$this->_sections['i']['index']]['country'] != ""):  echo $this->_tpl_vars['ques'][$this->_sections['i']['index']]['country'];  endif;  if ($this->_tpl_vars['ques'][$this->_sections['i']['index']]['city'] == "" && $this->_tpl_vars['ques'][$this->_sections['i']['index']]['country'] == ""): ?>Global<?php endif; ?></li>
-												
+                                                <li id="star<?php echo $this->_tpl_vars['ques'][$this->_sections['i']['index']]['PID']; ?>
+" class="filled-<?php echo $this->_tpl_vars['ques'][$this->_sections['i']['index']]['starred']; ?>
+">stars: <?php echo $this->_tpl_vars['ques'][$this->_sections['i']['index']]['starred']; ?>
+</li>
                                                 <li class="last"><?php echo $this->_tpl_vars['tac']; ?>
  <?php echo $this->_tpl_vars['lang161']; ?>
 </li>
+                                                
 											</ul>
 											<div class="clear"></div>
 											</span>

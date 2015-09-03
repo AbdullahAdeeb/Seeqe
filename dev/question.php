@@ -120,14 +120,14 @@ if (does_post_exist($pid)){
 	{
 		$query="SELECT seo,name FROM categories WHERE CATID='".mysql_real_escape_string($parent)."'";
 		$executequery=$conn->execute($query);
-		$pname = $executequery->fields[name];
-		$pseo = $executequery->fields[seo];
+		$pname = $executequery->fields['name'];
+		$pseo = $executequery->fields['seo'];
 		STemplate::assign('pname',$pname);
 		STemplate::assign('pseo',$pseo);
 	}
 	
 //	$query = "SELECT pc.* FROM posts_comments pc  WHERE pc.PID='$PID' AND pc.best='0' ORDER BY pc.vote_yes desc, pc.thumbedtime DESC";
-	$query = "SELECT pc.* FROM posts_comments pc  WHERE pc.PID='$PID' AND pc.best='0' ORDER BY pc.vote_yes desc, pc.thumbedtime DESC, pc.time_added";
+	$query = "SELECT pc.* FROM posts_comments pc  WHERE pc.PID='$PID' AND pc.best='0' ORDER BY pc.vote_yes desc, pc.thumbedtime DESC, pc.time_added"; // added to allow ordering by comment recenity
 	$executequery = $conn->execute($query);
 	$showcomments =  $executequery->getarray();
 	STemplate::assign('showcomments',$showcomments);

@@ -1,4 +1,16 @@
+{literal}
+<script>
+function starpost(pid) {
+        $.post("{/literal}{$baseurl}{literal}/star.php",{"pid":pid},function(res) {
+            $('#star'+pid).attr('class','filled-'+res); // switch the star class between filled and unfilled
+            $('#star'+pid).html('star: '+res);  // just for testing.. might not be needed when the front end change
+        });
+}
+    
 
+
+</script>
+{/literal}
 <div class="common">
 	<div id="new_body">
 		<div id="body_900">
@@ -14,9 +26,7 @@
 						{if ($isfound)}
 							{literal} 
 							<script type="text/javascript">
-								function categoryChange() { 
-									
-									
+								function categoryChange() { 									
 									var catFilter = document.getElementById("category_filter");
 									var catFilterVal = catFilter.options[catFilter.selectedIndex].text;
 									console.log(catFilterVal);
@@ -63,7 +73,7 @@
 										{insert name=get_seo_url assign=qtitle value=a title=$ques[i].title PID=$ques[i].PID}
 										<li>
 										<div class="and_rate mag15" onClick="top.location.href='{$baseurl}/{$qtitle}';">{$tac}</div>
-										<div class="right"><a class="list_nn" href="{$baseurl}/{$qtitle}">{$ques[i].title|stripslashes}</a>
+										<div class="right"><a class="list_nn" href="{$baseurl}/{$qtitle}">{$ques[i].title|stripslashes}</a><button href="javascript:;" onclick="starpost('{$ques[i].PID}');">Star Me</button>
 											<span class="silver_nn">
 											<ul class="sortby">
 												<li><a href="{$baseurl}/{$ques[i].seo}">{$ques[i].name|stripslashes}</a></li>
@@ -75,8 +85,9 @@
                                                 {/if}
                                                 
                                                 <li>City: {if $ques[i].city != ""}{$ques[i].city}{/if}{if $ques[i].city != "" && $ques[i].country != ""}, {/if}{if $ques[i].country != ""}{$ques[i].country}{/if}{if $ques[i].city == "" && $ques[i].country == ""}Global{/if}</li>
-												
+                                                <li id="star{$ques[i].PID}" class="filled-{$ques[i].starred}">stars: {$ques[i].starred}</li>
                                                 <li class="last">{$tac} {$lang161}</li>
+                                                
 											</ul>
 											<div class="clear"></div>
 											</span>

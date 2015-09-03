@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.6, created on 2015-07-02 20:42:44
+<?php /* Smarty version 2.6.6, created on 2015-08-22 15:23:25
          compiled from account.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'stripslashes', 'account.tpl', 28, false),array('modifier', 'date_format', 'account.tpl', 83, false),array('insert', 'get_member_comments_count', 'account.tpl', 74, false),)), $this); ?>

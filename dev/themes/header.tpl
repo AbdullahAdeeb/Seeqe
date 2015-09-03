@@ -3,7 +3,7 @@
     <head>
         <title>{if $pagetitle ne ""}{$pagetitle} - {/if}{$site_name}</title>
         <meta name="description" content="{if $pagetitle ne ''}{$pagetitle} - {/if}{if $metadescription ne ''}{$metadescription} - {/if}{$site_name}/>
-                                          <meta name="keywords" content="{if $pagetitle ne ''}{$pagetitle},{/if}{if $metakeywords ne ''}{$metakeywords},{/if}{$site_name}/>
+        <meta name="keywords" content="{if $pagetitle ne ''}{$pagetitle},{/if}{if $metakeywords ne ''}{$metakeywords},{/if}{$site_name}/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script language="javascript" type="text/javascript" src="{$baseurl}/js/jquery-1.3.2.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
