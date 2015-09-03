@@ -37,30 +37,15 @@ body {
     #menuopen {
       display: block;
       float: right;
-      color: #f7931e;
+      color: #f37021;
       font-size: 18px; } }
   @media (min-width: 768px) and (max-width: 991px) {
     #menuopen {
       display: block;
       float: right;
-      color: #f7931e;
+      color: #f37021;
       font-size: 18px; } }
 
-/* @font-face {
-  font-family: 'gotham';
-  src: url('../fonts/gothamhtf-light-webfont.ttf');
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'gotham';
-  src: url('../fonts/gothamhtf-medium-webfont.ttf');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'gotham';
-  src: url('../fonts/gothamhtf-black-webfont.ttf');
-  font-weight: 700;
-} */
 header {
   background: #fff;
   overflow: hidden;
@@ -76,21 +61,38 @@ header {
     padding: 0;
     list-style: none; }
     header nav ul li {
-      float: left;
-      margin-right: 15px; }
+      float: left; }
       header nav ul li a {
-        font-size: 16px; }
+        font-size: 16px;
+        position: relative;
+        padding: 10px; }
+        header nav ul li a:hover, header nav ul li a.active {
+          text-decoration: none;
+          color: #f7931e; }
+          header nav ul li a:hover:after, header nav ul li a.active:after {
+            top: 100%;
+            height: 3px;
+            background: #f7931e;
+            content: '';
+            left: 0;
+            width: 100%;
+            position: absolute; }
   @media (max-width: 767px) {
     header nav {
+      display: none; }
+    header .logo-nav {
+      margin-top: 0; }
+    header .right {
       display: none; } }
   @media (min-width: 768px) and (max-width: 991px) {
     header nav {
+      display: none; }
+    header .logo-nav {
+      margin-top: 0; }
+    header .right {
       display: none; } }
 
 footer {
-  background: #f7931e;
-  color: #fff;
-  padding: 50px;
   font-family: ProximaNovaSoft;
   overflow: hidden; }
   footer ul {
@@ -109,20 +111,33 @@ footer {
     footer a:hover {
       color: #fff;
       text-decoration: underline; }
-  footer .footerbottom {
-    margin-top: 70px;
-    position: relative; }
-    footer .footerbottom .logo {
-      position: absolute;
-      left: 0; }
-    footer .footerbottom .copyright {
+  footer .footertop {
+    background: #f7931e;
+    background-color: #f7931e;
+    background-image: -webkit-linear-gradient(top left, #f7931e, #f37021);
+    background-image: linear-gradient(to bottom right,#f7931e, #f37021);
+    color: #fff;
+    padding: 50px;
+    overflow: hidden; }
+    footer .footertop .logo {
       text-align: center;
-      padding-top: 20px; }
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3); }
+  footer .footerbottom {
+    position: relative;
+    background: #333;
+    color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    padding: 30px;
+    font-size: 16px; }
+    footer .footerbottom p {
+      margin: 0; }
 
 .intro h1 {
-  font-size: 60px; }
+  font-size: 70px; }
 .intro p {
-  font-size: 18px; }
+  font-size: 20px; }
 .intro .small {
   color: #fff; }
 
@@ -142,9 +157,9 @@ footer {
     width: 200px;
     font-size: 18px; }
   .main .wrapper {
-    border-left: 3px solid #e7e8e9;
-    border-right: 3px solid #e7e8e9;
-    padding: 50px; }
+    border: 3px solid #e7e8e9;
+    border-top: none;
+    padding: 50px 50px 20px 50px; }
 
 .items .item {
   margin-bottom: 30px; }
