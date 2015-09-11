@@ -56,7 +56,7 @@ body { font-family: 'ProximaNovaSoft'; }
 
 // Mobile Menu
 #menuopen { display: none;
-  .fa { font-size: 30px; margin: 20px 40px;}
+  .fa { font-size: 30px; margin: 25px 40px;}
   @include bp(xs) { display: block; float:right; color:$orange2; font-size:18px; }
   @include bp(s) { display: block; float:right; color:$orange2; font-size:18px; }
 }
@@ -70,7 +70,10 @@ header { background:$white; overflow: hidden; padding:15px;
     ul { margin:25px 0 0 40px; padding:0; list-style: none;
       li { float: left;
         a { font-size:16px; position: relative; padding:10px;
-          &:hover, &.active { text-decoration: none; color:$orange;
+          &:hover { text-decoration: none; color:$orange;
+            &:after { top:100%; height:3px; background:$orange; content:''; left:0; width:100%; position: absolute; }
+          }
+          &.active { text-decoration: none; color:$orange;
             &:after { top:100%; height:3px; background:$orange; content:''; left:0; width:100%; position: absolute; }
           }
         }
@@ -99,19 +102,72 @@ footer {  font-family: ProximaNovaSoft; overflow: hidden;
   a { color:$white;
     &:hover { color:$white; text-decoration: underline; }
   }
-  .footertop { background:$orange; @include linear-gradient(top left, $orange, $orange2); color:$white; padding:50px; overflow: hidden;
+  .footertop { background:$orange; @include linear-gradient(top left, $orange, $orange2); color:$white; padding:50px 0; overflow: hidden;
     .logo { text-align: center; margin-top:40px; padding-top:40px; border-top:1px solid rgba($white, .3); }
   }
-  .footerbottom { position: relative; background:$dark; color:rgba($white,.5); overflow: hidden; padding:30px; font-size:16px;
+  .footerbottom { position: relative; background:#B35600; color:rgba($white,.7); overflow: hidden; padding:15px 30px; font-size:16px;
     p { margin:0; }
   }
 }
+
+.nav-tabs.introtab { text-align: center; border: none; margin-bottom:60px;  margin-top: -80px;
+  li { display: inline-block; float: none; margin: 0 0 0 -4px; border-radius: 0;
+    a { padding:10px 30px; background:$orange; border:none; color:$white; border-radius: 0; margin: 0; font-size: 24px; font-weight:100;
+      &:hover { background:$orange2; border:none; padding:10px 30px; }
+    }
+    &:first-child {
+      a { border-top-left-radius: 50px; border-bottom-left-radius: 50px; }
+    }
+    &:last-child {
+      a { border-top-right-radius: 50px; border-bottom-right-radius: 50px; }
+    }
+    &.active {
+      a { border:none; background: $white; color: $orange;
+        &:hover { border:none;  background: $white; color: $orange; }
+      }
+    }
+  }
+}
+
+h2.orange { color:$orange; }
+h2.grey { color:#939598; }
+.btn { background:$orange; font-size: 20px; color:$white; padding:10px 40px; border-radius: 50px; margin-top:100px;
+  &:hover { background:$orange2; color:$white; }
+}
+.custom-file-input { margin-top:20px; padding-left:120px; padding-top: 10px; position: relative; }
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Choose file';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: $orange;
+  color:$white;
+  border-radius: 50px;
+  padding: 6px 16px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+.custom-file-input:hover::before {
+  border-color: none;
+  background:$orange2;
+}
+
 
 // Intro
 .intro {
   h1 { font-size:70px; }
   p { font-size:20px; }
   .small { color:$white;}
+  @include bp(xs) {
+    h1 { font-size:40px; }
+    p { font-size:16px; }
+  }
 }
 
 // Main
@@ -123,7 +179,7 @@ footer {  font-family: ProximaNovaSoft; overflow: hidden;
 // Items
 .items {
   .item { margin-bottom:30px;
-    .inner { border:12px solid $orange2; border-radius: 10px;
+    .inner { border:10px solid $orange2; border-radius: 10px;
       .picture {
         img { width:100%; height:auto; }
       }
@@ -140,5 +196,60 @@ footer {  font-family: ProximaNovaSoft; overflow: hidden;
 .discover {
   .intro { background:url(../img/discover.jpg) 50% 50% no-repeat; background-size:cover; padding:100px; color:$white; text-align: center; position: relative;
     &:after { position: absolute; content:''; width:100%; height:100%; background:rgba(255,255,255,0.2); z-index: 9; top:0; left:0; }
+    @include bp(xs) { padding:50px 0; }
   }
+}
+
+.inventory {
+  .main .wrapper { margin-bottom: 60px; }
+  .intro { background:url(../img/inventoryimport.jpg) 50% 50% no-repeat; background-size:cover; padding:180px 100px; color:$white; text-align: center; position: relative;
+    &:after { position: absolute; content:''; width:100%; height:100%; background:rgba($orange,0.4); z-index: 9; top:0; left:0; }
+    @include bp(xs) { padding:50px 0; }
+    .container { position: relative; z-index: 99; }
+  }
+  .tab-content {
+    h2 { margin-top:0; }
+  }
+  .filewrapper { border:3px solid $orange; padding:20px; margin-top:50px; overflow: hidden;
+    ul { list-style: none; margin:0; padding:0;
+      li { margin-bottom: 6px; display: block; float: left; width: 100%;
+        a { background:$grey; color:$orange; padding: 10px 20px; border-radius: 50px; float: left; clear: both; }
+      }
+    }
+  }
+}
+
+.profile {
+  .main .wrapper { margin-bottom: 60px; }
+  .intro { background:url(../img/userprofilepage.jpeg) 50% 50% no-repeat; background-size:cover; padding:100px; color:$white; text-align: center; position: relative;
+  }
+}
+
+.ask { background:url(../img/ask.png) 50% 50% no-repeat; background-size:cover; padding:100px 0 0 0;  color:$white; position: relative; min-height: 100vh;
+  h1 { font-size: 80px; }
+  p { font-size: 24px; margin-bottom: 30px; }
+  .custom-file-input { margin-top:0; padding-left:220px; padding-top: 10px; position: relative; }
+  .form-group { position: relative;
+    select { margin-left: 50px; }
+    img { position: absolute; top: 10px; left: 0; }
+    input { margin-left: 50px; }
+  }
+  .custom-file-input::before {
+    content: 'Upload photo (optional)';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    background: #f15a29;
+    color:$white;
+    border-radius: 50px;
+    padding: 6px 25px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+  }
+  a.btn { background: #fbb040; color: $white; padding:10px 25px; margin-top: 50px; font-size: 18px; }
+  input[type="text"], select { padding:5px 15px; height: 40px; width:100%; border-radius: 10px; font-size: 18px; border:2px solid #f15a29; color:#999; background:$white; margin-bottom:20px; }
 }
