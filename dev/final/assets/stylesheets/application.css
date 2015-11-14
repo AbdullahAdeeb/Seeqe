@@ -38,7 +38,8 @@ html {
           border: 1px solid #FF6F00;
           border-radius: 15px;
           text-align: center;
-          line-height: 30px; }
+          line-height: 30px;
+          font-size: 18px; }
     html body .footer {
       position: absolute;
       bottom: 0;
