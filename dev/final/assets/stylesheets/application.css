@@ -5,37 +5,40 @@ html {
     font-family: sans-serif;
     color: black;
     margin-bottom: 60px; }
-    html body .navbar .navbar-header {
-      margin-right: 20px; }
-      html body .navbar .navbar-header .navbar-brand {
-        height: 90px; }
-        html body .navbar .navbar-header .navbar-brand .navbar-logo {
-          height: 60px; }
-    html body .navbar #navbar .navbar-nav {
-      height: 90px;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-      html body .navbar #navbar .navbar-nav > li > a {
-        padding-top: 0;
-        padding-bottom: 0;
-        line-height: 60px;
-        color: #FF6F00; }
-        html body .navbar #navbar .navbar-nav > li > a:hover, html body .navbar #navbar .navbar-nav > li > a:focus {
-          color: #994300;
-          background-color: transparent; }
-      html body .navbar #navbar .navbar-nav .navbar-profile-pic {
-        height: 60px;
-        border: 2px solid #FF6F00;
-        border-radius: 30px;
-        margin-right: 10px; }
-      html body .navbar #navbar .navbar-nav .navbar-notifications {
-        margin-top: 15px;
-        height: 30px;
-        width: 30px;
-        border: 1px solid #FF6F00;
-        border-radius: 15px;
-        text-align: center;
-        line-height: 30px; }
+    html body .navbar-main {
+      padding-bottom: 10px;
+      border-bottom: 2px solid #FF6F00; }
+      html body .navbar-main .navbar-header {
+        margin-right: 20px; }
+        html body .navbar-main .navbar-header .navbar-brand {
+          height: 90px; }
+          html body .navbar-main .navbar-header .navbar-brand .navbar-logo {
+            height: 60px; }
+      html body .navbar-main #navbar .navbar-nav {
+        height: 90px;
+        padding-top: 15px;
+        padding-bottom: 15px; }
+        html body .navbar-main #navbar .navbar-nav > li > a {
+          padding-top: 0;
+          padding-bottom: 0;
+          line-height: 60px;
+          color: #FF6F00; }
+          html body .navbar-main #navbar .navbar-nav > li > a:hover, html body .navbar-main #navbar .navbar-nav > li > a:focus {
+            color: #994300;
+            background-color: transparent; }
+        html body .navbar-main #navbar .navbar-nav .navbar-profile-pic {
+          height: 60px;
+          border: 2px solid #FF6F00;
+          border-radius: 30px;
+          margin-right: 10px; }
+        html body .navbar-main #navbar .navbar-nav .navbar-notifications {
+          margin-top: 15px;
+          height: 30px;
+          width: 30px;
+          border: 1px solid #FF6F00;
+          border-radius: 15px;
+          text-align: center;
+          line-height: 30px; }
     html body .footer {
       position: absolute;
       bottom: 0;
