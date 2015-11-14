@@ -1,8 +1,15 @@
 html {
-  height: 100%; }
+  position: relative;
+  min-height: 100%; }
   html body {
     font-family: sans-serif;
     color: black;
-    min-height: 100%; }
+    margin-bottom: 60px; }
+    html body .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: orange; }
 
 /*# sourceMappingURL=application.css.map */
