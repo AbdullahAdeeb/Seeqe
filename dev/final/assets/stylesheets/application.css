@@ -28,6 +28,14 @@ html {
         border: 2px solid #FF6F00;
         border-radius: 30px;
         margin-right: 10px; }
+      html body .navbar #navbar .navbar-nav .navbar-notifications {
+        margin-top: 15px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid #FF6F00;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 30px; }
     html body .footer {
       position: absolute;
       bottom: 0;
