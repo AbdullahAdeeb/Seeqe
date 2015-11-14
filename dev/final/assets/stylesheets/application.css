@@ -72,6 +72,19 @@ html {
         font-size: 20px;
         margin-top: 0;
         margin-bottom: 0; }
+    html body .banner-heading {
+      margin-top: -20px;
+      margin-bottom: -20px;
+      text-align: center; }
+      html body .banner-heading .banner-heading-text {
+        padding: 5px 25px;
+        border-radius: 20px;
+        display: inline-block;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        line-height: 30px;
+        background-color: #FF6F00; }
     html body .footer {
       position: absolute;
       bottom: 0;
