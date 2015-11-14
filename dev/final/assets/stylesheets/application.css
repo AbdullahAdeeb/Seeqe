@@ -6,20 +6,28 @@ html {
     color: black;
     margin-bottom: 60px; }
     html body .navbar .navbar-header {
-      padding-right: 20px; }
+      margin-right: 20px; }
       html body .navbar .navbar-header .navbar-brand {
-        height: 80px; }
+        height: 90px; }
         html body .navbar .navbar-header .navbar-brand .navbar-logo {
-          height: 50px; }
+          height: 60px; }
     html body .navbar #navbar .navbar-nav {
-      height: 80px;
+      height: 90px;
       padding-top: 15px;
       padding-bottom: 15px; }
       html body .navbar #navbar .navbar-nav > li > a {
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 60px;
         color: #FF6F00; }
         html body .navbar #navbar .navbar-nav > li > a:hover, html body .navbar #navbar .navbar-nav > li > a:focus {
           color: #994300;
           background-color: transparent; }
+      html body .navbar #navbar .navbar-nav .navbar-profile-pic {
+        height: 60px;
+        border: 2px solid #FF6F00;
+        border-radius: 30px;
+        margin-right: 10px; }
     html body .footer {
       position: absolute;
       bottom: 0;
