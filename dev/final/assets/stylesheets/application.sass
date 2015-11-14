@@ -15,7 +15,7 @@ html
     .navbar-main
       padding: 0 25px 10px
       margin-bottom: 0
-      border-bottom: 2px solid $color-navbar-bottom
+      border-bottom: 2px solid $color-orange
 
       .navbar-header
         margin-right: 20px
@@ -37,15 +37,15 @@ html
             padding-top: 0
             padding-bottom: 0
             line-height: $navbar-height - 30px
-            color: $color-navbar-links
+            color: $color-orange
 
             &:hover, &:focus
-              color: darken($color-navbar-links, 20)
+              color: darken($color-orange, 20)
               background-color: transparent
 
           .navbar-profile-pic
             height: $navbar-height - 30px
-            border: 2px solid $color-navbar-accent
+            border: 2px solid $color-orange
             border-radius: ($navbar-height - 30px) / 2
             margin-right: 10px
 
@@ -53,7 +53,7 @@ html
             margin-top: ($navbar-height - 60px) / 2
             height: 30px
             width: 30px
-            border: 1px solid $color-navbar-accent
+            border: 1px solid $color-orange
             border-radius: 15px
             text-align: center
             line-height: 30px
@@ -103,11 +103,16 @@ html
         text-align: center
         font-size: 20px
         line-height: 30px
-        background-color: $color-banner-heading
+        background-color: $color-orange
+
+    .discover-container
+      padding-top: 70px
+      border-left: 3px solid $color-lightgrey
+      border-right: 3px solid $color-lightgrey
 
     .footer
       position: absolute
       bottom: 0
       width: 100%
       height: $footer-height
-      background-color: $color-footer-background
+      background-color: $color-orange
