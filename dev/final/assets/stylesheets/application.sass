@@ -37,11 +37,7 @@ html
             padding-top: 0
             padding-bottom: 0
             line-height: $navbar-height - 30px
-            color: $color-orange
-
-            &:hover, &:focus
-              color: darken($color-orange, 20)
-              background-color: transparent
+            @include hover($color-orange, darken($color-orange, 20))
 
           .navbar-profile-pic
             height: $navbar-height - 30px
@@ -106,9 +102,65 @@ html
         background-color: $color-orange
 
     .discover-container
-      padding-top: 70px
-      border-left: 3px solid $color-lightgrey
-      border-right: 3px solid $color-lightgrey
+      padding-top: 60px
+      border: 3px solid $color-lightgrey
+      border-top: none
+
+      .grey-text
+        color: $color-text-grey
+
+        .accent
+          color: $color-orange
+
+      .view-options
+        margin-top: 40px
+
+        .view-options-left
+          font-size: 24px
+
+          a
+            @include hover($color-orange, darken($color-orange, 20))
+
+        .view-options-right
+          font-size: 18px
+          text-align: right
+
+          a
+            @include hover($color-text-main, $color-orange)
+
+            &.active
+              @include hover($color-orange, darken($color-orange, 20))
+
+      .item-container
+        margin-top: 10px
+        padding-left: $item-display-padding
+        padding-right: $item-display-padding
+
+        .item-box
+          padding: $item-display-padding
+
+          .item
+            border: 4px solid $color-orange
+            border-radius: 6px
+
+            .item-picture
+              width: 100%
+
+            .item-title, .item-description
+              margin-left: 12px
+              margin-right: 12px
+
+            .item-title
+              margin-bottom: 5px
+              font-size: 20px
+
+            .item-description
+              margin-bottom: 0
+              font-size: 12px
+
+              .item-asked-by-name
+                @include hover($color-orange, darken($color-orange, 20))
+
 
     .footer
       position: absolute

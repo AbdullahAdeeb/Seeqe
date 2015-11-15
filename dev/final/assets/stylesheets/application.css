@@ -32,6 +32,7 @@ html {
           color: #FF6F00; }
           html body .navbar-main #navbar .navbar-nav > li > a:hover, html body .navbar-main #navbar .navbar-nav > li > a:focus {
             color: #994300;
+            text-decoration: none;
             background-color: transparent; }
         html body .navbar-main #navbar .navbar-nav .navbar-profile-pic {
           height: 60px;
@@ -86,9 +87,64 @@ html {
         line-height: 30px;
         background-color: #FF6F00; }
     html body .discover-container {
-      padding-top: 70px;
-      border-left: 3px solid #E7E8E9;
-      border-right: 3px solid #E7E8E9; }
+      padding-top: 60px;
+      border: 3px solid #E7E8E9;
+      border-top: none; }
+      html body .discover-container .grey-text {
+        color: #808080; }
+        html body .discover-container .grey-text .accent {
+          color: #FF6F00; }
+      html body .discover-container .view-options {
+        margin-top: 40px; }
+        html body .discover-container .view-options .view-options-left {
+          font-size: 24px; }
+          html body .discover-container .view-options .view-options-left a {
+            color: #FF6F00; }
+            html body .discover-container .view-options .view-options-left a:hover, html body .discover-container .view-options .view-options-left a:focus {
+              color: #994300;
+              text-decoration: none;
+              background-color: transparent; }
+        html body .discover-container .view-options .view-options-right {
+          font-size: 18px;
+          text-align: right; }
+          html body .discover-container .view-options .view-options-right a {
+            color: black; }
+            html body .discover-container .view-options .view-options-right a:hover, html body .discover-container .view-options .view-options-right a:focus {
+              color: #FF6F00;
+              text-decoration: none;
+              background-color: transparent; }
+            html body .discover-container .view-options .view-options-right a.active {
+              color: #FF6F00; }
+              html body .discover-container .view-options .view-options-right a.active:hover, html body .discover-container .view-options .view-options-right a.active:focus {
+                color: #994300;
+                text-decoration: none;
+                background-color: transparent; }
+      html body .discover-container .item-container {
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px; }
+        html body .discover-container .item-container .item-box {
+          padding: 20px; }
+          html body .discover-container .item-container .item-box .item {
+            border: 4px solid #FF6F00;
+            border-radius: 6px; }
+            html body .discover-container .item-container .item-box .item .item-picture {
+              width: 100%; }
+            html body .discover-container .item-container .item-box .item .item-title, html body .discover-container .item-container .item-box .item .item-description {
+              margin-left: 12px;
+              margin-right: 12px; }
+            html body .discover-container .item-container .item-box .item .item-title {
+              margin-bottom: 5px;
+              font-size: 20px; }
+            html body .discover-container .item-container .item-box .item .item-description {
+              margin-bottom: 0;
+              font-size: 12px; }
+              html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name {
+                color: #FF6F00; }
+                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:focus {
+                  color: #994300;
+                  text-decoration: none;
+                  background-color: transparent; }
     html body .footer {
       position: absolute;
       bottom: 0;
