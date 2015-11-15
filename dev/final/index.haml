@@ -93,13 +93,50 @@
                 Asked by
                 %a.item-asked-by-name Jeff Hudson
               %p.item-description 4 Answers
-    .container
-      %h1 Header
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a lorem sed arcu molestie bibendum quis quis nisl. Suspendisse vehicula lacus sed est gravida varius elementum vitae metus. Curabitur posuere ultricies semper. Suspendisse quis mauris non justo euismod tempor. Nulla eleifend turpis ac pharetra semper. Proin nisi neque, faucibus vel semper nec, rhoncus eleifend ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut tempor, mi vitae vestibulum aliquam, neque nisl consectetur tellus, non pellentesque purus neque nec nisl. Donec non metus eget nibh feugiat pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla aliquam nibh eget fringilla scelerisque. Sed ornare massa sit amet ipsum rhoncus gravida id et enim.
-      %p In vel volutpat diam, a semper dolor. Pellentesque et nibh finibus, tincidunt sem vel, pellentesque justo. Praesent tincidunt nisi ac ex condimentum vulputate ac sed dui. Integer efficitur eros sed eros fermentum aliquet. Nullam purus ipsum, venenatis ut magna eu, mollis facilisis ligula. Sed sapien est, facilisis quis mauris ut, varius maximus metus. Nunc laoreet erat a nunc mollis, ut ullamcorper lectus eleifend. Aenean lacinia varius dignissim. Sed sodales, odio a ultricies gravida, massa tortor venenatis tellus, ut lacinia velit nunc finibus leo. Sed dictum vehicula ligula nec ullamcorper. Nam volutpat, ipsum eget dictum egestas, massa risus condimentum justo, ac suscipit velit justo eu nisi. Sed dapibus tempor augue, vestibulum blandit magna ornare et. Integer nec nulla scelerisque, lobortis mi et, ultricies dui.
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis erat sed porta posuere. Proin ante metus, aliquam vel lacinia a, lobortis sit amet est. Pellentesque vitae tortor imperdiet, euismod est non, dapibus lorem. Maecenas velit turpis, fermentum et pellentesque blandit, tristique feugiat arcu. Aliquam eleifend auctor ante, at tincidunt lectus ultricies id. Fusce tincidunt eleifend leo scelerisque tristique. Sed dictum diam sit amet libero gravida, sed convallis nisi dictum. Cras lacinia a sem sed viverra. Aenean eu euismod eros, non volutpat eros. Sed eget nulla auctor, tincidunt lorem vel, interdum nulla. Donec ac blandit nunc, in accumsan dui. Curabitur ullamcorper mi turpis, quis posuere elit molestie et.
-      %p Nunc non elementum est. Quisque eu convallis erat. Etiam faucibus leo in elit rutrum semper. Suspendisse efficitur, mauris auctor scelerisque lobortis, dui lectus imperdiet purus, sed pretium sapien ex ac risus. Etiam sed dapibus ante. Praesent a orci sed enim eleifend ullamcorper. Nullam blandit et sapien sagittis viverra. Cras sit amet pellentesque eros, congue eleifend mi. In ut interdum tellus, vitae luctus orci. Etiam posuere tincidunt hendrerit.
-      %p Nunc nibh erat, eleifend a tortor quis, vestibulum aliquet purus. Aliquam sed felis sagittis, euismod augue eu, vestibulum ante. Vestibulum at pellentesque metus, sit amet elementum nulla. Aliquam bibendum purus in tellus aliquam laoreet. Aliquam vel bibendum lectus, ut venenatis magna. Vestibulum ullamcorper posuere viverra. Pellentesque fringilla, magna non porta sagittis, mauris odio porttitor erat, at sollicitudin mi mi eu metus. Integer mollis, leo vitae scelerisque mattis, libero dui laoreet massa, nec condimentum ex ex ut lacus. Nunc rutrum scelerisque nulla sit amet consequat. Nulla ac nisl leo. Nunc at interdum ante.
+        .col-xs-12.item-footer
+          %a{:href => '#'}
+            Return to top
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Ask Question
+            %i.fa.fa-comments-o
+    .container.featured-stores-heading
+      %h1 Featured Stories
+    .container.featured-stores-main
+      %p.grey-text
+        Here are our
+        %span.accent favorite products
+        of the week!
+      %p.grey-text Discover what's near you now!
+      .row.view-options
+        .col-sm-6.view-options-left
+          %a{:href => '#'}
+            %i.fa.fa-th-list
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-square
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-th-large
+        .col-sm-6.view-options-right
+          %a.active{:href => '#'}
+            Top Find
+            %i.fa.fa-star
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Alphabetical
+            %i.fa.fa-sort-alpha-asc
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Near Me
+            %i.fa.fa-map-marker
+    .container.pre-footer
     %footer.footer
       .container
         %p.text-muted
