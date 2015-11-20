@@ -146,11 +146,12 @@ html
           margin-top: 10px
           margin-bottom: 30px
           text-align: right
+          font-size: 14px
 
           a
             @include hover($color-text-main, $color-orange)
 
-    .featured-stores-heading
+    .section-heading
       margin-top: 60px
       background-color: $color-orange
       border-radius: 20px 20px 0 0
@@ -162,16 +163,50 @@ html
         text-align: center
         color: white
 
-    .featured-stores-main
+    .section-main
       padding-top: 30px
       border: 3px solid $color-lightgrey
       border-top: none
+
+      .padded-text
+        margin-left: $item-display-padding
+        margin-right: $item-display-padding
 
       .grey-text
         color: $color-text-grey
 
         .accent
           color: $color-orange
+
+      .list
+        margin-top: 40px
+        margin-left: $item-display-padding
+        margin-right: $item-display-padding
+        font-size: 20px
+        line-height: 36px
+
+        .list-item
+
+          > a
+            @include hover($color-text-main, $color-orange)
+
+            &.active
+              color: $color-orange
+
+        .list-more
+          margin-top: 16px
+
+          > a
+            @include hover($color-orange, darken($color-orange, 20))
+
+        .item-footer
+          margin-top: 10px
+          margin-bottom: 30px
+          text-align: right
+          font-size: 14px
+
+          a
+            @include hover($color-text-main, $color-orange)
 
     .pre-footer
       height: 80px

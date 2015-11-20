@@ -31,9 +31,10 @@ html {
           line-height: 60px;
           color: #FF6F00; }
           html body .navbar-main #navbar .navbar-nav > li > a:hover, html body .navbar-main #navbar .navbar-nav > li > a:focus {
-            color: #994300;
             text-decoration: none;
             background-color: transparent; }
+          html body .navbar-main #navbar .navbar-nav > li > a:hover {
+            color: #994300; }
         html body .navbar-main #navbar .navbar-nav .navbar-profile-pic {
           height: 60px;
           border: 2px solid #FF6F00;
@@ -117,37 +118,79 @@ html {
               html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name {
                 color: #FF6F00; }
                 html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:focus {
-                  color: #994300;
                   text-decoration: none;
                   background-color: transparent; }
+                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover {
+                  color: #994300; }
         html body .discover-container .item-container .item-footer {
           margin-top: 10px;
           margin-bottom: 30px;
-          text-align: right; }
+          text-align: right;
+          font-size: 14px; }
           html body .discover-container .item-container .item-footer a {
             color: black; }
             html body .discover-container .item-container .item-footer a:hover, html body .discover-container .item-container .item-footer a:focus {
-              color: #FF6F00;
               text-decoration: none;
               background-color: transparent; }
-    html body .featured-stores-heading {
+            html body .discover-container .item-container .item-footer a:hover {
+              color: #FF6F00; }
+    html body .section-heading {
       margin-top: 60px;
       background-color: #FF6F00;
       border-radius: 20px 20px 0 0;
       padding-top: 15px;
       padding-bottom: 15px; }
-      html body .featured-stores-heading > h1 {
+      html body .section-heading > h1 {
         margin: 0;
         text-align: center;
         color: white; }
-    html body .featured-stores-main {
+    html body .section-main {
       padding-top: 30px;
       border: 3px solid #E7E8E9;
       border-top: none; }
-      html body .featured-stores-main .grey-text {
+      html body .section-main .padded-text {
+        margin-left: 20px;
+        margin-right: 20px; }
+      html body .section-main .grey-text {
         color: #808080; }
-        html body .featured-stores-main .grey-text .accent {
+        html body .section-main .grey-text .accent {
           color: #FF6F00; }
+      html body .section-main .list {
+        margin-top: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 20px;
+        line-height: 36px; }
+        html body .section-main .list .list-item > a {
+          color: black; }
+          html body .section-main .list .list-item > a:hover, html body .section-main .list .list-item > a:focus {
+            text-decoration: none;
+            background-color: transparent; }
+          html body .section-main .list .list-item > a:hover {
+            color: #FF6F00; }
+          html body .section-main .list .list-item > a.active {
+            color: #FF6F00; }
+        html body .section-main .list .list-more {
+          margin-top: 16px; }
+          html body .section-main .list .list-more > a {
+            color: #FF6F00; }
+            html body .section-main .list .list-more > a:hover, html body .section-main .list .list-more > a:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .section-main .list .list-more > a:hover {
+              color: #994300; }
+        html body .section-main .list .item-footer {
+          margin-top: 10px;
+          margin-bottom: 30px;
+          text-align: right;
+          font-size: 14px; }
+          html body .section-main .list .item-footer a {
+            color: black; }
+            html body .section-main .list .item-footer a:hover, html body .section-main .list .item-footer a:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .section-main .list .item-footer a:hover {
+              color: #FF6F00; }
     html body .pre-footer {
       height: 80px; }
     html body .footer {
@@ -165,9 +208,10 @@ html {
         margin-top: 10px;
         color: white; }
         html body .footer .footer-list:hover, html body .footer .footer-list:focus {
-          color: white;
           text-decoration: none;
           background-color: transparent; }
+        html body .footer .footer-list:hover {
+          color: white; }
         html body .footer .footer-list:hover {
           text-decoration: underline; }
       html body .footer .footer-copyright {
@@ -188,23 +232,26 @@ html {
         html body .view-options .view-options-left a {
           color: #FF6F00; }
           html body .view-options .view-options-left a:hover, html body .view-options .view-options-left a:focus {
-            color: #994300;
             text-decoration: none;
             background-color: transparent; }
+          html body .view-options .view-options-left a:hover {
+            color: #994300; }
       html body .view-options .view-options-right {
         font-size: 18px;
         text-align: right; }
         html body .view-options .view-options-right a {
           color: black; }
           html body .view-options .view-options-right a:hover, html body .view-options .view-options-right a:focus {
-            color: #FF6F00;
             text-decoration: none;
             background-color: transparent; }
+          html body .view-options .view-options-right a:hover {
+            color: #FF6F00; }
           html body .view-options .view-options-right a.active {
             color: #FF6F00; }
             html body .view-options .view-options-right a.active:hover, html body .view-options .view-options-right a.active:focus {
-              color: #994300;
               text-decoration: none;
               background-color: transparent; }
+            html body .view-options .view-options-right a.active:hover {
+              color: #994300; }
 
 /*# sourceMappingURL=application.css.map */
