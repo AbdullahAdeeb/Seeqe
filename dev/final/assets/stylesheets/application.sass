@@ -142,6 +142,54 @@ html
               .item-asked-by-name
                 @include hover($color-orange, darken($color-orange, 20))
 
+          .item-panel
+            border: 4px solid $color-orange
+
+            .item-picture
+              margin-top: 15px
+              margin-bottom: 15px
+              border: 2px solid $color-orange
+              width: 100%
+
+            .item-title, .item-description
+              margin-left: 16px
+
+            .item-title
+              margin-top: 54px
+              font-size: 30px
+
+            .item-description
+              margin-top: 40px
+              font-size: 14px
+
+              .item-asked-by-name
+                @include hover($color-orange, darken($color-orange, 20))
+
+            .answer
+              text-align: center
+
+              .form-group
+                margin-top: 16px
+                margin-right: 8px
+
+                .answer-label
+
+                  > label
+                    line-height: 28px
+                    color: $color-orange
+
+                .answer-input
+
+                  > input
+                    height: 28px
+                    border: 1px solid $color-orange
+
+              > button
+                background-color: $color-orange
+                color: white
+                border-radius: 16px
+
+
         .item-footer
           margin-top: 10px
           margin-bottom: 30px
@@ -243,6 +291,9 @@ html
         position: absolute
         margin-top: 32px
         height: 40px
+
+    .nopadding
+      padding: 0
 
     .view-options
       margin-top: 40px
