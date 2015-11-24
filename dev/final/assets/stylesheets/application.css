@@ -140,14 +140,34 @@ html {
               border: 6px solid #FF6F00;
               border-radius: 20px;
               width: 100%; }
+              @media (max-width: 767px) {
+                html body .discover-container .item-container .item-box .item-panel .item-picture {
+                  display: block;
+                  max-width: 280px;
+                  margin-left: auto;
+                  margin-right: auto; } }
             html body .discover-container .item-container .item-box .item-panel .item-title, html body .discover-container .item-container .item-box .item-panel .item-description {
               margin-left: 16px; }
             html body .discover-container .item-container .item-box .item-panel .item-title {
               margin-top: 54px;
               font-size: 30px; }
+              @media (max-width: 991px) {
+                html body .discover-container .item-container .item-box .item-panel .item-title {
+                  margin-top: 32px; } }
+              @media (max-width: 767px) {
+                html body .discover-container .item-container .item-box .item-panel .item-title {
+                  margin-top: 0;
+                  text-align: center; } }
             html body .discover-container .item-container .item-box .item-panel .item-description {
               margin-top: 40px;
               font-size: 14px; }
+              @media (max-width: 991px) {
+                html body .discover-container .item-container .item-box .item-panel .item-description {
+                  margin-top: 24px; } }
+              @media (max-width: 767px) {
+                html body .discover-container .item-container .item-box .item-panel .item-description {
+                  margin-top: 0;
+                  text-align: center; } }
               html body .discover-container .item-container .item-box .item-panel .item-description .item-asked-by-name {
                 color: #FF6F00; }
                 html body .discover-container .item-container .item-box .item-panel .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item-panel .item-description .item-asked-by-name:focus {
@@ -167,6 +187,8 @@ html {
                   height: 28px;
                   border: 1px solid #FF6F00; }
               html body .discover-container .item-container .item-box .item-panel .answer > button {
+                margin-top: 16px;
+                margin-bottom: 16px;
                 background-color: #FF6F00;
                 color: white;
                 border-radius: 16px; }

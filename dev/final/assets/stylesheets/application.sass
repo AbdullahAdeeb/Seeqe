@@ -163,6 +163,12 @@ html
               border-radius: $standard-border-radius
               width: 100%
 
+              @media (max-width: $bootstrap-xs-max)
+                display: block
+                max-width: 280px
+                margin-left: auto
+                margin-right: auto
+
             .item-title, .item-description
               margin-left: 16px
 
@@ -170,9 +176,23 @@ html
               margin-top: 54px
               font-size: 30px
 
+              @media (max-width: $bootstrap-sm-max)
+                margin-top: 32px
+
+              @media (max-width: $bootstrap-xs-max)
+                margin-top: 0
+                text-align: center
+
             .item-description
               margin-top: 40px
               font-size: 14px
+
+              @media (max-width: $bootstrap-sm-max)
+                margin-top: 24px
+
+              @media (max-width: $bootstrap-xs-max)
+                margin-top: 0
+                text-align: center
 
               .item-asked-by-name
                 @include hover($color-orange, darken($color-orange, 20))
@@ -197,6 +217,8 @@ html
                     border: 1px solid $color-orange
 
               > button
+                margin-top: 16px
+                margin-bottom: 16px
                 background-color: $color-orange
                 color: white
                 border-radius: 16px
