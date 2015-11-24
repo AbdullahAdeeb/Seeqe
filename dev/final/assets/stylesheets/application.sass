@@ -13,7 +13,7 @@ html
     margin-bottom: $footer-height
 
     .navbar-main
-      padding: 0 25px 10px
+      padding: 0 25px
       margin-bottom: 0
       border-bottom: 2px solid $color-orange
 
@@ -39,21 +39,28 @@ html
             line-height: $navbar-height - 30px
             @include hover($color-orange, darken($color-orange, 20))
 
-          .navbar-profile-pic
-            height: $navbar-height - 30px
-            border: 2px solid $color-orange
-            border-radius: ($navbar-height - 30px) / 2
-            margin-right: 10px
+            &.navbar-notifications
+              margin-top: ($navbar-height - 60px) / 2
+              margin-right: 15px
+              padding-left: 0
+              padding-right: 0
+              height: 30px
+              width: 30px
+              border: 1px solid $color-orange
+              border-radius: 15px
+              text-align: center
+              line-height: 30px
+              font-size: 18px
 
-          .navbar-notifications
-            margin-top: ($navbar-height - 60px) / 2
-            height: 30px
-            width: 30px
-            border: 1px solid $color-orange
-            border-radius: 15px
-            text-align: center
-            line-height: 30px
-            font-size: 18px
+            &.navbar-profile-pic
+              padding-right: 0
+              height: $navbar-height - 30px
+
+              > img
+                display: block
+                height: $navbar-height - 30px
+                border: 2px solid $color-orange
+                border-radius: ($navbar-height - 30px) / 2
 
     .banner
       height: 400px

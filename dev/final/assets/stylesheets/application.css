@@ -12,43 +12,49 @@ html {
     color: black;
     margin-bottom: 310px; }
     html body .navbar-main {
-      padding: 0 25px 10px;
+      padding: 0 25px;
       margin-bottom: 0;
       border-bottom: 2px solid #FF6F00; }
       html body .navbar-main .navbar-header {
         margin-right: 20px; }
         html body .navbar-main .navbar-header .navbar-brand {
-          height: 90px; }
+          height: 70px; }
           html body .navbar-main .navbar-header .navbar-brand .navbar-logo {
-            height: 60px; }
+            height: 40px; }
       html body .navbar-main #navbar .navbar-nav {
-        height: 90px;
+        height: 70px;
         padding-top: 15px;
         padding-bottom: 15px; }
         html body .navbar-main #navbar .navbar-nav > li > a {
           padding-top: 0;
           padding-bottom: 0;
-          line-height: 60px;
+          line-height: 40px;
           color: #FF6F00; }
           html body .navbar-main #navbar .navbar-nav > li > a:hover, html body .navbar-main #navbar .navbar-nav > li > a:focus {
             text-decoration: none;
             background-color: transparent; }
           html body .navbar-main #navbar .navbar-nav > li > a:hover {
             color: #994300; }
-        html body .navbar-main #navbar .navbar-nav .navbar-profile-pic {
-          height: 60px;
-          border: 2px solid #FF6F00;
-          border-radius: 30px;
-          margin-right: 10px; }
-        html body .navbar-main #navbar .navbar-nav .navbar-notifications {
-          margin-top: 15px;
-          height: 30px;
-          width: 30px;
-          border: 1px solid #FF6F00;
-          border-radius: 15px;
-          text-align: center;
-          line-height: 30px;
-          font-size: 18px; }
+          html body .navbar-main #navbar .navbar-nav > li > a.navbar-notifications {
+            margin-top: 5px;
+            margin-right: 15px;
+            padding-left: 0;
+            padding-right: 0;
+            height: 30px;
+            width: 30px;
+            border: 1px solid #FF6F00;
+            border-radius: 15px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 18px; }
+          html body .navbar-main #navbar .navbar-nav > li > a.navbar-profile-pic {
+            padding-right: 0;
+            height: 40px; }
+            html body .navbar-main #navbar .navbar-nav > li > a.navbar-profile-pic > img {
+              display: block;
+              height: 40px;
+              border: 2px solid #FF6F00;
+              border-radius: 20px; }
     html body .banner {
       height: 400px;
       background-repeat: no-repeat;
