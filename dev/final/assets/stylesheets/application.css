@@ -102,10 +102,11 @@ html {
         html body .discover-container .item-container .item-box {
           padding: 20px; }
           html body .discover-container .item-container .item-box .item {
-            border: 4px solid #FF6F00;
-            border-radius: 6px; }
+            border: 6px solid #FF6F00;
+            border-radius: 20px; }
             html body .discover-container .item-container .item-box .item .item-picture {
-              width: 100%; }
+              width: 100%;
+              border-radius: 14px 14px 0 0; }
             html body .discover-container .item-container .item-box .item .item-title, html body .discover-container .item-container .item-box .item .item-description {
               margin-left: 12px;
               margin-right: 12px; }
@@ -123,11 +124,13 @@ html {
                 html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover {
                   color: #994300; }
           html body .discover-container .item-container .item-box .item-panel {
-            border: 4px solid #FF6F00; }
+            border: 6px solid #FF6F00;
+            border-radius: 26px; }
             html body .discover-container .item-container .item-box .item-panel .item-picture {
               margin-top: 15px;
               margin-bottom: 15px;
-              border: 2px solid #FF6F00;
+              border: 6px solid #FF6F00;
+              border-radius: 20px;
               width: 100%; }
             html body .discover-container .item-container .item-box .item-panel .item-title, html body .discover-container .item-container .item-box .item-panel .item-description {
               margin-left: 16px; }

@@ -121,11 +121,12 @@ html
           padding: $item-display-padding
 
           .item
-            border: 4px solid $color-orange
-            border-radius: 6px
+            border: $standard-border solid $color-orange
+            border-radius: $standard-border-radius
 
             .item-picture
               width: 100%
+              border-radius: ($standard-border-radius - $standard-border) ($standard-border-radius - $standard-border) 0 0
 
             .item-title, .item-description
               margin-left: 12px
@@ -143,12 +144,14 @@ html
                 @include hover($color-orange, darken($color-orange, 20))
 
           .item-panel
-            border: 4px solid $color-orange
+            border: $standard-border solid $color-orange
+            border-radius: $standard-border-radius + $standard-border
 
             .item-picture
               margin-top: 15px
               margin-bottom: 15px
-              border: 2px solid $color-orange
+              border: $standard-border solid $color-orange
+              border-radius: $standard-border-radius
               width: 100%
 
             .item-title, .item-description
