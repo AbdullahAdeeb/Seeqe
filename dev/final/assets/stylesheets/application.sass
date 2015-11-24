@@ -115,6 +115,7 @@ html
       border-top: none
 
       .grey-text
+        font-size: 20px
         color: $color-text-grey
 
         .accent
@@ -148,7 +149,7 @@ html
               margin-bottom: 0
               font-size: 12px
 
-              .item-asked-by-name
+              .item-asked-by-name, .answer-count
                 @include hover($color-orange, darken($color-orange, 20))
 
           .item-panel
@@ -232,6 +233,7 @@ html
         margin-right: $item-display-padding
 
       .grey-text
+        font-size: 20px
         color: $color-text-grey
 
         .accent
@@ -303,8 +305,19 @@ html
         margin-top: 32px
         height: 40px
 
+    .nomargin
+      margin: 0
+
     .nopadding
       padding: 0
+
+    .float-left
+      float: left
+
+    .float-right
+      float: right
+
+    .clear
 
     .view-options
       margin-top: 40px

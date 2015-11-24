@@ -99,6 +99,7 @@ html {
       border: 3px solid #E7E8E9;
       border-top: none; }
       html body .discover-container .grey-text {
+        font-size: 20px;
         color: #808080; }
         html body .discover-container .grey-text .accent {
           color: #FF6F00; }
@@ -123,12 +124,12 @@ html {
             html body .discover-container .item-container .item-box .item .item-description {
               margin-bottom: 0;
               font-size: 12px; }
-              html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name {
+              html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name, html body .discover-container .item-container .item-box .item .item-description .answer-count {
                 color: #FF6F00; }
-                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:focus {
+                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:focus, html body .discover-container .item-container .item-box .item .item-description .answer-count:hover, html body .discover-container .item-container .item-box .item .item-description .answer-count:focus {
                   text-decoration: none;
                   background-color: transparent; }
-                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover {
+                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item .item-description .answer-count:hover {
                   color: #994300; }
           html body .discover-container .item-container .item-box .item-panel {
             border: 6px solid #FF6F00;
@@ -199,6 +200,7 @@ html {
         margin-left: 20px;
         margin-right: 20px; }
       html body .section-main .grey-text {
+        font-size: 20px;
         color: #808080; }
         html body .section-main .grey-text .accent {
           color: #FF6F00; }
@@ -272,8 +274,14 @@ html {
         position: absolute;
         margin-top: 32px;
         height: 40px; }
+    html body .nomargin {
+      margin: 0; }
     html body .nopadding {
       padding: 0; }
+    html body .float-left {
+      float: left; }
+    html body .float-right {
+      float: right; }
     html body .view-options {
       margin-top: 40px; }
       html body .view-options .view-options-left {

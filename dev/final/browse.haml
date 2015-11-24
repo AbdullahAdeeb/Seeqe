@@ -48,10 +48,12 @@
             .item
               %img.item-picture{:src => 'http://lorempixel.com/400/300'}
               %h4.item-title Thing #{i}
-              %p.item-description
+              %p.item-description.float-left
                 Asked by
-                %a.item-asked-by-name Jeff Hudson
-              %p.item-description 4 Answers
+                %a.item-asked-by-name{:href => '#'} Jeff Hudson
+              %p.item-description.float-right
+                %a.answer-count{:href => '#'} 4 Answers
+              .clear &nbsp;
         .col-xs-12.item-footer
           %a{:href => '#'}
             Return to top
