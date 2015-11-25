@@ -14,6 +14,7 @@ html {
     html body .navbar-main {
       padding: 0 25px;
       margin-bottom: 0;
+      border: 0;
       border-bottom: 2px solid #FF6F00; }
       html body .navbar-main .navbar-header {
         margin-right: 20px; }
@@ -55,10 +56,34 @@ html {
               height: 40px;
               border: 2px solid #FF6F00;
               border-radius: 20px; }
+    html body .login-page {
+      position: absolute;
+      top: 72px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed; }
+      html body .login-page .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 420px;
+        max-width: 100%;
+        background-color: rgba(255, 111, 0, 0.75);
+        padding: 30px; }
+        html body .login-page .login-box .login-box-logo {
+          height: 60px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
     html body .banner {
       height: 400px;
       background-repeat: no-repeat;
-      background-position-y: center;
+      background-position: center;
       background-size: cover;
       background-attachment: fixed; }
       html body .banner > h1, html body .banner > p {

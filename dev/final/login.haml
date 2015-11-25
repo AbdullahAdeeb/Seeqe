@@ -4,4 +4,6 @@
     = Haml::Engine.new(File.read('_header.haml')).render
   %body
     = Haml::Engine.new(File.read('_navbar.haml')).render
-    .login-page
+    .login-page{:style => 'background-image: url(\'assets/images/login_page_background.jpg\')'}
+      .login-box
+        %img.login-box-logo{:src => 'assets/images/seeqe_logo_white.png'}
