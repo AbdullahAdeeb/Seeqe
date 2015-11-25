@@ -81,6 +81,48 @@ html {
           display: block;
           margin-left: auto;
           margin-right: auto; }
+        html body .login-page .login-box .login-form {
+          margin-top: 30px; }
+          html body .login-page .login-box .login-form input[type=text], html body .login-page .login-box .login-form input[type=password] {
+            height: 48px;
+            width: 100%;
+            padding: 8px;
+            font-size: 16px; }
+          html body .login-page .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label, html body .login-page .login-box .login-form .forgot-password {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px; }
+          html body .login-page .login-box .login-form .checkbox {
+            margin: 0; }
+            html body .login-page .login-box .login-form .checkbox input[type=checkbox] {
+              display: none; }
+              html body .login-page .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label {
+                padding-left: 10px; }
+                html body .login-page .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label:before {
+                  content: "";
+                  text-align: center;
+                  display: inline-block;
+                  vertical-align: top;
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 10px;
+                  border: 2px solid white;
+                  border-radius: 4px; }
+              html body .login-page .login-box .login-form .checkbox input[type=checkbox]:checked + .remember-me-label:before {
+                background-color: white; }
+          html body .login-page .login-box .login-form .forgot-password {
+            text-align: right; }
+            html body .login-page .login-box .login-form .forgot-password a {
+              padding-right: 10px;
+              color: white; }
+              html body .login-page .login-box .login-form .forgot-password a:hover, html body .login-page .login-box .login-form .forgot-password a:focus {
+                text-decoration: none;
+                background-color: transparent; }
+              html body .login-page .login-box .login-form .forgot-password a:hover {
+                color: white; }
+              html body .login-page .login-box .login-form .forgot-password a:hover {
+                text-decoration: underline; }
     html body .banner {
       height: 400px;
       background-repeat: no-repeat;

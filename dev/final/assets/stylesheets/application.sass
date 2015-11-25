@@ -85,6 +85,54 @@ html
           margin-left: auto
           margin-right: auto
 
+        .login-form
+          margin-top: 30px
+
+          input[type=text], input[type=password]
+            height: 48px
+            width: 100%
+            padding: 8px
+            font-size: 16px
+
+          .checkbox input[type=checkbox] + .remember-me-label, .forgot-password
+            color: white
+            font-weight: bold
+            font-size: 14px
+            line-height: $login-checkbox-size
+
+          .checkbox
+            margin: 0
+
+            input[type=checkbox]
+              display: none
+
+              + .remember-me-label
+                padding-left: $login-text-padding-x
+
+                &:before
+                  content: ''
+                  text-align: center
+                  display: inline-block
+                  vertical-align: top
+                  width: $login-checkbox-size
+                  height: $login-checkbox-size
+                  margin-right: 10px
+                  border: 2px solid white
+                  border-radius: 4px
+
+              &:checked + .remember-me-label:before
+                background-color: white
+
+          .forgot-password
+            text-align: right
+
+            a
+              padding-right: $login-text-padding-x
+              @include hover(white, white)
+
+              &:hover
+                text-decoration: underline
+
     .banner
       height: 400px
       @include full-background()
