@@ -12,14 +12,15 @@ html {
     color: black;
     margin-bottom: 310px; }
     html body .navbar-main {
-      padding: 0 25px;
+      padding: 0 20px;
       margin-bottom: 0;
       border: 0;
       border-bottom: 2px solid #FF6F00; }
       html body .navbar-main .navbar-header {
         margin-right: 20px; }
         html body .navbar-main .navbar-header .navbar-brand {
-          height: 70px; }
+          height: 70px;
+          padding: 15px 15px; }
           html body .navbar-main .navbar-header .navbar-brand .navbar-logo {
             height: 40px; }
       html body .navbar-main #navbar .navbar-nav {
@@ -38,18 +39,18 @@ html {
             color: #994300; }
           html body .navbar-main #navbar .navbar-nav > li > a.navbar-notifications {
             margin-top: 5px;
-            margin-right: 15px;
+            margin-right: 20px;
             padding-left: 0;
             padding-right: 0;
             height: 30px;
             width: 30px;
             border: 1px solid #FF6F00;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
             line-height: 30px;
             font-size: 18px; }
           html body .navbar-main #navbar .navbar-nav > li > a.navbar-profile-pic {
-            padding-right: 0;
+            padding: 0px 0;
             height: 40px; }
             html body .navbar-main #navbar .navbar-nav > li > a.navbar-profile-pic > img {
               display: block;

@@ -13,19 +13,20 @@ html
     margin-bottom: $footer-height
 
     .navbar-main
-      padding: 0 25px
+      padding: 0 $navbar-spacing-x
       margin-bottom: 0
       border: 0
       border-bottom: $navbar-border-height solid $color-orange
 
       .navbar-header
-        margin-right: 20px
+        margin-right: $navbar-spacing-x
 
         .navbar-brand
           height: $navbar-height
+          padding: (($navbar-height - $navbar-image-height) / 2) 15px
 
           .navbar-logo
-            height: $navbar-height - 30px
+            height: $navbar-image-height
 
       #navbar
 
@@ -42,24 +43,24 @@ html
 
             &.navbar-notifications
               margin-top: ($navbar-height - 60px) / 2
-              margin-right: 15px
+              margin-right: $navbar-spacing-x
               padding-left: 0
               padding-right: 0
               height: 30px
               width: 30px
               border: 1px solid $color-orange
-              border-radius: 15px
+              border-radius: $navbar-image-height / 2
               text-align: center
               line-height: 30px
               font-size: 18px
 
             &.navbar-profile-pic
-              padding-right: 0
-              height: $navbar-height - 30px
+              padding: (($navbar-height - $navbar-image-height) / 2 - 15px) 0
+              height: $navbar-image-height
 
               > img
                 display: block
-                height: $navbar-height - 30px
+                height: $navbar-image-height
                 border: 2px solid $color-orange
                 border-radius: ($navbar-height - 30px) / 2
 
@@ -72,10 +73,7 @@ html
       @include full-background()
 
       .login-box
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translateY(-50%) translateX(-50%)
+        @include center-x-y()
         width: 420px
         max-width: 100%
         background-color: transparentize($color-orange, 0.25)
