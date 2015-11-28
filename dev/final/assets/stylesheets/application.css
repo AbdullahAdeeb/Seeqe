@@ -14,6 +14,7 @@ html {
     html body .navbar-main {
       padding: 0 20px;
       margin-bottom: 0;
+      background-color: white;
       border: 0;
       border-bottom: 2px solid #FF6F00; }
       html body .navbar-main .navbar-header {
@@ -23,6 +24,9 @@ html {
           padding: 15px 15px; }
           html body .navbar-main .navbar-header .navbar-brand .navbar-logo {
             height: 40px; }
+      html body .navbar-main.navbar-transparent {
+        background-color: transparent;
+        border-bottom: 0; }
       html body .navbar-main #navbar .navbar-nav {
         height: 70px;
         padding-top: 15px;
@@ -37,6 +41,9 @@ html {
             background-color: transparent; }
           html body .navbar-main #navbar .navbar-nav > li > a:hover {
             color: #994300; }
+          html body .navbar-main #navbar .navbar-nav > li > a.navbar-login, html body .navbar-main #navbar .navbar-nav > li > a.navbar-signup {
+            margin-top: 5px;
+            text-align: center; }
           html body .navbar-main #navbar .navbar-nav > li > a.navbar-notifications {
             margin-top: 5px;
             margin-right: 20px;
@@ -57,8 +64,36 @@ html {
               height: 40px;
               border: 2px solid #FF6F00;
               border-radius: 20px; }
+    html body .index-page {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed; }
+      html body .index-page .index-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        padding: 30px;
+        text-align: center; }
+        html body .index-page .index-box .index-box-heading, html body .index-page .index-box .index-box-subheading {
+          width: 600px;
+          max-width: 100%; }
+        html body .index-page .index-box .index-box-heading {
+          font-size: 60px;
+          color: #FF6F00; }
+        html body .index-page .index-box .index-box-subheading {
+          font-size: 26px;
+          color: white; }
     html body .login-page {
       position: absolute;
+      z-index: -1;
       top: 72px;
       right: 0;
       bottom: 0;
@@ -405,6 +440,8 @@ html {
       float: left; }
     html body .float-right {
       float: right; }
+    html body .shader-black {
+      background-color: rgba(31, 31, 31, 0.5); }
     html body .view-options {
       margin-top: 40px; }
       html body .view-options .view-options-left {

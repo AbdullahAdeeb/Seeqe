@@ -15,6 +15,7 @@ html
     .navbar-main
       padding: 0 $navbar-spacing-x
       margin-bottom: 0
+      background-color: white
       border: 0
       border-bottom: $navbar-border-height solid $color-orange
 
@@ -28,6 +29,10 @@ html
           .navbar-logo
             height: $navbar-image-height
 
+      &.navbar-transparent
+        background-color: transparent
+        border-bottom: 0
+
       #navbar
 
         .navbar-nav
@@ -40,6 +45,10 @@ html
             padding-bottom: 0
             line-height: $navbar-height - 30px
             @include hover($color-orange, darken($color-orange, 20))
+
+            &.navbar-login, &.navbar-signup
+              margin-top: ($navbar-height - 60px) / 2
+              text-align: center
 
             &.navbar-notifications
               margin-top: ($navbar-height - 60px) / 2
@@ -64,8 +73,35 @@ html
                 border: 2px solid $color-orange
                 border-radius: ($navbar-height - 30px) / 2
 
+    .index-page
+      position: absolute
+      z-index: -1
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      @include full-background()
+
+      .index-box
+        @include center-x-y()
+        padding: 30px
+        text-align: center
+
+        .index-box-heading, .index-box-subheading
+          width: 600px
+          max-width: 100%
+
+        .index-box-heading
+          font-size: 60px
+          color: $color-orange
+
+        .index-box-subheading
+          font-size: 26px
+          color: white
+
     .login-page
       position: absolute
+      z-index: -1
       top: $navbar-height + $navbar-border-height
       right: 0
       bottom: 0
@@ -436,6 +472,9 @@ html
 
     .float-right
       float: right
+
+    .shader-black
+      background-color: rgba(31, 31, 31, 0.5)
 
     .view-options
       margin-top: 40px

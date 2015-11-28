@@ -1,0 +1,11 @@
+!!! html
+%html{:lang => 'en'}
+  %head
+    = Haml::Engine.new(File.read('_header.haml')).render
+  %body
+    = Haml::Engine.new(File.read('_navbar-transparent.haml')).render
+    .index-page{:style => 'background-image: url(\'assets/images/backgrounds/index_page.jpg\')'}
+    .index-page.shader-black
+      .index-box
+        %h1.index-box-heading Find Local Products
+        %h4.index-box-subheading The first community-based product finding platform for offline retail
