@@ -14,7 +14,7 @@
     <script src='assets/javascripts/application.js'></script>
   </head>
   <body>
-    <nav class='navbar navbar-main'>
+    <nav class='navbar navbar-main navbar-transparent'>
       <div class='container-fluid'>
         <div class='navbar-header'>
           <button aria-expanded='false' class='navbar-toggle collapsed' data-target='#navbar' data-toggle='collapse' type='button'>
@@ -43,60 +43,51 @@
           </ul>
           <ul class='nav navbar-nav navbar-right'>
             <li>
-              <a class='navbar-notifications' href='#'>
-                <i class='fa fa-bell-o'></i>
-              </a>
+              <a class='navbar-login' href='#'>Log In</a>
             </li>
             <li>
-              <a class='navbar-profile-pic' href='#'>
-                <img alt='' src='assets/images/profile_pic.jpg'>
-              </a>
-            </li>
-            <li>
-              <a class='navbar-name' href='#'>
-                Profile
-              </a>
+              <a class='navbar-signup' href='#'>Sign Up</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class='login-page' style="background-image: url('assets/images/backgrounds/login_page.jpg')">
-      <div class='login-box'>
-        <img class='login-box-logo' src='assets/images/seeqe_logo_white.png'>
-        <form class='login-form'>
-          <div class='form-group'>
-            <input class='large-input' placeholder='Username / Email' type='text'>
+    <div class='login-page' style="background-image: url('assets/images/backgrounds/login_page.jpg')"></div>
+    <div class='login-page shader-black'></div>
+    <div class='login-box'>
+      <img class='login-box-logo' src='assets/images/seeqe_logo_white.png'>
+      <form class='login-form'>
+        <div class='form-group'>
+          <input class='large-input' placeholder='Username / Email' type='text'>
+        </div>
+        <div class='form-group'>
+          <input class='large-input' placeholder='Password' type='password'>
+        </div>
+        <div class='row'>
+          <div class='col-sm-6 checkbox'>
+            <input class='remember-me' id='checkbox-remember-me' type='checkbox'>
+            <label class='remember-me-label' for='checkbox-remember-me'>
+              Remember Me
+            </label>
           </div>
-          <div class='form-group'>
-            <input class='large-input' placeholder='Password' type='password'>
+          <div class='col-sm-6 forgot-password'>
+            <a href='#'>
+              Forgot Password?
+            </a>
           </div>
-          <div class='row'>
-            <div class='col-sm-6 checkbox'>
-              <input class='remember-me' id='checkbox-remember-me' type='checkbox'>
-              <label class='remember-me-label' for='checkbox-remember-me'>
-                Remember Me
-              </label>
-            </div>
-            <div class='col-sm-6 forgot-password'>
-              <a href='#'>
-                Forgot Password?
-              </a>
-            </div>
-          </div>
-          <button class='btn large-input' type='submit'>Log In</button>
-        </form>
-        <div class='breakup'>Or</div>
-        <button class='btn social-sign-in facebook-sign-in large-input' type='submit'>
-          <i class='fa fa-facebook-square'></i>
-          Sign in via Facebook
-        </button>
-        <button class='btn social-sign-in twitter-sign-in large-input' type='submit'>
-          <i class='fa fa-twitter-square'></i>
-          Sign in via Twitter
-        </button>
-        <a class='signup-link' href='#'>Still not a member? Create an account here</a>
-      </div>
+        </div>
+        <button class='btn large-input' type='submit'>Log In</button>
+      </form>
+      <div class='breakup'>Or</div>
+      <button class='btn social-sign-in facebook-sign-in large-input' type='submit'>
+        <i class='fa fa-facebook-square'></i>
+        Sign in via Facebook
+      </button>
+      <button class='btn social-sign-in twitter-sign-in large-input' type='submit'>
+        <i class='fa fa-twitter-square'></i>
+        Sign in via Twitter
+      </button>
+      <a class='signup-link' href='#'>Still not a member? Create an account here</a>
     </div>
   </body>
 </html>

@@ -3,29 +3,30 @@
   %head
     = Haml::Engine.new(File.read('_header.haml')).render
   %body
-    = Haml::Engine.new(File.read('_navbar.haml')).render
+    = Haml::Engine.new(File.read('_navbar-transparent.haml')).render
     .login-page{:style => 'background-image: url(\'assets/images/backgrounds/login_page.jpg\')'}
-      .login-box
-        %img.login-box-logo{:src => 'assets/images/seeqe_logo_white.png'}
-        %form.login-form
-          .form-group
-            %input.large-input{:type => 'text', :placeholder => 'Username / Email'}
-          .form-group
-            %input.large-input{:type => 'password', :placeholder => 'Password'}
-          .row
-            .col-sm-6.checkbox
-              %input#checkbox-remember-me.remember-me{:type => 'checkbox'}
-              %label.remember-me-label{:for => 'checkbox-remember-me'}
-                Remember Me
-            .col-sm-6.forgot-password
-              %a{:href => '#'}
-                Forgot Password?
-          %button.btn.large-input{:type => 'submit'} Log In
-        .breakup Or
-        %button.btn.social-sign-in.facebook-sign-in.large-input{:type => 'submit'}
-          %i.fa.fa-facebook-square
-          Sign in via Facebook
-        %button.btn.social-sign-in.twitter-sign-in.large-input{:type => 'submit'}
-          %i.fa.fa-twitter-square
-          Sign in via Twitter
-        %a.signup-link{:href => '#'} Still not a member? Create an account here
+    .login-page.shader-black
+    .login-box
+      %img.login-box-logo{:src => 'assets/images/seeqe_logo_white.png'}
+      %form.login-form
+        .form-group
+          %input.large-input{:type => 'text', :placeholder => 'Username / Email'}
+        .form-group
+          %input.large-input{:type => 'password', :placeholder => 'Password'}
+        .row
+          .col-sm-6.checkbox
+            %input#checkbox-remember-me.remember-me{:type => 'checkbox'}
+            %label.remember-me-label{:for => 'checkbox-remember-me'}
+              Remember Me
+          .col-sm-6.forgot-password
+            %a{:href => '#'}
+              Forgot Password?
+        %button.btn.large-input{:type => 'submit'} Log In
+      .breakup Or
+      %button.btn.social-sign-in.facebook-sign-in.large-input{:type => 'submit'}
+        %i.fa.fa-facebook-square
+        Sign in via Facebook
+      %button.btn.social-sign-in.twitter-sign-in.large-input{:type => 'submit'}
+        %i.fa.fa-twitter-square
+        Sign in via Twitter
+      %a.signup-link{:href => '#'} Still not a member? Create an account here

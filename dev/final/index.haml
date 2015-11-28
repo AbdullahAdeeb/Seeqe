@@ -6,6 +6,20 @@
     = Haml::Engine.new(File.read('_navbar-transparent.haml')).render
     .index-page{:style => 'background-image: url(\'assets/images/backgrounds/index_page.jpg\')'}
     .index-page.shader-black
-      .index-box
-        %h1.index-box-heading Find Local Products
-        %h4.index-box-subheading The first community-based product finding platform for offline retail
+    .index-box
+      %h1.index-box-heading Find Local Products
+      %h4.index-box-subheading The first community-based product finding platform for offline retail
+      .index-box-ask
+        %form.index-ask-form.form-inline
+          %span Where can I find
+          .form-group
+            %input#ask-product{:type => 'text', :placeholder => 'e.g. Rock Tape'}
+          %span in
+          .form-group
+            %input#ask-location{:type => 'text', :placeholder => 'e.g. Ottawa'}
+          %span.hidden-xs ?
+          %button.btn{:type => 'submit'} Seeqe
+      %p.index-box-learn-heading Want to learn more about Seeqe?
+      %p.index-box-learn-content
+        Visit our About Us page to get a more in-depth look at how Seeqe works,
+        and to find out what we have planned for businesses around the world.

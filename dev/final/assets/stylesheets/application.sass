@@ -73,7 +73,7 @@ html
                 border-radius: ($navbar-height - 30px) / 2
 
     .index-page
-      position: absolute
+      position: fixed
       z-index: -1
       top: 0
       right: 0
@@ -81,124 +81,165 @@ html
       left: 0
       @include full-background()
 
-      .index-box
-        @include center-x-y()
-        padding: 30px
-        text-align: center
+    .index-box
+      @include center-x()
+      top: $navbar-height + $navbar-border-height + 50px
+      width: 720px
+      max-width: 100%
+      text-align: center
+      padding: 30px
 
-        .index-box-heading, .index-box-subheading
-          width: 600px
-          max-width: 100%
+      .index-box-heading, .index-box-subheading, .index-box-learn-heading, .index-box-learn-content
+        margin-left: auto
+        margin-right: auto
+        width: 600px
+        max-width: 100%
 
-        .index-box-heading
-          font-size: 60px
-          color: $color-orange
+      .index-box-heading
+        font-size: 60px
+        color: $color-orange
 
-        .index-box-subheading
-          font-size: 26px
-          color: white
+      .index-box-subheading
+        margin-top: 15px
+        font-size: 26px
+        color: white
+
+      .index-box-ask
+        margin-top: 70px
+        margin-bottom: 70px
+        color: $color-orange
+        font-size: 16px
+        font-weight: bold
+
+        .index-ask-form
+
+          .form-group
+            margin-top: 10px
+            margin-bottom: 10px
+
+          input, button
+            font-weight: normal
+
+          button
+            margin-top: 10px
+            height: 34px
+            border-radius: 17px
+            background-color: $color-orange
+            color: white
+
+            @media (min-width: $bootstrap-sm-min)
+              margin-left: 40px
+
+      .index-box-learn-heading
+        font-size: 16px
+        color: $color-orange
+
+      .index-box-learn-content
+        font-size: 16px
+        color: white
 
     .login-page
-      position: absolute
+      position: fixed
       z-index: -1
-      top: $navbar-height + $navbar-border-height
+      top: 0
       right: 0
       bottom: 0
       left: 0
       @include full-background()
 
-      .login-box
-        @include center-x-y()
-        width: 420px
-        max-width: 100%
-        background-color: transparentize($color-orange, 0.25)
-        padding: 30px
+    .login-box
+      @include center-x()
+      top: $navbar-height + $navbar-border-height + 50px
+      width: 420px
+      max-width: 100%
+      background-color: transparentize($color-orange, 0.25)
+      padding: 30px
 
-        .login-box-logo
-          height: 60px
-          display: block
-          margin-left: auto
-          margin-right: auto
+      .login-box-logo
+        height: 60px
+        display: block
+        margin-left: auto
+        margin-right: auto
 
-        .login-form
-          margin-top: 30px
+      .login-form
+        margin-top: 30px
 
-          input[type=text], input[type=password]
-            padding: 8px
+        input[type=text], input[type=password]
+          padding: 8px
 
-          .checkbox input[type=checkbox] + .remember-me-label, .forgot-password
-            color: white
-            font-weight: bold
-            font-size: 14px
-            line-height: $login-checkbox-size
-
-          .checkbox
-            margin: 0
-
-            input[type=checkbox]
-              display: none
-
-              + .remember-me-label
-                padding-left: $login-text-padding-x
-
-                &:before
-                  content: ''
-                  text-align: center
-                  display: inline-block
-                  vertical-align: top
-                  width: $login-checkbox-size
-                  height: $login-checkbox-size
-                  margin-right: 10px
-                  border: 2px solid white
-                  border-radius: 4px
-
-              &:checked + .remember-me-label:before
-                background-color: white
-
-          .forgot-password
-            text-align: right
-
-            a
-              padding-right: $login-text-padding-x
-              @include hover(white, white)
-              @include hover-underline()
-
-          button
-            margin-top: 15px
-            background-color: lighten($color-orange, 10)
-            color: white
-
-        .breakup
-          margin-top: 35px
-          margin-bottom: 35px
-          text-align: center
+        .checkbox input[type=checkbox] + .remember-me-label, .forgot-password
           color: white
-          font-size: 20px
           font-weight: bold
-
-        .large-input
-          height: 48px
-          width: 100%
-          font-size: 16px
-
-        .social-sign-in
-          margin-bottom: 15px
-          color: white
-
-          &.facebook-sign-in
-            background-color: $color-facebook-blue
-
-          &.twitter-sign-in
-            background-color: $color-twitter-blue
-
-        .signup-link
-          display: block
-          margin-top: 15px
-          text-align: center
-          color: white
           font-size: 14px
-          @include hover(white, white)
-          @include hover-underline()
+          line-height: $login-checkbox-size
+
+        .checkbox
+          margin: 0
+
+          input[type=checkbox]
+            display: none
+
+            + .remember-me-label
+              padding-left: $login-text-padding-x
+
+              &:before
+                content: ''
+                text-align: center
+                display: inline-block
+                vertical-align: top
+                width: $login-checkbox-size
+                height: $login-checkbox-size
+                margin-right: 10px
+                border: 2px solid white
+                border-radius: 4px
+
+            &:checked + .remember-me-label:before
+              background-color: white
+
+        .forgot-password
+          text-align: right
+
+          a
+            padding-right: $login-text-padding-x
+            @include hover(white, white)
+            @include hover-underline()
+
+        button
+          margin-top: 15px
+          background-color: lighten($color-orange, 10)
+          color: white
+
+      .breakup
+        margin-top: 35px
+        margin-bottom: 35px
+        text-align: center
+        color: white
+        font-size: 20px
+        font-weight: bold
+
+      .large-input
+        height: 48px
+        width: 100%
+        font-size: 16px
+
+      .social-sign-in
+        margin-bottom: 15px
+        color: white
+
+        &.facebook-sign-in
+          background-color: $color-facebook-blue
+
+        &.twitter-sign-in
+          background-color: $color-twitter-blue
+
+      .signup-link
+        display: block
+        margin-top: 15px
+        text-align: center
+        color: white
+        font-size: 14px
+        @include hover(white, white)
+        @include hover-underline()
 
     .banner
       height: 400px

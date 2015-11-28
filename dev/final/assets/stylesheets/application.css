@@ -64,7 +64,7 @@ html {
               border: 2px solid #FF6F00;
               border-radius: 20px; }
     html body .index-page {
-      position: absolute;
+      position: fixed;
       z-index: -1;
       top: 0;
       right: 0;
@@ -74,26 +74,57 @@ html {
       background-position: center;
       background-size: cover;
       background-attachment: fixed; }
-      html body .index-page .index-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        padding: 30px;
-        text-align: center; }
-        html body .index-page .index-box .index-box-heading, html body .index-page .index-box .index-box-subheading {
-          width: 600px;
-          max-width: 100%; }
-        html body .index-page .index-box .index-box-heading {
-          font-size: 60px;
-          color: #FF6F00; }
-        html body .index-page .index-box .index-box-subheading {
-          font-size: 26px;
-          color: white; }
-    html body .login-page {
+    html body .index-box {
       position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 122px;
+      width: 720px;
+      max-width: 100%;
+      text-align: center;
+      padding: 30px; }
+      html body .index-box .index-box-heading, html body .index-box .index-box-subheading, html body .index-box .index-box-learn-heading, html body .index-box .index-box-learn-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        max-width: 100%; }
+      html body .index-box .index-box-heading {
+        font-size: 60px;
+        color: #FF6F00; }
+      html body .index-box .index-box-subheading {
+        margin-top: 15px;
+        font-size: 26px;
+        color: white; }
+      html body .index-box .index-box-ask {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        color: #FF6F00;
+        font-size: 16px;
+        font-weight: bold; }
+        html body .index-box .index-box-ask .index-ask-form .form-group {
+          margin-top: 10px;
+          margin-bottom: 10px; }
+        html body .index-box .index-box-ask .index-ask-form input, html body .index-box .index-box-ask .index-ask-form button {
+          font-weight: normal; }
+        html body .index-box .index-box-ask .index-ask-form button {
+          margin-top: 10px;
+          height: 34px;
+          border-radius: 17px;
+          background-color: #FF6F00;
+          color: white; }
+          @media (min-width: 768px) {
+            html body .index-box .index-box-ask .index-ask-form button {
+              margin-left: 40px; } }
+      html body .index-box .index-box-learn-heading {
+        font-size: 16px;
+        color: #FF6F00; }
+      html body .index-box .index-box-learn-content {
+        font-size: 16px;
+        color: white; }
+    html body .login-page {
+      position: fixed;
       z-index: -1;
-      top: 72px;
+      top: 0;
       right: 0;
       bottom: 0;
       left: 0;
@@ -101,95 +132,95 @@ html {
       background-position: center;
       background-size: cover;
       background-attachment: fixed; }
-      html body .login-page .login-box {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        width: 420px;
-        max-width: 100%;
-        background-color: rgba(255, 111, 0, 0.75);
-        padding: 30px; }
-        html body .login-page .login-box .login-box-logo {
-          height: 60px;
-          display: block;
-          margin-left: auto;
-          margin-right: auto; }
-        html body .login-page .login-box .login-form {
-          margin-top: 30px; }
-          html body .login-page .login-box .login-form input[type=text], html body .login-page .login-box .login-form input[type=password] {
-            padding: 8px; }
-          html body .login-page .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label, html body .login-page .login-box .login-form .forgot-password {
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 20px; }
-          html body .login-page .login-box .login-form .checkbox {
-            margin: 0; }
-            html body .login-page .login-box .login-form .checkbox input[type=checkbox] {
-              display: none; }
-              html body .login-page .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label {
-                padding-left: 10px; }
-                html body .login-page .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label:before {
-                  content: "";
-                  text-align: center;
-                  display: inline-block;
-                  vertical-align: top;
-                  width: 20px;
-                  height: 20px;
-                  margin-right: 10px;
-                  border: 2px solid white;
-                  border-radius: 4px; }
-              html body .login-page .login-box .login-form .checkbox input[type=checkbox]:checked + .remember-me-label:before {
-                background-color: white; }
-          html body .login-page .login-box .login-form .forgot-password {
-            text-align: right; }
-            html body .login-page .login-box .login-form .forgot-password a {
-              padding-right: 10px;
-              color: white; }
-              html body .login-page .login-box .login-form .forgot-password a:hover, html body .login-page .login-box .login-form .forgot-password a:focus {
-                text-decoration: none;
-                background-color: transparent; }
-              html body .login-page .login-box .login-form .forgot-password a:hover {
-                color: white; }
-              html body .login-page .login-box .login-form .forgot-password a:hover {
-                text-decoration: underline; }
-          html body .login-page .login-box .login-form button {
-            margin-top: 15px;
-            background-color: #ff8c33;
-            color: white; }
-        html body .login-page .login-box .breakup {
-          margin-top: 35px;
-          margin-bottom: 35px;
-          text-align: center;
+    html body .login-box {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 122px;
+      width: 420px;
+      max-width: 100%;
+      background-color: rgba(255, 111, 0, 0.75);
+      padding: 30px; }
+      html body .login-box .login-box-logo {
+        height: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
+      html body .login-box .login-form {
+        margin-top: 30px; }
+        html body .login-box .login-form input[type=text], html body .login-box .login-form input[type=password] {
+          padding: 8px; }
+        html body .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label, html body .login-box .login-form .forgot-password {
           color: white;
-          font-size: 20px;
-          font-weight: bold; }
-        html body .login-page .login-box .large-input {
-          height: 48px;
-          width: 100%;
-          font-size: 16px; }
-        html body .login-page .login-box .social-sign-in {
-          margin-bottom: 15px;
-          color: white; }
-          html body .login-page .login-box .social-sign-in.facebook-sign-in {
-            background-color: #3A5795; }
-          html body .login-page .login-box .social-sign-in.twitter-sign-in {
-            background-color: #55ACEE; }
-        html body .login-page .login-box .signup-link {
-          display: block;
-          margin-top: 15px;
-          text-align: center;
-          color: white;
+          font-weight: bold;
           font-size: 14px;
-          color: white; }
-          html body .login-page .login-box .signup-link:hover, html body .login-page .login-box .signup-link:focus {
-            text-decoration: none;
-            background-color: transparent; }
-          html body .login-page .login-box .signup-link:hover {
+          line-height: 20px; }
+        html body .login-box .login-form .checkbox {
+          margin: 0; }
+          html body .login-box .login-form .checkbox input[type=checkbox] {
+            display: none; }
+            html body .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label {
+              padding-left: 10px; }
+              html body .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label:before {
+                content: "";
+                text-align: center;
+                display: inline-block;
+                vertical-align: top;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                border: 2px solid white;
+                border-radius: 4px; }
+            html body .login-box .login-form .checkbox input[type=checkbox]:checked + .remember-me-label:before {
+              background-color: white; }
+        html body .login-box .login-form .forgot-password {
+          text-align: right; }
+          html body .login-box .login-form .forgot-password a {
+            padding-right: 10px;
             color: white; }
-          html body .login-page .login-box .signup-link:hover {
-            text-decoration: underline; }
+            html body .login-box .login-form .forgot-password a:hover, html body .login-box .login-form .forgot-password a:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .login-box .login-form .forgot-password a:hover {
+              color: white; }
+            html body .login-box .login-form .forgot-password a:hover {
+              text-decoration: underline; }
+        html body .login-box .login-form button {
+          margin-top: 15px;
+          background-color: #ff8c33;
+          color: white; }
+      html body .login-box .breakup {
+        margin-top: 35px;
+        margin-bottom: 35px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold; }
+      html body .login-box .large-input {
+        height: 48px;
+        width: 100%;
+        font-size: 16px; }
+      html body .login-box .social-sign-in {
+        margin-bottom: 15px;
+        color: white; }
+        html body .login-box .social-sign-in.facebook-sign-in {
+          background-color: #3A5795; }
+        html body .login-box .social-sign-in.twitter-sign-in {
+          background-color: #55ACEE; }
+      html body .login-box .signup-link {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        color: white; }
+        html body .login-box .signup-link:hover, html body .login-box .signup-link:focus {
+          text-decoration: none;
+          background-color: transparent; }
+        html body .login-box .signup-link:hover {
+          color: white; }
+        html body .login-box .signup-link:hover {
+          text-decoration: underline; }
     html body .banner {
       height: 400px;
       background-repeat: no-repeat;
