@@ -89,10 +89,7 @@ html
           margin-top: 30px
 
           input[type=text], input[type=password]
-            height: 48px
-            width: 100%
             padding: 8px
-            font-size: 16px
 
           .checkbox input[type=checkbox] + .remember-me-label, .forgot-password
             color: white
@@ -129,9 +126,44 @@ html
             a
               padding-right: $login-text-padding-x
               @include hover(white, white)
+              @include hover-underline()
 
-              &:hover
-                text-decoration: underline
+          button
+            margin-top: 15px
+            background-color: lighten($color-orange, 10)
+            color: white
+
+        .breakup
+          margin-top: 35px
+          margin-bottom: 35px
+          text-align: center
+          color: white
+          font-size: 20px
+          font-weight: bold
+
+        .large-input
+          height: 48px
+          width: 100%
+          font-size: 16px
+
+        .social-sign-in
+          margin-bottom: 15px
+          color: white
+
+          &.facebook-sign-in
+            background-color: $color-facebook-blue
+
+          &.twitter-sign-in
+            background-color: $color-twitter-blue
+
+        .signup-link
+          display: block
+          margin-top: 15px
+          text-align: center
+          color: white
+          font-size: 14px
+          @include hover(white, white)
+          @include hover-underline()
 
     .banner
       height: 400px
@@ -378,9 +410,7 @@ html
         display: block
         margin-top: 10px
         @include hover(white, white)
-
-        &:hover
-          text-decoration: underline
+        @include hover-underline()
 
       .footer-copyright
         position: absolute

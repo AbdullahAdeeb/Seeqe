@@ -84,10 +84,7 @@ html {
         html body .login-page .login-box .login-form {
           margin-top: 30px; }
           html body .login-page .login-box .login-form input[type=text], html body .login-page .login-box .login-form input[type=password] {
-            height: 48px;
-            width: 100%;
-            padding: 8px;
-            font-size: 16px; }
+            padding: 8px; }
           html body .login-page .login-box .login-form .checkbox input[type=checkbox] + .remember-me-label, html body .login-page .login-box .login-form .forgot-password {
             color: white;
             font-weight: bold;
@@ -123,6 +120,42 @@ html {
                 color: white; }
               html body .login-page .login-box .login-form .forgot-password a:hover {
                 text-decoration: underline; }
+          html body .login-page .login-box .login-form button {
+            margin-top: 15px;
+            background-color: #ff8c33;
+            color: white; }
+        html body .login-page .login-box .breakup {
+          margin-top: 35px;
+          margin-bottom: 35px;
+          text-align: center;
+          color: white;
+          font-size: 20px;
+          font-weight: bold; }
+        html body .login-page .login-box .large-input {
+          height: 48px;
+          width: 100%;
+          font-size: 16px; }
+        html body .login-page .login-box .social-sign-in {
+          margin-bottom: 15px;
+          color: white; }
+          html body .login-page .login-box .social-sign-in.facebook-sign-in {
+            background-color: #3A5795; }
+          html body .login-page .login-box .social-sign-in.twitter-sign-in {
+            background-color: #55ACEE; }
+        html body .login-page .login-box .signup-link {
+          display: block;
+          margin-top: 15px;
+          text-align: center;
+          color: white;
+          font-size: 14px;
+          color: white; }
+          html body .login-page .login-box .signup-link:hover, html body .login-page .login-box .signup-link:focus {
+            text-decoration: none;
+            background-color: transparent; }
+          html body .login-page .login-box .signup-link:hover {
+            color: white; }
+          html body .login-page .login-box .signup-link:hover {
+            text-decoration: underline; }
     html body .banner {
       height: 400px;
       background-repeat: no-repeat;

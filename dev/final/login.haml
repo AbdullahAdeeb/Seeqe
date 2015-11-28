@@ -9,9 +9,9 @@
         %img.login-box-logo{:src => 'assets/images/seeqe_logo_white.png'}
         %form.login-form
           .form-group
-            %input{:type => 'text', :placeholder => 'Username / Email'}
+            %input.large-input{:type => 'text', :placeholder => 'Username / Email'}
           .form-group
-            %input{:type => 'password', :placeholder => 'Password'}
+            %input.large-input{:type => 'password', :placeholder => 'Password'}
           .row
             .col-sm-6.checkbox
               %input#checkbox-remember-me.remember-me{:type => 'checkbox'}
@@ -20,3 +20,12 @@
             .col-sm-6.forgot-password
               %a{:href => '#'}
                 Forgot Password?
+          %button.btn.large-input{:type => 'submit'} Log In
+        .breakup Or
+        %button.btn.social-sign-in.facebook-sign-in.large-input{:type => 'submit'}
+          %i.fa.fa-facebook-square
+          Sign in via Facebook
+        %button.btn.social-sign-in.twitter-sign-in.large-input{:type => 'submit'}
+          %i.fa.fa-twitter-square
+          Sign in via Twitter
+        %a.signup-link{:href => '#'} Still not a member? Create an account here
