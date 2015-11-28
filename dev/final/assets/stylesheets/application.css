@@ -42,7 +42,6 @@ html {
           html body .navbar-main #navbar .navbar-nav > li > a:hover {
             color: #994300; }
           html body .navbar-main #navbar .navbar-nav > li > a.navbar-login, html body .navbar-main #navbar .navbar-nav > li > a.navbar-signup {
-            margin-top: 5px;
             text-align: center; }
           html body .navbar-main #navbar .navbar-nav > li > a.navbar-notifications {
             margin-top: 5px;
