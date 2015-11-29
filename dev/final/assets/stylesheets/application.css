@@ -379,6 +379,11 @@ html {
       html body .ask-box .ask-box-subheading {
         font-size: 24px;
         color: white; }
+      html body .ask-box .ask-form {
+        margin-top: 50px; }
+        html body .ask-box .ask-form label {
+          line-height: 34px;
+          margin: 0; }
     html body .section-heading {
       margin-top: 60px;
       background-color: #FF6F00;

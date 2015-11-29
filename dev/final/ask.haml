@@ -10,3 +10,26 @@
       %h1.ask-box-heading Ask
       %h4.ask-box-subheading
         Let the Seeqe community know what you're trying to find and you'll receive an answer in no time!
+      %form.ask-form
+        .row.form-group
+          .col-xs-2.col-sm-1
+            %label{:for => 'ask-item'}
+              %i.fa.fa-search
+          .col-xs-10.col-sm-11
+            %input#ask-item.form-control.large-input{:type => 'text', :placeholder => 'What you\'re looking for'}
+        .row.form-group
+          .col-xs-2.col-sm-1
+            %label{:for => 'ask-location'}
+              %i.fa.fa-map-marker
+          .col-xs-10.col-sm-11
+            %input#ask-location.form-control.large-input{:type => 'text', :placeholder => 'Location'}
+        .row.form-group
+          .col-xs-2.col-sm-1
+            %label{:for => 'ask-category'}
+              %i.fa.fa-th-list
+          .col-xs-10.col-sm-11
+            %select#ask-category.form-control
+              %option{:selected => true, :disabled => true, :hidden => true} Category
+              %option Option 1
+              %option Option 2
+              %option Option 3
