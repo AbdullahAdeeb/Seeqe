@@ -1,0 +1,12 @@
+!!! html
+%html{:lang => 'en'}
+  %head
+    = Haml::Engine.new(File.read('_header.haml')).render
+  %body
+    = Haml::Engine.new(File.read('_navbar-transparent.haml')).render
+    //.fullscreen-page.ask-page{:style => 'background-image: url(\'assets/images/backgrounds/ask_page.jpg\')'}
+    .fullscreen-page.ask-page.shader-black
+    .fullscreen-box.ask-box
+      %h1.ask-box-heading Ask
+      %h4.ask-box-subheading
+        Let the Seeqe community know what you're trying to find and you'll receive an answer in no time!

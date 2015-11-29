@@ -75,6 +75,7 @@ html {
       background-size: cover;
       background-attachment: fixed; }
     html body .fullscreen-box {
+      position: absolute;
       top: 112px;
       padding: 30px; }
     html body .index-box {
@@ -368,6 +369,16 @@ html {
               background-color: transparent; }
             html body .discover-container .item-container .item-footer a:hover {
               color: #FF6F00; }
+    html body .ask-box {
+      width: 680px;
+      max-width: 100%;
+      padding-left: 100px; }
+      html body .ask-box .ask-box-heading {
+        font-size: 60px;
+        color: white; }
+      html body .ask-box .ask-box-subheading {
+        font-size: 24px;
+        color: white; }
     html body .section-heading {
       margin-top: 60px;
       background-color: #FF6F00;
