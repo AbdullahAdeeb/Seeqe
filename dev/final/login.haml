@@ -4,9 +4,9 @@
     = Haml::Engine.new(File.read('_header.haml')).render
   %body
     = Haml::Engine.new(File.read('_navbar-transparent.haml')).render
-    .login-page{:style => 'background-image: url(\'assets/images/backgrounds/login_page.jpg\')'}
-    .login-page.shader-black
-    .login-box
+    .fullscreen-page.login-page{:style => 'background-image: url(\'assets/images/backgrounds/login_page.jpg\')'}
+    .fullscreen-page.login-page.shader-black
+    .fullscreen-box.login-box
       %img.login-box-logo{:src => 'assets/images/seeqe_logo_white.png'}
       %form.login-form
         .form-group

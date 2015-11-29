@@ -63,7 +63,7 @@ html {
               height: 40px;
               border: 2px solid #FF6F00;
               border-radius: 20px; }
-    html body .index-page {
+    html body .fullscreen-page {
       position: fixed;
       z-index: -1;
       top: 0;
@@ -74,15 +74,16 @@ html {
       background-position: center;
       background-size: cover;
       background-attachment: fixed; }
+    html body .fullscreen-box {
+      top: 112px;
+      padding: 30px; }
     html body .index-box {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 112px;
       width: 720px;
       max-width: 100%;
-      text-align: center;
-      padding: 30px; }
+      text-align: center; }
       html body .index-box .index-box-heading, html body .index-box .index-box-subheading, html body .index-box .index-box-learn-heading, html body .index-box .index-box-learn-content {
         margin-left: auto;
         margin-right: auto;
@@ -131,26 +132,13 @@ html {
             background-color: transparent; }
           html body .index-box .bottom-links a:hover {
             color: white; }
-    html body .login-page {
-      position: fixed;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed; }
     html body .login-box {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 112px;
       width: 420px;
       max-width: 100%;
-      background-color: rgba(255, 111, 0, 0.75);
-      padding: 30px; }
+      background-color: rgba(255, 111, 0, 0.75); }
       html body .login-box .login-box-logo {
         height: 60px;
         display: block;

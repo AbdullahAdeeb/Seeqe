@@ -72,7 +72,7 @@ html
                 border: 2px solid $color-orange
                 border-radius: ($navbar-height - 30px) / 2
 
-    .index-page
+    .fullscreen-page
       position: fixed
       z-index: -1
       top: 0
@@ -81,13 +81,17 @@ html
       left: 0
       @include full-background()
 
+    .fullscreen-box
+      top: $navbar-height + $navbar-border-height + 40px
+      padding: 30px
+
+    .index-page
+
     .index-box
       @include center-x()
-      top: $navbar-height + $navbar-border-height + 40px
       width: 720px
       max-width: 100%
       text-align: center
-      padding: 30px
 
       .index-box-heading, .index-box-subheading, .index-box-learn-heading, .index-box-learn-content
         margin-left: auto
@@ -146,21 +150,12 @@ html
           font-size: 24px
 
     .login-page
-      position: fixed
-      z-index: -1
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
-      @include full-background()
 
     .login-box
       @include center-x()
-      top: $navbar-height + $navbar-border-height + 40px
       width: 420px
       max-width: 100%
       background-color: transparentize($color-orange, 0.25)
-      padding: 30px
 
       .login-box-logo
         height: 60px
