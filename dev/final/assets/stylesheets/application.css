@@ -78,7 +78,7 @@ html {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 122px;
+      top: 112px;
       width: 720px;
       max-width: 100%;
       text-align: center;
@@ -121,6 +121,16 @@ html {
       html body .index-box .index-box-learn-content {
         font-size: 16px;
         color: white; }
+      html body .index-box .bottom-links {
+        margin-top: 32px; }
+        html body .index-box .bottom-links a {
+          color: #FF6F00;
+          font-size: 24px; }
+          html body .index-box .bottom-links a:hover, html body .index-box .bottom-links a:focus {
+            text-decoration: none;
+            background-color: transparent; }
+          html body .index-box .bottom-links a:hover {
+            color: white; }
     html body .login-page {
       position: fixed;
       z-index: -1;
@@ -136,7 +146,7 @@ html {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 122px;
+      top: 112px;
       width: 420px;
       max-width: 100%;
       background-color: rgba(255, 111, 0, 0.75);
