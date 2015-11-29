@@ -28,8 +28,19 @@
             %label{:for => 'ask-category'}
               %i.fa.fa-th-list
           .col-xs-10.col-sm-11
-            %select#ask-category.form-control
+            %select#ask-category.form-control.large-input
               %option{:selected => true, :disabled => true, :hidden => true} Category
               %option Option 1
               %option Option 2
               %option Option 3
+        .row.form-group
+          .col-xs-2.col-sm-1
+            %label{:for => 'ask-upload'}
+              %i.fa.fa-camera
+          .col-xs-10.col-sm-11
+            %input#ask-upload.displaynone{:type => 'file'}
+            %label.ask-upload-button.large-input.btn{:for => 'ask-upload'}
+              Upload photo (optional)
+        .row.ask-button
+          .col-xs-10.col-xs-offset-2.col-sm-11.col-sm-offset-1
+            %button.btn.large-input{:type => 'submit'} Ask

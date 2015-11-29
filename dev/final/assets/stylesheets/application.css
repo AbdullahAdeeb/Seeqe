@@ -195,10 +195,6 @@ html {
         color: white;
         font-size: 20px;
         font-weight: bold; }
-      html body .login-box .large-input {
-        height: 48px;
-        width: 100%;
-        font-size: 16px; }
       html body .login-box .social-sign-in {
         margin-bottom: 15px;
         color: white; }
@@ -372,7 +368,8 @@ html {
     html body .ask-box {
       width: 680px;
       max-width: 100%;
-      padding-left: 100px; }
+      padding-left: 100px;
+      color: white; }
       html body .ask-box .ask-box-heading {
         font-size: 60px;
         color: white; }
@@ -382,8 +379,27 @@ html {
       html body .ask-box .ask-form {
         margin-top: 50px; }
         html body .ask-box .ask-form label {
-          line-height: 34px;
-          margin: 0; }
+          margin: 2px 0;
+          font-size: 24px;
+          line-height: 48px; }
+        html body .ask-box .ask-form input, html body .ask-box .ask-form select {
+          margin-top: 2px;
+          margin-bottom: 2px;
+          border: 2px solid #FF6F00; }
+        html body .ask-box .ask-form input, html body .ask-box .ask-form select, html body .ask-box .ask-form .ask-upload-button, html body .ask-box .ask-form .ask-button button {
+          border-radius: 15px; }
+        html body .ask-box .ask-form .ask-upload-button {
+          width: 240px;
+          font-size: 16px;
+          line-height: 36px;
+          text-align: center;
+          background-color: #FF6F00;
+          cursor: pointer; }
+        html body .ask-box .ask-form .ask-button {
+          margin-top: 40px; }
+          html body .ask-box .ask-form .ask-button button {
+            width: 120px;
+            background-color: #ffa966; }
     html body .section-heading {
       margin-top: 60px;
       background-color: #FF6F00;
@@ -480,12 +496,19 @@ html {
       margin: 0; }
     html body .nopadding {
       padding: 0; }
+    html body .displaynone {
+      display: none; }
     html body .float-left {
       float: left; }
     html body .float-right {
       float: right; }
     html body .shader-black {
       background-color: rgba(31, 31, 31, 0.5); }
+    html body .large-input {
+      height: 48px;
+      width: 100%;
+      padding: 6px 12px;
+      font-size: 16px; }
     html body .view-options {
       margin-top: 40px; }
       html body .view-options .view-options-left {
