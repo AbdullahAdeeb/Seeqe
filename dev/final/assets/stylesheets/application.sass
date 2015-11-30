@@ -272,6 +272,7 @@ html
       margin-top: -20px
       margin-bottom: -20px
       text-align: center
+      font-size: 0
 
       .banner-heading-text
         padding: 5px 25px
@@ -282,6 +283,29 @@ html
         font-size: 20px
         line-height: 30px
         background-color: $color-orange
+
+      &.banner-heading-options
+
+        .banner-heading-text
+          border-radius: 0
+
+          > a
+            @include hover(white, white)
+
+            &:hover
+              text-decoration: underline
+
+          &.active
+            background-color: white
+
+            > a
+              @include hover($color-orange, $color-orange)
+
+        .banner-heading-text:first-of-type
+          border-radius: 20px 0 0 20px
+
+        .banner-heading-text:last-of-type
+          border-radius: 0 20px 20px 0
 
     .discover-container
       padding-top: 60px
