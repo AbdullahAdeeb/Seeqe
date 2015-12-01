@@ -293,91 +293,6 @@ html {
         margin-top: 10px;
         padding-left: 20px;
         padding-right: 20px; }
-        html body .discover-container .item-container .item-box {
-          padding: 20px; }
-          html body .discover-container .item-container .item-box .item {
-            border: 6px solid #FF6F00;
-            border-radius: 20px; }
-            html body .discover-container .item-container .item-box .item .item-picture {
-              width: 100%;
-              border-radius: 14px 14px 0 0; }
-            html body .discover-container .item-container .item-box .item .item-title, html body .discover-container .item-container .item-box .item .item-description {
-              margin-left: 12px;
-              margin-right: 12px; }
-            html body .discover-container .item-container .item-box .item .item-title {
-              margin-bottom: 5px;
-              font-size: 20px; }
-            html body .discover-container .item-container .item-box .item .item-description {
-              margin-bottom: 0;
-              font-size: 12px; }
-              html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name, html body .discover-container .item-container .item-box .item .item-description .answer-count {
-                color: #FF6F00; }
-                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:focus, html body .discover-container .item-container .item-box .item .item-description .answer-count:hover, html body .discover-container .item-container .item-box .item .item-description .answer-count:focus {
-                  text-decoration: none;
-                  background-color: transparent; }
-                html body .discover-container .item-container .item-box .item .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item .item-description .answer-count:hover {
-                  color: #994300; }
-          html body .discover-container .item-container .item-box .item-panel {
-            border: 6px solid #FF6F00;
-            border-radius: 26px; }
-            html body .discover-container .item-container .item-box .item-panel .item-picture {
-              margin-top: 15px;
-              margin-bottom: 15px;
-              border: 6px solid #FF6F00;
-              border-radius: 20px;
-              width: 100%; }
-              @media (max-width: 767px) {
-                html body .discover-container .item-container .item-box .item-panel .item-picture {
-                  display: block;
-                  max-width: 280px;
-                  margin-left: auto;
-                  margin-right: auto; } }
-            html body .discover-container .item-container .item-box .item-panel .item-title, html body .discover-container .item-container .item-box .item-panel .item-description {
-              margin-left: 16px; }
-            html body .discover-container .item-container .item-box .item-panel .item-title {
-              margin-top: 54px;
-              font-size: 30px; }
-              @media (max-width: 991px) {
-                html body .discover-container .item-container .item-box .item-panel .item-title {
-                  margin-top: 32px; } }
-              @media (max-width: 767px) {
-                html body .discover-container .item-container .item-box .item-panel .item-title {
-                  margin-top: 0;
-                  text-align: center; } }
-            html body .discover-container .item-container .item-box .item-panel .item-description {
-              margin-top: 40px;
-              font-size: 14px; }
-              @media (max-width: 991px) {
-                html body .discover-container .item-container .item-box .item-panel .item-description {
-                  margin-top: 24px; } }
-              @media (max-width: 767px) {
-                html body .discover-container .item-container .item-box .item-panel .item-description {
-                  margin-top: 0;
-                  text-align: center; } }
-              html body .discover-container .item-container .item-box .item-panel .item-description .item-asked-by-name {
-                color: #FF6F00; }
-                html body .discover-container .item-container .item-box .item-panel .item-description .item-asked-by-name:hover, html body .discover-container .item-container .item-box .item-panel .item-description .item-asked-by-name:focus {
-                  text-decoration: none;
-                  background-color: transparent; }
-                html body .discover-container .item-container .item-box .item-panel .item-description .item-asked-by-name:hover {
-                  color: #994300; }
-            html body .discover-container .item-container .item-box .item-panel .answer {
-              text-align: center; }
-              html body .discover-container .item-container .item-box .item-panel .answer .form-group {
-                margin-top: 16px;
-                margin-right: 8px; }
-                html body .discover-container .item-container .item-box .item-panel .answer .form-group .answer-label > label {
-                  line-height: 28px;
-                  color: #FF6F00; }
-                html body .discover-container .item-container .item-box .item-panel .answer .form-group .answer-input > input {
-                  height: 28px;
-                  border: 1px solid #FF6F00; }
-              html body .discover-container .item-container .item-box .item-panel .answer > button {
-                margin-top: 16px;
-                margin-bottom: 16px;
-                background-color: #FF6F00;
-                color: white;
-                border-radius: 16px; }
         html body .discover-container .item-container .item-footer {
           margin-top: 10px;
           margin-bottom: 30px;
@@ -562,5 +477,90 @@ html {
               background-color: transparent; }
             html body .view-options .view-options-right a.active:hover {
               color: #994300; }
+    html body .product-box {
+      padding: 20px; }
+      html body .product-box .product {
+        border: 6px solid #FF6F00;
+        border-radius: 20px; }
+        html body .product-box .product .product-picture {
+          width: 100%;
+          border-radius: 14px 14px 0 0; }
+        html body .product-box .product .product-title, html body .product-box .product .product-description {
+          margin-left: 12px;
+          margin-right: 12px; }
+        html body .product-box .product .product-title {
+          margin-bottom: 5px;
+          font-size: 20px; }
+        html body .product-box .product .product-description {
+          margin-bottom: 0;
+          font-size: 12px; }
+          html body .product-box .product .product-description .product-asked-by-name, html body .product-box .product .product-description .answer-count {
+            color: #FF6F00; }
+            html body .product-box .product .product-description .product-asked-by-name:hover, html body .product-box .product .product-description .product-asked-by-name:focus, html body .product-box .product .product-description .answer-count:hover, html body .product-box .product .product-description .answer-count:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .product-box .product .product-description .product-asked-by-name:hover, html body .product-box .product .product-description .answer-count:hover {
+              color: #994300; }
+      html body .product-box .product-panel {
+        border: 6px solid #FF6F00;
+        border-radius: 26px; }
+        html body .product-box .product-panel .product-picture {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          border: 6px solid #FF6F00;
+          border-radius: 20px;
+          width: 100%; }
+          @media (max-width: 767px) {
+            html body .product-box .product-panel .product-picture {
+              display: block;
+              max-width: 280px;
+              margin-left: auto;
+              margin-right: auto; } }
+        html body .product-box .product-panel .product-title, html body .product-box .product-panel .product-description {
+          margin-left: 16px; }
+        html body .product-box .product-panel .product-title {
+          margin-top: 54px;
+          font-size: 30px; }
+          @media (max-width: 991px) {
+            html body .product-box .product-panel .product-title {
+              margin-top: 32px; } }
+          @media (max-width: 767px) {
+            html body .product-box .product-panel .product-title {
+              margin-top: 0;
+              text-align: center; } }
+        html body .product-box .product-panel .product-description {
+          margin-top: 40px;
+          font-size: 14px; }
+          @media (max-width: 991px) {
+            html body .product-box .product-panel .product-description {
+              margin-top: 24px; } }
+          @media (max-width: 767px) {
+            html body .product-box .product-panel .product-description {
+              margin-top: 0;
+              text-align: center; } }
+          html body .product-box .product-panel .product-description .product-asked-by-name {
+            color: #FF6F00; }
+            html body .product-box .product-panel .product-description .product-asked-by-name:hover, html body .product-box .product-panel .product-description .product-asked-by-name:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .product-box .product-panel .product-description .product-asked-by-name:hover {
+              color: #994300; }
+        html body .product-box .product-panel .answer {
+          text-align: center; }
+          html body .product-box .product-panel .answer .form-group {
+            margin-top: 16px;
+            margin-right: 8px; }
+            html body .product-box .product-panel .answer .form-group .answer-label > label {
+              line-height: 28px;
+              color: #FF6F00; }
+            html body .product-box .product-panel .answer .form-group .answer-input > input {
+              height: 28px;
+              border: 1px solid #FF6F00; }
+          html body .product-box .product-panel .answer > button {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            background-color: #FF6F00;
+            color: white;
+            border-radius: 16px; }
 
 /*# sourceMappingURL=application.css.map */

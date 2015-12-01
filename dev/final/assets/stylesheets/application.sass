@@ -324,104 +324,6 @@ html
         padding-left: $item-display-padding
         padding-right: $item-display-padding
 
-        .item-box
-          padding: $item-display-padding
-
-          .item
-            border: $standard-border solid $color-orange
-            border-radius: $standard-border-radius
-
-            .item-picture
-              width: 100%
-              border-radius: ($standard-border-radius - $standard-border) ($standard-border-radius - $standard-border) 0 0
-
-            .item-title, .item-description
-              margin-left: 12px
-              margin-right: 12px
-
-            .item-title
-              margin-bottom: 5px
-              font-size: 20px
-
-            .item-description
-              margin-bottom: 0
-              font-size: 12px
-
-              .item-asked-by-name, .answer-count
-                @include hover($color-orange, darken($color-orange, 20))
-
-          .item-panel
-            border: $standard-border solid $color-orange
-            border-radius: $standard-border-radius + $standard-border
-
-            .item-picture
-              margin-top: 15px
-              margin-bottom: 15px
-              border: $standard-border solid $color-orange
-              border-radius: $standard-border-radius
-              width: 100%
-
-              @media (max-width: $bootstrap-xs-max)
-                display: block
-                max-width: 280px
-                margin-left: auto
-                margin-right: auto
-
-            .item-title, .item-description
-              margin-left: 16px
-
-            .item-title
-              margin-top: 54px
-              font-size: 30px
-
-              @media (max-width: $bootstrap-sm-max)
-                margin-top: 32px
-
-              @media (max-width: $bootstrap-xs-max)
-                margin-top: 0
-                text-align: center
-
-            .item-description
-              margin-top: 40px
-              font-size: 14px
-
-              @media (max-width: $bootstrap-sm-max)
-                margin-top: 24px
-
-              @media (max-width: $bootstrap-xs-max)
-                margin-top: 0
-                text-align: center
-
-              .item-asked-by-name
-                @include hover($color-orange, darken($color-orange, 20))
-
-            .answer
-              text-align: center
-
-              .form-group
-                margin-top: 16px
-                margin-right: 8px
-
-                .answer-label
-
-                  > label
-                    line-height: 28px
-                    color: $color-orange
-
-                .answer-input
-
-                  > input
-                    height: 28px
-                    border: 1px solid $color-orange
-
-              > button
-                margin-top: 16px
-                margin-bottom: 16px
-                background-color: $color-orange
-                color: white
-                border-radius: 16px
-
-
         .item-footer
           margin-top: 10px
           margin-bottom: 30px
@@ -610,3 +512,100 @@ html
 
           &.active
             @include hover($color-orange, darken($color-orange, 20))
+
+    .product-box
+      padding: $item-display-padding
+
+      .product
+        border: $standard-border solid $color-orange
+        border-radius: $standard-border-radius
+
+        .product-picture
+          width: 100%
+          border-radius: ($standard-border-radius - $standard-border) ($standard-border-radius - $standard-border) 0 0
+
+        .product-title, .product-description
+          margin-left: 12px
+          margin-right: 12px
+
+        .product-title
+          margin-bottom: 5px
+          font-size: 20px
+
+        .product-description
+          margin-bottom: 0
+          font-size: 12px
+
+          .product-asked-by-name, .answer-count
+            @include hover($color-orange, darken($color-orange, 20))
+
+      .product-panel
+        border: $standard-border solid $color-orange
+        border-radius: $standard-border-radius + $standard-border
+
+        .product-picture
+          margin-top: 15px
+          margin-bottom: 15px
+          border: $standard-border solid $color-orange
+          border-radius: $standard-border-radius
+          width: 100%
+
+          @media (max-width: $bootstrap-xs-max)
+            display: block
+            max-width: 280px
+            margin-left: auto
+            margin-right: auto
+
+        .product-title, .product-description
+          margin-left: 16px
+
+        .product-title
+          margin-top: 54px
+          font-size: 30px
+
+          @media (max-width: $bootstrap-sm-max)
+            margin-top: 32px
+
+          @media (max-width: $bootstrap-xs-max)
+            margin-top: 0
+            text-align: center
+
+        .product-description
+          margin-top: 40px
+          font-size: 14px
+
+          @media (max-width: $bootstrap-sm-max)
+            margin-top: 24px
+
+          @media (max-width: $bootstrap-xs-max)
+            margin-top: 0
+            text-align: center
+
+          .product-asked-by-name
+            @include hover($color-orange, darken($color-orange, 20))
+
+        .answer
+          text-align: center
+
+          .form-group
+            margin-top: 16px
+            margin-right: 8px
+
+            .answer-label
+
+              > label
+                line-height: 28px
+                color: $color-orange
+
+            .answer-input
+
+              > input
+                height: 28px
+                border: 1px solid $color-orange
+
+          > button
+            margin-top: 16px
+            margin-bottom: 16px
+            background-color: $color-orange
+            color: white
+            border-radius: 16px
