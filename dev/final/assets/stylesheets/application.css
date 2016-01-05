@@ -257,7 +257,8 @@ html {
         line-height: 30px;
         background-color: #FF6F00; }
       html body .banner-heading.banner-heading-options .banner-heading-text {
-        border-radius: 0; }
+        border-radius: 0;
+        min-width: 190px; }
         html body .banner-heading.banner-heading-options .banner-heading-text > a {
           color: white; }
           html body .banner-heading.banner-heading-options .banner-heading-text > a:hover, html body .banner-heading.banner-heading-options .banner-heading-text > a:focus {
