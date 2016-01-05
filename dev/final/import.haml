@@ -10,96 +10,27 @@
       %p Let your customers know what products you currently have in store
     .container-fluid.banner-heading.banner-heading-options
       .banner-heading-text.active
-        %a{:href => '#'} Featured Stores
+        %a{:href => '#'} Choose
       .banner-heading-text
-        %a{:href => '#'} Featured Stores 2
+        %a{:href => '#'} Edit
       .banner-heading-text
-        %a{:href => '#'} Featured Stores 3
+        %a{:href => '#'} Upload
     .container.discover-container
-      %p.grey-text
-        Here are our
-        %span.accent favorite products
-        of the week!
-      %p.grey-text Discover what's near you now!
-      .row.view-options
-        .col-sm-6.view-options-left
-          %a{:href => '#'}
-            %i.fa.fa-th-list
-          &nbsp;
-          %a{:href => '#'}
-            %i.fa.fa-square
-          &nbsp;
-          %a{:href => '#'}
-            %i.fa.fa-th-large
-        .col-sm-6.view-options-right
-          %a.active{:href => '#'}
-            Top Find
-            %i.fa.fa-star
-          &nbsp;
-          &#124;
-          &nbsp;
-          %a{:href => '#'}
-            Alphabetical
-            %i.fa.fa-sort-alpha-asc
-          &nbsp;
-          &#124;
-          &nbsp;
-          %a{:href => '#'}
-            Near Me
-            %i.fa.fa-map-marker
-      .row.item-container
-        - (1..12).each do |i|
-          .col-sm-6.col-md-4.col-lg-3.item-box
-            .item
-              %img.item-picture{:src => 'http://lorempixel.com/400/300'}
-              %h4.item-title Thing #{i}
-              %p.item-description.float-left
-                Asked by
-                %a.item-asked-by-name{:href => '#'} Jeff Hudson
-              %p.item-description.float-right
-                %a.answer-count{:href => '#'} 4 Answers
-              %p &nbsp;
-        .col-xs-12.item-footer
-          %a{:href => '#'}
-            Return to top
-          &nbsp;
-          &#124;
-          &nbsp;
-          %a{:href => '#'}
-            Ask Question
-            %i.fa.fa-comments-o
-    .container.section-heading
-      %h1 Featured Stores
-    .container.section-main
-      %p.grey-text
-        Here are our
-        %span.accent favorite products
-        of the week!
-      %p.grey-text Discover what's near you now!
-      .row.view-options
-        .col-sm-6.view-options-left
-          %a{:href => '#'}
-            %i.fa.fa-th-list
-          &nbsp;
-          %a{:href => '#'}
-            %i.fa.fa-square
-          &nbsp;
-          %a{:href => '#'}
-            %i.fa.fa-th-large
-        .col-sm-6.view-options-right
-          %a.active{:href => '#'}
-            Top Find
-            %i.fa.fa-star
-          &nbsp;
-          &#124;
-          &nbsp;
-          %a{:href => '#'}
-            Alphabetical
-            %i.fa.fa-sort-alpha-asc
-          &nbsp;
-          &#124;
-          &nbsp;
-          %a{:href => '#'}
-            Near Me
-            %i.fa.fa-map-marker
+      .row
+        .col-xs-2.col-sm-1.col-sm-offset-1.import-icon
+          %i.fa.fa-file-text-o
+        .col-xs-10.col-sm-4.import-text
+          %h3.import-heading Instructions for products
+          Copy and paste your inventory list, drag and drop a .csv file, or click below to choose a file to upload.
+        .col-xs-2.col-sm-1.import-icon
+          %i.fa.fa-file-image-o
+        .col-xs-10.col-sm-4.import-text
+          %h3.import-heading Instructions for pictures
+          Drag and drop a zip file containing PNG and JPEG pictures, or click below to choose a file to upload.
+      .import-subtext
+        To match a product with a picture, please ensure both the product and the picture have identical names.
+      %form.import-choose-form
+        %button.btn.import-upload-button Choose File
+        .import-upload-box
+        %button.btn.rounded-input.import-upload-next Next
     = Haml::Engine.new(File.read('_footer.haml')).render

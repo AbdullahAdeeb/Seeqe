@@ -306,6 +306,32 @@ html {
               background-color: transparent; }
             html body .discover-container .item-container .item-footer a:hover {
               color: #FF6F00; }
+      html body .discover-container .import-icon {
+        font-size: 60px;
+        text-align: right;
+        color: #FF6F00; }
+      html body .discover-container .import-text {
+        color: #808080; }
+        html body .discover-container .import-text .import-heading {
+          color: #FF6F00;
+          margin-top: 0; }
+      html body .discover-container .import-subtext {
+        margin-top: 20px;
+        margin-left: 20px;
+        color: #808080;
+        font-size: 12px; }
+      html body .discover-container .import-upload-button {
+        background-color: #FF6F00;
+        margin-top: 20px;
+        margin-left: 20px; }
+      html body .discover-container .import-upload-box {
+        border: 6px solid #FF6F00;
+        margin: 10px 20px;
+        min-height: 400px; }
+      html body .discover-container .import-upload-next {
+        background-color: #FF6F00;
+        margin: 30px auto 30px auto;
+        display: block; }
     html body .ask-box {
       width: 680px;
       max-width: 100%;
@@ -450,6 +476,13 @@ html {
       width: 100%;
       padding: 6px 12px;
       font-size: 16px; }
+    html body .rounded-input {
+      height: 34px;
+      width: auto;
+      min-width: 120px;
+      padding: 6px 12px;
+      font-size: 16px;
+      border-radius: 18px; }
     html body .view-options {
       margin-top: 40px; }
       html body .view-options .view-options-left {
