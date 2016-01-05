@@ -9,29 +9,22 @@
         Upload Inventory
       %p Let your customers know what products you currently have in store
     .container-fluid.banner-heading.banner-heading-options
-      .banner-heading-text.active
-        %a{:href => '#'} Choose
       .banner-heading-text
+        %a{:href => '#'} Choose
+      .banner-heading-text.active
         %a{:href => '#'} Edit
       .banner-heading-text
         %a{:href => '#'} Upload
     .container.discover-container
       .row
         .col-xs-2.col-sm-1.col-sm-offset-1.import-icon
-          %i.fa.fa-file-text-o
+          %i.fa.fa-check-square-o
         .col-xs-10.col-sm-4.import-text
-          %h3.import-heading Instructions for products
-          Copy and paste your inventory list, drag and drop a .csv file, or click below to choose a file to upload.
-        .col-xs-2.col-sm-1.import-icon
-          %i.fa.fa-file-image-o
-        .col-xs-10.col-sm-4.import-text
-          %h3.import-heading Instructions for pictures
-          Drag and drop a zip file containing PNG and JPEG pictures, or click below to choose a file to upload.
-      .import-subtext
-        To match a product with a picture, please ensure both the product and the picture have identical names.
+          %h3.import-heading Instructions
+          Organize your products by assigning categories
       %form.import-form
-        %button.btn.import-upload-button Choose File
-        .import-upload-box
         %button.btn.rounded-input.import-upload-next
-          %a{:href => 'import-edit.html'} Next
+          %a{:href => 'import.html'} Back
+        %button.btn.rounded-input.import-upload-next
+          %a{:href => 'import-upload.html'} Next
     = Haml::Engine.new(File.read('_footer.haml')).render

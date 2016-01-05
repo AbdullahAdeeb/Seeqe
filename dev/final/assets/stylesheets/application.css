@@ -328,10 +328,22 @@ html {
         border: 6px solid #FF6F00;
         margin: 10px 20px;
         min-height: 400px; }
-      html body .discover-container .import-upload-next {
-        background-color: #FF6F00;
-        margin: 30px auto 30px auto;
-        display: block; }
+      html body .discover-container .import-form {
+        text-align: center; }
+        html body .discover-container .import-form .import-upload-next {
+          background-color: #FF6F00;
+          color: white;
+          margin: 30px 10px; }
+          html body .discover-container .import-form .import-upload-next > a {
+            display: block;
+            color: white; }
+            html body .discover-container .import-form .import-upload-next > a:hover, html body .discover-container .import-form .import-upload-next > a:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .discover-container .import-form .import-upload-next > a:hover {
+              color: white; }
+            html body .discover-container .import-form .import-upload-next > a:hover {
+              text-decoration: underline; }
     html body .ask-box {
       width: 680px;
       max-width: 100%;

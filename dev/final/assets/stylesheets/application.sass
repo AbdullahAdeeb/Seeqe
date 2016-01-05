@@ -363,10 +363,20 @@ html
         margin: 10px $item-display-padding
         min-height: 400px
 
-      .import-upload-next
-        background-color: $color-orange
-        margin: 30px auto 30px auto
-        display: block
+      .import-form
+        text-align: center
+
+        .import-upload-next
+          background-color: $color-orange
+          color: white
+          margin: 30px 10px
+
+          > a
+            display: block
+            @include hover(white, white)
+
+            &:hover
+              text-decoration: underline
 
     .ask-box
       width: 680px
