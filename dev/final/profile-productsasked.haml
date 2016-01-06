@@ -14,13 +14,13 @@
       %p Favorite the ones you like.
     .container-fluid.banner-heading.banner-heading-options
       .banner-heading-text.active
-        %a{:href => '#'} Products Asked
+        %a{:href => 'profile-productsasked.html'} Products Asked
       .banner-heading-text
-        %a{:href => '#'} Products Found
+        %a{:href => 'profile-productsfound.html'} Products Found
       .banner-heading-text
-        %a{:href => '#'} Following
+        %a{:href => 'profile-following.html'} Following
       .banner-heading-text
-        %a{:href => '#'} Favorites
+        %a{:href => 'profile-favorites.html'} Favorites
       .banner-heading-text
-        %a{:href => '#'} Account
+        %a{:href => 'profile-account.html'} Account
     = Haml::Engine.new(File.read('_footer.haml')).render
