@@ -244,7 +244,7 @@ html
       height: 400px
       @include full-background()
 
-      > h1, > p
+      > h1, > p, > a > p
         color: white
         text-align: center
 
@@ -264,10 +264,23 @@ html
           @media (max-width: $bootstrap-xs-max)
             font-size: 25px
 
-      > p
+      > p, > a > p
         font-size: 20px
         margin-top: 0
         margin-bottom: 0
+
+      > a > p
+        @include hover(white, white)
+
+        &:hover
+          text-decoration: underline
+
+      > button
+        display: block
+        margin: 10px auto
+        color: white
+        border-color: $standard-border solid white
+        background-color: transparent
 
     .banner-heading
       margin-top: -20px
@@ -377,6 +390,19 @@ html
 
             &:hover
               text-decoration: underline
+
+    .store-left-pane
+
+      .store-left-pane-item
+
+        h3
+          display: block
+          background-color: $color-orange
+          padding: 5px
+          text-align: center
+
+    .store-right-pane
+
 
     .ask-box
       width: 680px

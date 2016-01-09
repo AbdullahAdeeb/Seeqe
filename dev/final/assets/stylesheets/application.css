@@ -222,7 +222,7 @@ html {
       background-position: center;
       background-size: cover;
       background-attachment: fixed; }
-      html body .banner > h1, html body .banner > p {
+      html body .banner > h1, html body .banner > p, html body .banner > a > p {
         color: white;
         text-align: center; }
       html body .banner > h1 {
@@ -238,10 +238,25 @@ html {
           @media (max-width: 767px) {
             html body .banner > h1 .banner-small {
               font-size: 25px; } }
-      html body .banner > p {
+      html body .banner > p, html body .banner > a > p {
         font-size: 20px;
         margin-top: 0;
         margin-bottom: 0; }
+      html body .banner > a > p {
+        color: white; }
+        html body .banner > a > p:hover, html body .banner > a > p:focus {
+          text-decoration: none;
+          background-color: transparent; }
+        html body .banner > a > p:hover {
+          color: white; }
+        html body .banner > a > p:hover {
+          text-decoration: underline; }
+      html body .banner > button {
+        display: block;
+        margin: 10px auto;
+        color: white;
+        border-color: 6px solid white;
+        background-color: transparent; }
     html body .banner-heading {
       margin-top: -20px;
       margin-bottom: -20px;
@@ -344,6 +359,11 @@ html {
               color: white; }
             html body .discover-container .import-form .import-upload-next > a:hover {
               text-decoration: underline; }
+    html body .store-left-pane .store-left-pane-item h3 {
+      display: block;
+      background-color: #FF6F00;
+      padding: 5px;
+      text-align: center; }
     html body .ask-box {
       width: 680px;
       max-width: 100%;

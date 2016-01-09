@@ -1,0 +1,73 @@
+!!! html
+%html{:lang => 'en'}
+  %head
+    = Haml::Engine.new(File.read('_header.haml')).render
+  %body
+    = Haml::Engine.new(File.read('_navbar.haml')).render
+    .container-fluid.banner{:style => 'background-image: url(\'assets/images/banner_images/discover.jpg\')'}
+      %h1 Teastore
+      %a{:href => 'www.teastore.ca', :target => '_blank'}
+        %p www.teastore.ca
+      %button.rounded-input Follow
+    .container-fluid.banner-heading.banner-heading-options
+      .banner-heading-text.active
+        %a{:href => 'store-products.html'} Products
+      .banner-heading-text
+        %a{:href => 'store-account'} Account
+    .container.discover-container
+      .row
+        .col-md-4.col-lg-3.store-left-pane
+          .store-left-pane-item
+            %h3 About Us
+          .store-left-pane-item
+            %p In the heart of ByWard Market lies a little tea store like no other in the Nation's Capital.
+            %p Our specialty tea selection are some of the best quality teas found from around the world.
+            %p From China to Japan, Kenya, and India, we truly carry the best teas in Ottawa.
+          .store-left-pane-item
+            %h3 Contact Us
+          .store-left-pane-item
+            %p
+              %i.fa.fa-phone
+              (613) 355-9816
+            %p
+              %i.fa.fa-email
+              service@teastore.ca
+            %p
+              %i.fa.fa-map-marker
+              452 Metcalfe Street<br>
+              Ottawa, ON, Canada<br>
+              K2F 9Z1
+        .col-md-8.col-lg-9.store-right.pane
+          .row.view-options
+            .col-sm-6.view-options-left
+              %a{:href => '#'}
+                %i.fa.fa-th-list
+              &nbsp;
+              %a{:href => '#'}
+                %i.fa.fa-square
+              &nbsp;
+              %a{:href => '#'}
+                %i.fa.fa-th-large
+            .col-sm-6.view-options-right
+              %a.active{:href => '#'}
+                Top Find
+                %i.fa.fa-star
+              &nbsp;
+              &#124;
+              &nbsp;
+              %a{:href => '#'}
+                Alphabetical
+                %i.fa.fa-sort-alpha-asc
+          .row.item-container
+            - (1..9).each do |i|
+              .col-sm-6.col-lg-4.product-box
+                .product
+                  %img.product-picture{:src => 'http://lorempixel.com/400/300'}
+                  %h4.product-title Thing #{i}
+                  %p.product-description.float-left
+                    Asked by
+                    %a.product-asked-by-name{:href => '#'} Jeff Hudson
+                  %p.product-description.float-right
+                    %a.answer-count{:href => '#'} 4 Answers
+                  %p &nbsp;
+    = Haml::Engine.new(File.read('_footer.haml')).render
