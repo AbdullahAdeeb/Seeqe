@@ -362,6 +362,7 @@ html {
     html body .store-left-pane .store-left-pane-item h3 {
       display: block;
       background-color: #FF6F00;
+      color: white;
       padding: 5px;
       text-align: center; }
     html body .ask-box {
