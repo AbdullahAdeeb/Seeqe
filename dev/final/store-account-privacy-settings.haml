@@ -1,0 +1,42 @@
+!!! html
+%html{:lang => 'en'}
+  %head
+    = Haml::Engine.new(File.read('_header.haml')).render
+  %body
+    = Haml::Engine.new(File.read('_navbar.haml')).render
+    .container-fluid.banner{:style => 'background-image: url(\'assets/images/banner_images/discover.jpg\')'}
+      %h1 Teastore
+      %a{:href => 'www.teastore.ca', :target => '_blank'}
+        %p www.teastore.ca
+      %button.rounded-input Follow
+    .container-fluid.banner-heading.banner-heading-options
+      .banner-heading-text
+        %a{:href => 'store-products.html'} Products
+      .banner-heading-text.active
+        %a{:href => 'store-account-basic-information.html'} Account
+    .container.discover-container
+      .row
+        .col-md-4.col-lg-3.store-account-nav
+          .row
+            .col-xs-6.store-account-nav-primary &nbsp;
+            .col-xs-6.store-account-nav-primary Settings
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary &nbsp;
+            .col-xs-6.store-account-nav-secondary
+              %a{:href => 'store-account-basic-information.html'} Basic Information
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary &nbsp;
+            .col-xs-6.store-account-nav-secondary
+              %a{:href => 'store-account-change-password.html'} Change Password
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary.active &nbsp;
+            .col-xs-6.store-account-nav-secondary.active
+              %a{:href => 'store-account-privacy-settings.html'} Privacy Settings
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary &nbsp;
+            .col-xs-6.store-account-nav-secondary
+              %a{:href => 'store-account-mail-settings.html'} Mail Settings
+        .col-md-7.col-lg-8.col-md-offset-1.store-account-right-pane
+          %form
+            %input#checkbox-stop-emails{:type => 'checkbox'}
+            %label{:for => 'checkbox-stop-emails'}
+              Set Account Private
+            %div
+              %input.rounded-input{:type => 'submit', :value => 'Update'}
+    = Haml::Engine.new(File.read('_footer.haml')).render

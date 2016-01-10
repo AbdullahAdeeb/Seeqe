@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport'>
+    <title>Jeff Hudson</title>
+    <meta content='' name='description'>
+    <meta content='Jeff Hudson' name='author'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='assets/stylesheets/application.css' rel='stylesheet'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src='assets/javascripts/application.js'></script>
+  </head>
+  <body>
+    <nav class='navbar navbar-main'>
+      <div class='container-fluid'>
+        <div class='navbar-header'>
+          <button aria-expanded='false' class='navbar-toggle collapsed' data-target='#navbar' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='index.html'>
+            <img alt='Seeqe' class='navbar-logo' src='assets/images/seeqe_logo.png'>
+          </a>
+        </div>
+        <div class='collapse navbar-collapse' id='navbar'>
+          <ul class='nav navbar-nav'>
+            <li class='active'>
+              <a href='browse.html'>Browse</a>
+            </li>
+            <li>
+              <a href='discover.html'>Discover</a>
+            </li>
+            <li>
+              <a href='recentlyasked.html'>Recently Asked</a>
+            </li>
+            <li>
+              <a href='ask.html'>Ask</a>
+            </li>
+          </ul>
+          <ul class='nav navbar-nav navbar-right'>
+            <li>
+              <a class='navbar-notifications' href='#'>
+                <i class='fa fa-bell-o'></i>
+              </a>
+            </li>
+            <li>
+              <a class='navbar-profile-pic' href='profile-productsasked.html'>
+                <img alt='' src='assets/images/profile_pic.jpg'>
+              </a>
+            </li>
+            <li>
+              <a class='navbar-name' href='profile-productsasked.html'>
+                Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class='container-fluid banner' style="background-image: url('assets/images/banner_images/discover.jpg')">
+      <h1>Teastore</h1>
+      <a href='www.teastore.ca' target='_blank'>
+        <p>www.teastore.ca</p>
+      </a>
+      <button class='rounded-input'>Follow</button>
+    </div>
+    <div class='container-fluid banner-heading banner-heading-options'>
+      <div class='banner-heading-text'>
+        <a href='store-products.html'>Products</a>
+      </div>
+      <div class='banner-heading-text active'>
+        <a href='store-account-basic-information.html'>Account</a>
+      </div>
+    </div>
+    <div class='container discover-container'>
+      <div class='row'>
+        <div class='col-md-4 col-lg-3 store-account-nav'>
+          <div class='row'>
+            <div class='col-xs-6 store-account-nav-primary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-primary'>Settings</div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='store-account-basic-information.html'>Basic Information</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='store-account-change-password.html'>Change Password</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary active'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary active'>
+              <a href='store-account-privacy-settings.html'>Privacy Settings</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='store-account-mail-settings.html'>Mail Settings</a>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-7 col-lg-8 col-md-offset-1 store-account-right-pane'>
+          <form>
+            <input id='checkbox-stop-emails' type='checkbox'>
+            <label for='checkbox-stop-emails'>
+              Set Account Private
+            </label>
+            <div>
+              <input class='rounded-input' type='submit' value='Update'>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class='container pre-footer'></div>
+    <footer class='footer'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-sm-6 col-lg-3'>
+            <h3 class='footer-header'>Seeqe</h3>
+            <a class='footer-list' href='#'>Home</a>
+            <a class='footer-list' href='browse.html'>Browse</a>
+            <a class='footer-list' href='discover.html'>Discover</a>
+            <a class='footer-list' href='recentlyasked.html'>Recently Asked</a>
+            <a class='footer-list' href='#'>Ask</a>
+          </div>
+          <div class='col-sm-6 col-lg-3'>
+            <h3 class='footer-header'>Help</h3>
+            <a class='footer-list' href='#'>About Us</a>
+            <a class='footer-list' href='#'>For Businesses</a>
+            <a class='footer-list' href='#'>FAQ</a>
+          </div>
+          <div class='col-sm-6 col-lg-3'>
+            <h3 class='footer-header'>SeeqeBlogger</h3>
+            <a class='footer-list' href='#'>Blog</a>
+            <a class='footer-list' href='#'>Apply</a>
+          </div>
+          <div class='col-sm-6 col-lg-3'>
+            <h3 class='footer-header'>Social Media</h3>
+            <a class='footer-list' href='#'>Facebook</a>
+            <a class='footer-list' href='#'>Twitter</a>
+            <a class='footer-list' href='#'>Instagram</a>
+          </div>
+        </div>
+        <div class='footer-copyright'>&copy; Copyright Seeqe App Inc.</div>
+        <img class='footer-logo' src='assets/images/seeqe_logo_white.png'>
+      </div>
+    </footer>
+  </body>
+</html>

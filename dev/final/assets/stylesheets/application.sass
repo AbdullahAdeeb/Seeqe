@@ -4,6 +4,9 @@
 @import "_animations"
 @import "_fonts"
 
+textarea
+  resize: none
+
 html
   position: relative
   min-height: 100%
@@ -87,8 +90,6 @@ html
       top: $navbar-height + $navbar-border-height + 40px
       padding: 30px
 
-    .index-page
-
     .index-box
       @include center-x()
       width: 720px
@@ -150,8 +151,6 @@ html
         a
           @include hover($color-orange, white)
           font-size: 24px
-
-    .login-page
 
     .login-box
       @include center-x()
@@ -279,7 +278,7 @@ html
         display: block
         margin: 10px auto
         color: white
-        border-color: $standard-border solid white
+        border: 2px solid white
         background-color: transparent
 
     .banner-heading
@@ -391,16 +390,63 @@ html
             &:hover
               text-decoration: underline
 
-    .store-left-pane
+      .store-left-pane
 
-      .store-left-pane-item
+        .store-left-pane-item
 
-        h3
-          display: block
-          background-color: $color-orange
+          h3
+            display: block
+            background-color: $color-orange
+            color: white
+            padding: 5px
+            text-align: center
+
+      .store-account-nav
+
+        .store-account-nav-primary, .store-account-nav-secondary
+          padding-top: 10px
+          padding-bottom: 10px
+
+          &.active
+            color: $color-orange
+
+        .store-account-nav-primary
           color: white
-          padding: 5px
-          text-align: center
+          background-color: $color-orange
+
+        .store-account-nav-secondary
+          background-color: $color-text-grey
+
+          > a
+            @include hover(white, $color-orange)
+
+          &.active
+            background-color: white
+
+            > a
+              @include hover($color-orange, $color-orange)
+
+      .store-account-right-pane
+
+        form
+          max-width: 400px
+
+          .form-group
+            margin-bottom: 20px
+
+            #new-email-address
+              max-width: 400px
+
+          #checkbox-stop-emails
+            margin-top: 30px
+
+          input[type=submit]
+            display: block
+            margin: 30px auto
+            color: white
+            border: none
+            background-color: $color-orange
+
 
     .ask-box
       width: 680px

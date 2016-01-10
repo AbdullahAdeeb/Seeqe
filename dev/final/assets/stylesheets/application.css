@@ -4,6 +4,9 @@
 @font-face {
   font-family: Fonjava;
   src: url("../fonts/Fonjava.otf"); }
+textarea {
+  resize: none; }
+
 html {
   position: relative;
   min-height: 100%; }
@@ -255,7 +258,7 @@ html {
         display: block;
         margin: 10px auto;
         color: white;
-        border-color: 6px solid white;
+        border: 2px solid white;
         background-color: transparent; }
     html body .banner-heading {
       margin-top: -20px;
@@ -359,12 +362,52 @@ html {
               color: white; }
             html body .discover-container .import-form .import-upload-next > a:hover {
               text-decoration: underline; }
-    html body .store-left-pane .store-left-pane-item h3 {
-      display: block;
-      background-color: #FF6F00;
-      color: white;
-      padding: 5px;
-      text-align: center; }
+      html body .discover-container .store-left-pane .store-left-pane-item h3 {
+        display: block;
+        background-color: #FF6F00;
+        color: white;
+        padding: 5px;
+        text-align: center; }
+      html body .discover-container .store-account-nav .store-account-nav-primary, html body .discover-container .store-account-nav .store-account-nav-secondary {
+        padding-top: 10px;
+        padding-bottom: 10px; }
+        html body .discover-container .store-account-nav .store-account-nav-primary.active, html body .discover-container .store-account-nav .store-account-nav-secondary.active {
+          color: #FF6F00; }
+      html body .discover-container .store-account-nav .store-account-nav-primary {
+        color: white;
+        background-color: #FF6F00; }
+      html body .discover-container .store-account-nav .store-account-nav-secondary {
+        background-color: #808080; }
+        html body .discover-container .store-account-nav .store-account-nav-secondary > a {
+          color: white; }
+          html body .discover-container .store-account-nav .store-account-nav-secondary > a:hover, html body .discover-container .store-account-nav .store-account-nav-secondary > a:focus {
+            text-decoration: none;
+            background-color: transparent; }
+          html body .discover-container .store-account-nav .store-account-nav-secondary > a:hover {
+            color: #FF6F00; }
+        html body .discover-container .store-account-nav .store-account-nav-secondary.active {
+          background-color: white; }
+          html body .discover-container .store-account-nav .store-account-nav-secondary.active > a {
+            color: #FF6F00; }
+            html body .discover-container .store-account-nav .store-account-nav-secondary.active > a:hover, html body .discover-container .store-account-nav .store-account-nav-secondary.active > a:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .discover-container .store-account-nav .store-account-nav-secondary.active > a:hover {
+              color: #FF6F00; }
+      html body .discover-container .store-account-right-pane form {
+        max-width: 400px; }
+        html body .discover-container .store-account-right-pane form .form-group {
+          margin-bottom: 20px; }
+          html body .discover-container .store-account-right-pane form .form-group #new-email-address {
+            max-width: 400px; }
+        html body .discover-container .store-account-right-pane form #checkbox-stop-emails {
+          margin-top: 30px; }
+        html body .discover-container .store-account-right-pane form input[type=submit] {
+          display: block;
+          margin: 30px auto;
+          color: white;
+          border: none;
+          background-color: #FF6F00; }
     html body .ask-box {
       width: 680px;
       max-width: 100%;
