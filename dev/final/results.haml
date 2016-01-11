@@ -1,0 +1,121 @@
+!!! html
+%html{:lang => 'en'}
+  %head
+    = Haml::Engine.new(File.read('_header.haml')).render
+  %body
+    = Haml::Engine.new(File.read('_navbar.haml')).render
+    .container-fluid.banner{:style => 'background-image: url(\'assets/images/banner_images/results.jpg\')'}
+      %h1
+        Recently Asked
+        %span.banner-small in
+        Ottawa, Canada
+      %p Help the community by letting them know
+      %p which stores sell what they're looking for
+    .container-fluid.banner-heading
+      .banner-heading-text Categories
+    .container.discover-container
+      %p.grey-text
+        People are trying to find all kinds of things near you!
+      %p.grey-text
+        Help the community out!
+      .row.view-options
+        .col-sm-6.view-options-left
+          %a{:href => '#'}
+            %i.fa.fa-th-list
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-square
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-th-large
+        .col-sm-6.view-options-right
+          %a.active{:href => '#'}
+            Top Find
+            %i.fa.fa-star
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Alphabetical
+            %i.fa.fa-sort-alpha-asc
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Near Me
+            %i.fa.fa-map-marker
+      .row.item-container
+        - (1..3).each do |i|
+          .col-xs-10.col-xs-offset-1.product-box
+            .row.product-panel
+              .col-sm-4
+                %img.product-picture{:src => 'http://lorempixel.com/400/300'}
+              .col-sm-8.col-lg-5
+                %h4.product-title Thing #{i}
+                %p.product-description
+                  Asked by
+                  %a.product-asked-by-name Jeff Hudson
+                  2 min ago
+              .col-sm-12.col-lg-3
+                %form.answer
+                  .form-group.row.nomargin
+                    .col-xs-1.nopadding.answer-label
+                      %label{:for => 'store-name'}
+                        %i.fa.fa-building
+                    .col-xs-11.nopadding.answer-input
+                      %input#store-name.form-control{:type => 'text', :placeholder => 'store name'}
+                  .form-group.row.nomargin
+                    .col-xs-1.nopadding.answer-label
+                      %label{:for => 'store-website'}
+                        %i.fa.fa-globe
+                    .col-xs-11.nopadding.answer-input
+                      %input#store-website.form-control{:type => 'text', :placeholder => 'store website'}
+                  .form-group.row.nomargin
+                    .col-xs-1.nopadding.answer-label
+                      %label{:for => 'store-address'}
+                        %i.fa.fa-map-marker
+                    .col-xs-11.nopadding.answer-input
+                      %input#store-address.form-control{:type => 'text', :placeholder => 'store address'}
+                  %button.btn{:type => 'submit'} Answer
+        .col-xs-12.item-footer
+          %a{:href => '#'}
+            Return to top
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Ask Question
+            %i.fa.fa-comments-o
+    .container.section-heading
+      %h1 Bumped Products
+    .container.section-main
+      %p.grey-text
+        Some people still can't find what they're looking for!
+      %p.grey-text Maybe you can help!
+      .row.view-options
+        .col-sm-6.view-options-left
+          %a{:href => '#'}
+            %i.fa.fa-th-list
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-square
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-th-large
+        .col-sm-6.view-options-right
+          %a.active{:href => '#'}
+            Top Find
+            %i.fa.fa-star
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Alphabetical
+            %i.fa.fa-sort-alpha-asc
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Near Me
+            %i.fa.fa-map-marker
+    = Haml::Engine.new(File.read('_footer.haml')).render
