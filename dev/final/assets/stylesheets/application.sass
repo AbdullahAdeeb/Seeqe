@@ -666,6 +666,12 @@ html
         border: $standard-border solid $color-orange
         border-radius: $standard-border-radius + $standard-border
 
+        .product-top-border-line
+          border-top: 2px solid $color-orange
+
+        .product-bottom-border-line
+          border-bottom: 2px solid $color-orange
+
         .product-picture
           margin-top: 15px
           margin-bottom: 15px
@@ -679,12 +685,23 @@ html
             margin-left: auto
             margin-right: auto
 
-        .product-title, .product-description
+        .product-icon
+          display: block
+          text-align: center
+          margin-top: 50%
+          transform: translateY(-50%)
+          font-size: 48px
+          line-height: 48px
+
+        .product-title, .product-description, .product-info
           margin-left: 16px
 
         .product-title
           margin-top: 54px
           font-size: 30px
+
+          &.product-title-thin-top
+            margin-top: 32px
 
           @media (max-width: $bootstrap-sm-max)
             margin-top: 32px
@@ -706,6 +723,63 @@ html
 
           .product-asked-by-name
             @include hover($color-orange, darken($color-orange, 20))
+
+        .product-info
+          margin-top: 10px
+          font-size: 14px
+
+          > a
+            @include hover($color-orange, $color-orange)
+
+            &:hover
+              text-decoration: underline
+
+          @media (max-width: $bootstrap-xs-max)
+            margin-top: 0
+            text-align: center
+
+          .product-answer-button
+            padding: 5px
+            background-color: $color-orange
+            color: white
+            border-radius: 16px
+
+        .product-asker
+          margin-top: 10px
+
+          > a
+            @include hover($color-orange, $color-orange)
+
+            &:hover
+              text-decoration: underline
+
+        .product-rating
+          margin-top: -8px
+          text-align: center
+          color: $color-orange
+
+          .top-answer
+            margin-bottom: 12px
+
+            .top-answer-text
+              color: $color-text-main
+
+          .caret-up, .caret-down
+            font-size: 24px
+
+          .rating
+            color: $color-text-main
+            font-size: 24px
+
+          .caret-up
+            margin-bottom: -5px
+
+          .rating
+            margin-top: 0
+            margin-bottom: 0
+
+          .caret-down
+            margin-top: -5px
 
         .answer
           text-align: center
@@ -732,3 +806,15 @@ html
             background-color: $color-orange
             color: white
             border-radius: 16px
+
+          &.answer-filled
+
+            .form-group
+              margin-top: 0
+
+              .answer-input
+
+                > input
+                  height: 28px
+                  border: none
+                  background-color: transparent

@@ -6,18 +6,18 @@
     = Haml::Engine.new(File.read('_navbar.haml')).render
     .container-fluid.banner{:style => 'background-image: url(\'assets/images/banner_images/results.jpg\')'}
       %h1
-        Recently Asked
+        Organic Quinoa
         %span.banner-small in
         Ottawa, Canada
-      %p Help the community by letting them know
-      %p which stores sell what they're looking for
-    .container-fluid.banner-heading
-      .banner-heading-text Categories
+      %p Check out the community's top finds:
+      %p which product has recently been found,
+      %p or which one is nearest to you!
     .container.discover-container
       %p.grey-text
-        People are trying to find all kinds of things near you!
+        Here's what we found! Not sure what you're looking for?
       %p.grey-text
-        Help the community out!
+        No problem, just
+        %a{:href => '#'} ask the community
       .row.view-options
         .col-sm-6.view-options-left
           %a{:href => '#'}
@@ -48,35 +48,83 @@
         - (1..3).each do |i|
           .col-xs-10.col-xs-offset-1.product-box
             .row.product-panel
-              .col-sm-4
-                %img.product-picture{:src => 'http://lorempixel.com/400/300'}
-              .col-sm-8.col-lg-5
-                %h4.product-title Thing #{i}
-                %p.product-description
-                  Asked by
-                  %a.product-asked-by-name Jeff Hudson
-                  2 min ago
-              .col-sm-12.col-lg-3
-                %form.answer
-                  .form-group.row.nomargin
-                    .col-xs-1.nopadding.answer-label
-                      %label{:for => 'store-name'}
-                        %i.fa.fa-building
-                    .col-xs-11.nopadding.answer-input
-                      %input#store-name.form-control{:type => 'text', :placeholder => 'store name'}
-                  .form-group.row.nomargin
-                    .col-xs-1.nopadding.answer-label
-                      %label{:for => 'store-website'}
-                        %i.fa.fa-globe
-                    .col-xs-11.nopadding.answer-input
-                      %input#store-website.form-control{:type => 'text', :placeholder => 'store website'}
-                  .form-group.row.nomargin
-                    .col-xs-1.nopadding.answer-label
-                      %label{:for => 'store-address'}
-                        %i.fa.fa-map-marker
-                    .col-xs-11.nopadding.answer-input
-                      %input#store-address.form-control{:type => 'text', :placeholder => 'store address'}
-                  %button.btn{:type => 'submit'} Answer
+              .col-xs-12
+                .row
+                  .col-xs-6.col-md-2
+                    %img.product-picture{:src => 'http://lorempixel.com/400/300'}
+                  .col-xs-6.col-md-2.col-md-push-8
+                    %span.product-icon
+                      %i.fa.fa-cutlery
+                  .col-xs-12.col-md-8.col-md-pull-2.product-bottom-border-line
+                    %h4.product-title.product-title-thin-top Thing #{i}
+                    %p.product-info
+                      Asked by
+                      %a{:href => '#'} Jeff
+                      12 days ago
+              .col-xs-12
+                .row
+                  .col-xs-8.col-xs-offset-2
+                    %p.product-asker
+                      by
+                      %a{:href => '#'} Jeff Hudson
+                    %form.answer
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-name-' + i.to_s}
+                            %i.fa.fa-building
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-name-' + i.to_s, :type => 'text', :placeholder => 'store name'}
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-website-' + i.to_s}
+                            %i.fa.fa-globe
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-website-' + i.to_s, :type => 'text', :placeholder => 'store website'}
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-address-' + i.to_s}
+                            %i.fa.fa-map-marker
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-address-' + i.to_s, :type => 'text', :placeholder => 'store address'}
+                      %button.btn{:type => 'submit'} Answer
+              .col-xs-12
+                .row
+                  .col-xs-4.col-md-2.product-rating
+                    %p.top-answer
+                      %span.top-answer-text Top Answer
+                      %i.fa.fa-star
+                    %p.caret-up
+                      %i.fa.fa-caret-up
+                    %p.rating 14
+                    %p.caret-down
+                      %i.fa.fa-caret-down
+                  .col-md-2.col-md-push-8.hidden-xs.hidden-sm
+                  .col-xs-8.col-md-pull-2.product-top-border-line
+                    %p.product-asker
+                      by
+                      %a{:href => '#'} Jeff Hudson
+                    %form.answer.answer-filled
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-name-' + i.to_s}
+                            %i.fa.fa-building
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-name-' + i.to_s, :type => 'text', :value => 'WholeFoods Inc.', :disabled => true}
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-website-' + i.to_s}
+                            %i.fa.fa-globe
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-website-' + i.to_s, :type => 'text', :value => 'www.wholefoods.ca', :disabled => true}
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-address-' + i.to_s}
+                            %i.fa.fa-map-marker
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-address-' + i.to_s, :type => 'text', :value => '325 Rideau St.', :disabled => true}
+
+
+
         .col-xs-12.item-footer
           %a{:href => '#'}
             Return to top

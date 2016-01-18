@@ -614,6 +614,10 @@ html {
       html body .product-box .product-panel {
         border: 6px solid #FF6F00;
         border-radius: 26px; }
+        html body .product-box .product-panel .product-top-border-line {
+          border-top: 2px solid #FF6F00; }
+        html body .product-box .product-panel .product-bottom-border-line {
+          border-bottom: 2px solid #FF6F00; }
         html body .product-box .product-panel .product-picture {
           margin-top: 15px;
           margin-bottom: 15px;
@@ -626,11 +630,20 @@ html {
               max-width: 280px;
               margin-left: auto;
               margin-right: auto; } }
-        html body .product-box .product-panel .product-title, html body .product-box .product-panel .product-description {
+        html body .product-box .product-panel .product-icon {
+          display: block;
+          text-align: center;
+          margin-top: 50%;
+          transform: translateY(-50%);
+          font-size: 48px;
+          line-height: 48px; }
+        html body .product-box .product-panel .product-title, html body .product-box .product-panel .product-description, html body .product-box .product-panel .product-info {
           margin-left: 16px; }
         html body .product-box .product-panel .product-title {
           margin-top: 54px;
           font-size: 30px; }
+          html body .product-box .product-panel .product-title.product-title-thin-top {
+            margin-top: 32px; }
           @media (max-width: 991px) {
             html body .product-box .product-panel .product-title {
               margin-top: 32px; } }
@@ -655,6 +668,58 @@ html {
               background-color: transparent; }
             html body .product-box .product-panel .product-description .product-asked-by-name:hover {
               color: #994300; }
+        html body .product-box .product-panel .product-info {
+          margin-top: 10px;
+          font-size: 14px; }
+          html body .product-box .product-panel .product-info > a {
+            color: #FF6F00; }
+            html body .product-box .product-panel .product-info > a:hover, html body .product-box .product-panel .product-info > a:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .product-box .product-panel .product-info > a:hover {
+              color: #FF6F00; }
+            html body .product-box .product-panel .product-info > a:hover {
+              text-decoration: underline; }
+          @media (max-width: 767px) {
+            html body .product-box .product-panel .product-info {
+              margin-top: 0;
+              text-align: center; } }
+          html body .product-box .product-panel .product-info .product-answer-button {
+            padding: 5px;
+            background-color: #FF6F00;
+            color: white;
+            border-radius: 16px; }
+        html body .product-box .product-panel .product-asker {
+          margin-top: 10px; }
+          html body .product-box .product-panel .product-asker > a {
+            color: #FF6F00; }
+            html body .product-box .product-panel .product-asker > a:hover, html body .product-box .product-panel .product-asker > a:focus {
+              text-decoration: none;
+              background-color: transparent; }
+            html body .product-box .product-panel .product-asker > a:hover {
+              color: #FF6F00; }
+            html body .product-box .product-panel .product-asker > a:hover {
+              text-decoration: underline; }
+        html body .product-box .product-panel .product-rating {
+          margin-top: -8px;
+          text-align: center;
+          color: #FF6F00; }
+          html body .product-box .product-panel .product-rating .top-answer {
+            margin-bottom: 12px; }
+            html body .product-box .product-panel .product-rating .top-answer .top-answer-text {
+              color: black; }
+          html body .product-box .product-panel .product-rating .caret-up, html body .product-box .product-panel .product-rating .caret-down {
+            font-size: 24px; }
+          html body .product-box .product-panel .product-rating .rating {
+            color: black;
+            font-size: 24px; }
+          html body .product-box .product-panel .product-rating .caret-up {
+            margin-bottom: -5px; }
+          html body .product-box .product-panel .product-rating .rating {
+            margin-top: 0;
+            margin-bottom: 0; }
+          html body .product-box .product-panel .product-rating .caret-down {
+            margin-top: -5px; }
         html body .product-box .product-panel .answer {
           text-align: center; }
           html body .product-box .product-panel .answer .form-group {
@@ -672,5 +737,11 @@ html {
             background-color: #FF6F00;
             color: white;
             border-radius: 16px; }
+          html body .product-box .product-panel .answer.answer-filled .form-group {
+            margin-top: 0; }
+            html body .product-box .product-panel .answer.answer-filled .form-group .answer-input > input {
+              height: 28px;
+              border: none;
+              background-color: transparent; }
 
 /*# sourceMappingURL=application.css.map */
