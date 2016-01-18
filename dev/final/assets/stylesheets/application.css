@@ -742,6 +742,9 @@ html {
             html body .product-box .product-panel .answer.answer-filled .form-group .answer-input > input {
               height: 28px;
               border: none;
-              background-color: transparent; }
+              outline: none;
+              -webkit-box-shadow: none;
+              background-color: transparent;
+              cursor: default; }
 
 /*# sourceMappingURL=application.css.map */
