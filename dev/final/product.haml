@@ -1,0 +1,165 @@
+!!! html
+%html{:lang => 'en'}
+  %head
+    = Haml::Engine.new(File.read('_header.haml')).render
+  %body
+    = Haml::Engine.new(File.read('_navbar.haml')).render
+    .container-fluid.banner{:style => 'background-image: url(\'assets/images/banner_images/import.jpg\')'}
+      %h1
+        Ancient Harvest Organic Quinoa
+      %p
+        Asked by
+        %a.link-orange-then-underline{:href => ''} Aly
+        12 days ago
+      %p Last found on June 5, 2015
+    .container-fluid.banner-heading
+      .banner-heading-text Answer
+    .container.discover-container
+      .row
+        .col-md-8.col-md-offset-2
+          %form.answer
+            .form-group.row.nomargin
+              .col-xs-1.nopadding.answer-label
+                %label{:for => 'store-name'}
+                  %i.fa.fa-building
+              .col-xs-11.nopadding.answer-input
+                %input.form-control{:id => 'store-name', :type => 'text', :placeholder => 'store name'}
+            .form-group.row.nomargin
+              .col-xs-1.nopadding.answer-label
+                %label{:for => 'store-website'}
+                  %i.fa.fa-globe
+              .col-xs-11.nopadding.answer-input
+                %input.form-control{:id => 'store-website', :type => 'text', :placeholder => 'store website'}
+            .form-group.row.nomargin
+              .col-xs-1.nopadding.answer-label
+                %label{:for => 'store-address'}
+                  %i.fa.fa-map-marker
+              .col-xs-11.nopadding.answer-input
+                %input.form-control{:id => 'store-address', :type => 'text', :placeholder => 'store address'}
+            %button.btn{:type => 'submit'} Answer
+
+
+
+
+
+
+
+      %p.grey-text
+        Want to know who sells what
+        %a.link-orange-then-underline{:href => '#'} Aly
+        is looking for?
+      %p.grey-text
+        Check out what the community said
+      .row.view-options
+        .col-sm-6.view-options-left
+          %a{:href => '#'}
+            %i.fa.fa-th-list
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-square
+          &nbsp;
+          %a{:href => '#'}
+            %i.fa.fa-th-large
+        .col-sm-6.view-options-right
+          %a.active{:href => '#'}
+            Top Find
+            %i.fa.fa-star
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Alphabetical
+            %i.fa.fa-sort-alpha-asc
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Near Me
+            %i.fa.fa-map-marker
+      .row.item-container
+        - (1..3).each do |i|
+          .col-xs-10.col-xs-offset-1.product-box
+            .row.product-panel
+              .col-xs-12
+                .row
+                  .col-xs-4.col-md-2.product-rating.not-raised
+                    %p.top-answer
+                      %span.top-answer-text Top Answer
+                      %i.fa.fa-star
+                    %p.caret-up
+                      %i.fa.fa-caret-up
+                    %p.rating 14
+                    %p.caret-down
+                      %i.fa.fa-caret-down
+                  .col-md-2.col-md-push-8.hidden-xs.hidden-sm
+                  .col-xs-8.col-md-pull-2
+                    %p.product-asker
+                      by
+                      %a{:href => '#'} Jeff Hudson
+                    %form.answer.answer-filled
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-name-' + i.to_s}
+                            %i.fa.fa-building
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-name-' + i.to_s, :type => 'text', :value => 'WholeFoods Inc.', :disabled => true}
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-website-' + i.to_s}
+                            %i.fa.fa-globe
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-website-' + i.to_s, :type => 'text', :value => 'www.wholefoods.ca', :disabled => true}
+                      .form-group.row.nomargin
+                        .col-xs-1.nopadding.answer-label
+                          %label{:for => 'store-address-' + i.to_s}
+                            %i.fa.fa-map-marker
+                        .col-xs-11.nopadding.answer-input
+                          %input.form-control{:id => 'store-address-' + i.to_s, :type => 'text', :value => '325 Rideau St.', :disabled => true}
+        .col-xs-12.item-footer
+          %a{:href => '#'}
+            Return to top
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Ask Question
+            %i.fa.fa-comments-o
+    .container.section-heading
+      %h1 Answer
+    .container.section-main
+      %p.grey-text Do you know where to find this product?
+      %p.grey-text
+        %a.link-orange-then-underline{:href => ''} Answer Aly
+        now!
+      .row.item-container
+        .col-md-8.col-md-offset-2
+          %form.answer
+            .form-group.row.nomargin
+              .col-xs-1.nopadding.answer-label
+                %label{:for => 'store-name'}
+                  %i.fa.fa-building
+              .col-xs-11.nopadding.answer-input
+                %input.form-control{:id => 'store-name', :type => 'text', :placeholder => 'store name'}
+            .form-group.row.nomargin
+              .col-xs-1.nopadding.answer-label
+                %label{:for => 'store-website'}
+                  %i.fa.fa-globe
+              .col-xs-11.nopadding.answer-input
+                %input.form-control{:id => 'store-website', :type => 'text', :placeholder => 'store website'}
+            .form-group.row.nomargin
+              .col-xs-1.nopadding.answer-label
+                %label{:for => 'store-address'}
+                  %i.fa.fa-map-marker
+              .col-xs-11.nopadding.answer-input
+                %input.form-control{:id => 'store-address', :type => 'text', :placeholder => 'store address'}
+            %button.btn{:type => 'submit'} Answer
+        .col-xs-12.item-footer
+          %a{:href => '#'}
+            Return to top
+          &nbsp;
+          &#124;
+          &nbsp;
+          %a{:href => '#'}
+            Ask Question
+            %i.fa.fa-comments-o
+    = Haml::Engine.new(File.read('_footer.haml')).render

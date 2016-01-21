@@ -3,6 +3,7 @@
 @import "_mixins"
 @import "_animations"
 @import "_fonts"
+@import "_global"
 
 textarea
   resize: none
@@ -333,119 +334,119 @@ html
         .accent
           color: $color-orange
 
-      .item-container
+    .item-container
+      margin-top: 10px
+      padding-left: $item-display-padding
+      padding-right: $item-display-padding
+
+      .item-footer
         margin-top: 10px
-        padding-left: $item-display-padding
-        padding-right: $item-display-padding
-
-        .item-footer
-          margin-top: 10px
-          margin-bottom: 30px
-          text-align: right
-          font-size: 14px
-
-          a
-            @include hover($color-text-main, $color-orange)
-
-      .import-icon
-        font-size: 60px
+        margin-bottom: 30px
         text-align: right
+        font-size: 14px
+
+        a
+          @include hover($color-text-main, $color-orange)
+
+    .import-icon
+      font-size: 60px
+      text-align: right
+      color: $color-orange
+
+    .import-text
+      color: $color-text-grey
+
+      .import-heading
         color: $color-orange
+        margin-top: 0
 
-      .import-text
-        color: $color-text-grey
+    .import-subtext
+      margin-top: 20px
+      margin-left: $item-display-padding
+      color: $color-text-grey
+      font-size: 12px
 
-        .import-heading
-          color: $color-orange
-          margin-top: 0
+    .import-upload-button
+      background-color: $color-orange
+      margin-top: 20px
+      margin-left: $item-display-padding
 
-      .import-subtext
-        margin-top: 20px
-        margin-left: $item-display-padding
-        color: $color-text-grey
-        font-size: 12px
+    .import-upload-box
+      border: $standard-border solid $color-orange
+      margin: 10px $item-display-padding
+      min-height: 400px
 
-      .import-upload-button
+    .import-form
+      text-align: center
+
+      .import-upload-next
         background-color: $color-orange
-        margin-top: 20px
-        margin-left: $item-display-padding
+        color: white
+        margin: 30px 10px
 
-      .import-upload-box
-        border: $standard-border solid $color-orange
-        margin: 10px $item-display-padding
-        min-height: 400px
+        > a
+          display: block
+          @include hover(white, white)
 
-      .import-form
-        text-align: center
+          &:hover
+            text-decoration: underline
 
-        .import-upload-next
+    .store-left-pane
+
+      .store-left-pane-item
+
+        h3
+          display: block
           background-color: $color-orange
           color: white
-          margin: 30px 10px
+          padding: 5px
+          text-align: center
+
+    .store-account-nav
+
+      .store-account-nav-primary, .store-account-nav-secondary
+        padding-top: 10px
+        padding-bottom: 10px
+
+        &.active
+          color: $color-orange
+
+      .store-account-nav-primary
+        color: white
+        background-color: $color-orange
+
+      .store-account-nav-secondary
+        background-color: $color-text-grey
+
+        > a
+          @include hover(white, $color-orange)
+
+        &.active
+          background-color: white
 
           > a
-            display: block
-            @include hover(white, white)
+            @include hover($color-orange, $color-orange)
 
-            &:hover
-              text-decoration: underline
+    .store-account-right-pane
 
-      .store-left-pane
+      form
+        max-width: 400px
 
-        .store-left-pane-item
+        .form-group
+          margin-bottom: 20px
 
-          h3
-            display: block
-            background-color: $color-orange
-            color: white
-            padding: 5px
-            text-align: center
+          #new-email-address
+            max-width: 400px
 
-      .store-account-nav
+        #checkbox-stop-emails
+          margin-top: 30px
 
-        .store-account-nav-primary, .store-account-nav-secondary
-          padding-top: 10px
-          padding-bottom: 10px
-
-          &.active
-            color: $color-orange
-
-        .store-account-nav-primary
+        input[type=submit]
+          display: block
+          margin: 30px auto
           color: white
+          border: none
           background-color: $color-orange
-
-        .store-account-nav-secondary
-          background-color: $color-text-grey
-
-          > a
-            @include hover(white, $color-orange)
-
-          &.active
-            background-color: white
-
-            > a
-              @include hover($color-orange, $color-orange)
-
-      .store-account-right-pane
-
-        form
-          max-width: 400px
-
-          .form-group
-            margin-bottom: 20px
-
-            #new-email-address
-              max-width: 400px
-
-          #checkbox-stop-emails
-            margin-top: 30px
-
-          input[type=submit]
-            display: block
-            margin: 30px auto
-            color: white
-            border: none
-            background-color: $color-orange
 
 
     .ask-box
@@ -758,6 +759,9 @@ html
           text-align: center
           color: $color-orange
 
+          &.not-raised
+            margin-top: 12px
+
           .top-answer
             margin-bottom: 12px
 
@@ -781,43 +785,43 @@ html
           .caret-down
             margin-top: -5px
 
-        .answer
-          text-align: center
+    .answer
+      text-align: center
 
-          .form-group
-            margin-top: 16px
-            margin-right: 8px
+      .form-group
+        margin-top: 16px
+        margin-right: 8px
 
-            .answer-label
+        .answer-label
 
-              > label
-                line-height: 28px
-                color: $color-orange
+          > label
+            line-height: 28px
+            color: $color-orange
 
-            .answer-input
+        .answer-input
 
-              > input
-                height: 28px
-                border: 1px solid $color-orange
+          > input
+            height: 28px
+            border: 1px solid $color-orange
 
-          > button
-            margin-top: 16px
-            margin-bottom: 16px
-            background-color: $color-orange
-            color: white
-            border-radius: 16px
+      > button
+        margin-top: 16px
+        margin-bottom: 16px
+        background-color: $color-orange
+        color: white
+        border-radius: 16px
 
-          &.answer-filled
+      &.answer-filled
 
-            .form-group
-              margin-top: 0
+        .form-group
+          margin-top: 0
 
-              .answer-input
+          .answer-input
 
-                > input
-                  height: 28px
-                  border: none
-                  outline: none
-                  -webkit-box-shadow: none
-                  background-color: transparent
-                  cursor: default
+            > input
+              height: 28px
+              border: none
+              outline: none
+              -webkit-box-shadow: none
+              background-color: transparent
+              cursor: default

@@ -4,6 +4,16 @@
 @font-face {
   font-family: Fonjava;
   src: url("../fonts/Fonjava.otf"); }
+.link-orange-then-underline {
+  color: #FF6F00; }
+  .link-orange-then-underline:hover, .link-orange-then-underline:focus {
+    text-decoration: none;
+    background-color: transparent; }
+  .link-orange-then-underline:hover {
+    color: #FF6F00; }
+  .link-orange-then-underline:hover {
+    text-decoration: underline; }
+
 textarea {
   resize: none; }
 
@@ -308,106 +318,106 @@ html {
         color: #808080; }
         html body .discover-container .grey-text .accent {
           color: #FF6F00; }
-      html body .discover-container .item-container {
+    html body .item-container {
+      margin-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px; }
+      html body .item-container .item-footer {
         margin-top: 10px;
-        padding-left: 20px;
-        padding-right: 20px; }
-        html body .discover-container .item-container .item-footer {
-          margin-top: 10px;
-          margin-bottom: 30px;
-          text-align: right;
-          font-size: 14px; }
-          html body .discover-container .item-container .item-footer a {
-            color: black; }
-            html body .discover-container .item-container .item-footer a:hover, html body .discover-container .item-container .item-footer a:focus {
-              text-decoration: none;
-              background-color: transparent; }
-            html body .discover-container .item-container .item-footer a:hover {
-              color: #FF6F00; }
-      html body .discover-container .import-icon {
-        font-size: 60px;
+        margin-bottom: 30px;
         text-align: right;
-        color: #FF6F00; }
-      html body .discover-container .import-text {
-        color: #808080; }
-        html body .discover-container .import-text .import-heading {
-          color: #FF6F00;
-          margin-top: 0; }
-      html body .discover-container .import-subtext {
-        margin-top: 20px;
-        margin-left: 20px;
-        color: #808080;
-        font-size: 12px; }
-      html body .discover-container .import-upload-button {
-        background-color: #FF6F00;
-        margin-top: 20px;
-        margin-left: 20px; }
-      html body .discover-container .import-upload-box {
-        border: 6px solid #FF6F00;
-        margin: 10px 20px;
-        min-height: 400px; }
-      html body .discover-container .import-form {
-        text-align: center; }
-        html body .discover-container .import-form .import-upload-next {
-          background-color: #FF6F00;
-          color: white;
-          margin: 30px 10px; }
-          html body .discover-container .import-form .import-upload-next > a {
-            display: block;
-            color: white; }
-            html body .discover-container .import-form .import-upload-next > a:hover, html body .discover-container .import-form .import-upload-next > a:focus {
-              text-decoration: none;
-              background-color: transparent; }
-            html body .discover-container .import-form .import-upload-next > a:hover {
-              color: white; }
-            html body .discover-container .import-form .import-upload-next > a:hover {
-              text-decoration: underline; }
-      html body .discover-container .store-left-pane .store-left-pane-item h3 {
-        display: block;
-        background-color: #FF6F00;
-        color: white;
-        padding: 5px;
-        text-align: center; }
-      html body .discover-container .store-account-nav .store-account-nav-primary, html body .discover-container .store-account-nav .store-account-nav-secondary {
-        padding-top: 10px;
-        padding-bottom: 10px; }
-        html body .discover-container .store-account-nav .store-account-nav-primary.active, html body .discover-container .store-account-nav .store-account-nav-secondary.active {
-          color: #FF6F00; }
-      html body .discover-container .store-account-nav .store-account-nav-primary {
-        color: white;
-        background-color: #FF6F00; }
-      html body .discover-container .store-account-nav .store-account-nav-secondary {
-        background-color: #808080; }
-        html body .discover-container .store-account-nav .store-account-nav-secondary > a {
-          color: white; }
-          html body .discover-container .store-account-nav .store-account-nav-secondary > a:hover, html body .discover-container .store-account-nav .store-account-nav-secondary > a:focus {
+        font-size: 14px; }
+        html body .item-container .item-footer a {
+          color: black; }
+          html body .item-container .item-footer a:hover, html body .item-container .item-footer a:focus {
             text-decoration: none;
             background-color: transparent; }
-          html body .discover-container .store-account-nav .store-account-nav-secondary > a:hover {
+          html body .item-container .item-footer a:hover {
             color: #FF6F00; }
-        html body .discover-container .store-account-nav .store-account-nav-secondary.active {
-          background-color: white; }
-          html body .discover-container .store-account-nav .store-account-nav-secondary.active > a {
-            color: #FF6F00; }
-            html body .discover-container .store-account-nav .store-account-nav-secondary.active > a:hover, html body .discover-container .store-account-nav .store-account-nav-secondary.active > a:focus {
-              text-decoration: none;
-              background-color: transparent; }
-            html body .discover-container .store-account-nav .store-account-nav-secondary.active > a:hover {
-              color: #FF6F00; }
-      html body .discover-container .store-account-right-pane form {
-        max-width: 400px; }
-        html body .discover-container .store-account-right-pane form .form-group {
-          margin-bottom: 20px; }
-          html body .discover-container .store-account-right-pane form .form-group #new-email-address {
-            max-width: 400px; }
-        html body .discover-container .store-account-right-pane form #checkbox-stop-emails {
-          margin-top: 30px; }
-        html body .discover-container .store-account-right-pane form input[type=submit] {
+    html body .import-icon {
+      font-size: 60px;
+      text-align: right;
+      color: #FF6F00; }
+    html body .import-text {
+      color: #808080; }
+      html body .import-text .import-heading {
+        color: #FF6F00;
+        margin-top: 0; }
+    html body .import-subtext {
+      margin-top: 20px;
+      margin-left: 20px;
+      color: #808080;
+      font-size: 12px; }
+    html body .import-upload-button {
+      background-color: #FF6F00;
+      margin-top: 20px;
+      margin-left: 20px; }
+    html body .import-upload-box {
+      border: 6px solid #FF6F00;
+      margin: 10px 20px;
+      min-height: 400px; }
+    html body .import-form {
+      text-align: center; }
+      html body .import-form .import-upload-next {
+        background-color: #FF6F00;
+        color: white;
+        margin: 30px 10px; }
+        html body .import-form .import-upload-next > a {
           display: block;
-          margin: 30px auto;
-          color: white;
-          border: none;
-          background-color: #FF6F00; }
+          color: white; }
+          html body .import-form .import-upload-next > a:hover, html body .import-form .import-upload-next > a:focus {
+            text-decoration: none;
+            background-color: transparent; }
+          html body .import-form .import-upload-next > a:hover {
+            color: white; }
+          html body .import-form .import-upload-next > a:hover {
+            text-decoration: underline; }
+    html body .store-left-pane .store-left-pane-item h3 {
+      display: block;
+      background-color: #FF6F00;
+      color: white;
+      padding: 5px;
+      text-align: center; }
+    html body .store-account-nav .store-account-nav-primary, html body .store-account-nav .store-account-nav-secondary {
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      html body .store-account-nav .store-account-nav-primary.active, html body .store-account-nav .store-account-nav-secondary.active {
+        color: #FF6F00; }
+    html body .store-account-nav .store-account-nav-primary {
+      color: white;
+      background-color: #FF6F00; }
+    html body .store-account-nav .store-account-nav-secondary {
+      background-color: #808080; }
+      html body .store-account-nav .store-account-nav-secondary > a {
+        color: white; }
+        html body .store-account-nav .store-account-nav-secondary > a:hover, html body .store-account-nav .store-account-nav-secondary > a:focus {
+          text-decoration: none;
+          background-color: transparent; }
+        html body .store-account-nav .store-account-nav-secondary > a:hover {
+          color: #FF6F00; }
+      html body .store-account-nav .store-account-nav-secondary.active {
+        background-color: white; }
+        html body .store-account-nav .store-account-nav-secondary.active > a {
+          color: #FF6F00; }
+          html body .store-account-nav .store-account-nav-secondary.active > a:hover, html body .store-account-nav .store-account-nav-secondary.active > a:focus {
+            text-decoration: none;
+            background-color: transparent; }
+          html body .store-account-nav .store-account-nav-secondary.active > a:hover {
+            color: #FF6F00; }
+    html body .store-account-right-pane form {
+      max-width: 400px; }
+      html body .store-account-right-pane form .form-group {
+        margin-bottom: 20px; }
+        html body .store-account-right-pane form .form-group #new-email-address {
+          max-width: 400px; }
+      html body .store-account-right-pane form #checkbox-stop-emails {
+        margin-top: 30px; }
+      html body .store-account-right-pane form input[type=submit] {
+        display: block;
+        margin: 30px auto;
+        color: white;
+        border: none;
+        background-color: #FF6F00; }
     html body .ask-box {
       width: 680px;
       max-width: 100%;
@@ -704,6 +714,8 @@ html {
           margin-top: -8px;
           text-align: center;
           color: #FF6F00; }
+          html body .product-box .product-panel .product-rating.not-raised {
+            margin-top: 12px; }
           html body .product-box .product-panel .product-rating .top-answer {
             margin-bottom: 12px; }
             html body .product-box .product-panel .product-rating .top-answer .top-answer-text {
@@ -720,31 +732,31 @@ html {
             margin-bottom: 0; }
           html body .product-box .product-panel .product-rating .caret-down {
             margin-top: -5px; }
-        html body .product-box .product-panel .answer {
-          text-align: center; }
-          html body .product-box .product-panel .answer .form-group {
-            margin-top: 16px;
-            margin-right: 8px; }
-            html body .product-box .product-panel .answer .form-group .answer-label > label {
-              line-height: 28px;
-              color: #FF6F00; }
-            html body .product-box .product-panel .answer .form-group .answer-input > input {
-              height: 28px;
-              border: 1px solid #FF6F00; }
-          html body .product-box .product-panel .answer > button {
-            margin-top: 16px;
-            margin-bottom: 16px;
-            background-color: #FF6F00;
-            color: white;
-            border-radius: 16px; }
-          html body .product-box .product-panel .answer.answer-filled .form-group {
-            margin-top: 0; }
-            html body .product-box .product-panel .answer.answer-filled .form-group .answer-input > input {
-              height: 28px;
-              border: none;
-              outline: none;
-              -webkit-box-shadow: none;
-              background-color: transparent;
-              cursor: default; }
+    html body .answer {
+      text-align: center; }
+      html body .answer .form-group {
+        margin-top: 16px;
+        margin-right: 8px; }
+        html body .answer .form-group .answer-label > label {
+          line-height: 28px;
+          color: #FF6F00; }
+        html body .answer .form-group .answer-input > input {
+          height: 28px;
+          border: 1px solid #FF6F00; }
+      html body .answer > button {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        background-color: #FF6F00;
+        color: white;
+        border-radius: 16px; }
+      html body .answer.answer-filled .form-group {
+        margin-top: 0; }
+        html body .answer.answer-filled .form-group .answer-input > input {
+          height: 28px;
+          border: none;
+          outline: none;
+          -webkit-box-shadow: none;
+          background-color: transparent;
+          cursor: default; }
 
 /*# sourceMappingURL=application.css.map */
