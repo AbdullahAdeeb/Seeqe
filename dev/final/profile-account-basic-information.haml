@@ -1,0 +1,64 @@
+!!! html
+%html{:lang => 'en'}
+  %head
+    = Haml::Engine.new(File.read('_header.haml')).render
+  %body
+    = Haml::Engine.new(File.read('_navbar.haml')).render
+    .container-fluid.banner{:style => 'background-image: url(\'assets/images/banner_images/profile.jpg\')'}
+      %h1
+        %span.banner-fancy Discover
+        %span.banner-small in
+        Ottawa, Canada
+      %p View cool products near you.
+      %p Discover what's popular.
+      %p Favorite the ones you like.
+    .container-fluid.banner-heading.banner-heading-options
+      .banner-heading-text
+        %a{:href => 'profile-productsasked.html'} Products Asked
+      .banner-heading-text
+        %a{:href => 'profile-productsfound.html'} Products Found
+      .banner-heading-text
+        %a{:href => 'profile-following.html'} Following
+      .banner-heading-text
+        %a{:href => 'profile-favorites.html'} Favorites
+      .banner-heading-text.active
+        %a{:href => 'profile-account.html'} Account
+    .container.discover-container
+      .row
+        .col-md-4.col-lg-3.store-account-nav
+          .row
+            .col-xs-6.store-account-nav-primary &nbsp;
+            .col-xs-6.store-account-nav-primary Settings
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary.active &nbsp;
+            .col-xs-6.store-account-nav-secondary.active
+              %a{:href => 'profile-account-basic-information.html'} Basic Information
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary &nbsp;
+            .col-xs-6.store-account-nav-secondary
+              %a{:href => 'profile-account-change-password.html'} Change Password
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary &nbsp;
+            .col-xs-6.store-account-nav-secondary
+              %a{:href => 'profile-account-privacy-settings.html'} Privacy Settings
+            .col-xs-2.col-xs-offset-4.store-account-nav-secondary &nbsp;
+            .col-xs-6.store-account-nav-secondary
+              %a{:href => 'profile-account-mail-settings.html'} Mail Settings
+        .col-md-7.col-lg-8.col-md-offset-1.store-account-right-pane
+          %form
+            .form-group
+              %label{:for => 'username'} Username
+              %input#store-name.form-control{:type => 'text'}
+            .form-group
+              %label{:for => 'location'} Location
+              %input#location.form-control{:type => 'text'}
+            .form-group
+              %label{:for => 'about-me'} About Me
+              %textarea#about-me.form-control{:rows => '4'}
+            .form-group
+              %label{:for => 'profile-picture'} Profile Picture
+              %a.profile-pic{:href => 'profile-productsasked.html'}
+                %img{:alt => '', :src => 'assets/images/profile_pic.jpg'}
+              %div.profile-pic-buttons
+                %button.rounded-input Edit
+                %button.rounded-input Remove
+            %div
+              %input.rounded-input{:type => 'submit', :value => 'Update'}
+    = Haml::Engine.new(File.read('_footer.haml')).render

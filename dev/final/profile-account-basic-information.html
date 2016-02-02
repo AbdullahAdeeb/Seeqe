@@ -72,7 +72,7 @@
       <p>Favorite the ones you like.</p>
     </div>
     <div class='container-fluid banner-heading banner-heading-options'>
-      <div class='banner-heading-text active'>
+      <div class='banner-heading-text'>
         <a href='profile-productsasked.html'>Products Asked</a>
       </div>
       <div class='banner-heading-text'>
@@ -84,8 +84,63 @@
       <div class='banner-heading-text'>
         <a href='profile-favorites.html'>Favorites</a>
       </div>
-      <div class='banner-heading-text'>
-        <a href='profile-account-basic-information.html'>Account</a>
+      <div class='banner-heading-text active'>
+        <a href='profile-account.html'>Account</a>
+      </div>
+    </div>
+    <div class='container discover-container'>
+      <div class='row'>
+        <div class='col-md-4 col-lg-3 store-account-nav'>
+          <div class='row'>
+            <div class='col-xs-6 store-account-nav-primary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-primary'>Settings</div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary active'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary active'>
+              <a href='profile-account-basic-information.html'>Basic Information</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='profile-account-change-password.html'>Change Password</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='profile-account-privacy-settings.html'>Privacy Settings</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='profile-account-mail-settings.html'>Mail Settings</a>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-7 col-lg-8 col-md-offset-1 store-account-right-pane'>
+          <form>
+            <div class='form-group'>
+              <label for='username'>Username</label>
+              <input class='form-control' id='store-name' type='text'>
+            </div>
+            <div class='form-group'>
+              <label for='location'>Location</label>
+              <input class='form-control' id='location' type='text'>
+            </div>
+            <div class='form-group'>
+              <label for='about-me'>About Me</label>
+              <textarea class='form-control' id='about-me' rows='4'></textarea>
+            </div>
+            <div class='form-group'>
+              <label for='profile-picture'>Profile Picture</label>
+              <a class='profile-pic' href='profile-productsasked.html'>
+                <img alt='' src='assets/images/profile_pic.jpg'>
+              </a>
+              <div class='profile-pic-buttons'>
+                <button class='rounded-input'>Edit</button>
+                <button class='rounded-input'>Remove</button>
+              </div>
+            </div>
+            <div>
+              <input class='rounded-input' type='submit' value='Update'>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <div class='container pre-footer'></div>

@@ -61,18 +61,15 @@
         </div>
       </div>
     </nav>
-    <div class='container-fluid banner' style="background-image: url('assets/images/banner_images/profile.jpg')">
-      <h1>
-        <span class='banner-fancy'>Discover</span>
-        <span class='banner-small'>in</span>
-        Ottawa, Canada
-      </h1>
-      <p>View cool products near you.</p>
-      <p>Discover what's popular.</p>
-      <p>Favorite the ones you like.</p>
+    <div class='container-fluid banner' style="background-image: url('assets/images/banner_images/discover.jpg')">
+      <h1>Teastore</h1>
+      <a href='www.teastore.ca' target='_blank'>
+        <p>www.teastore.ca</p>
+      </a>
+      <button class='rounded-input'>Follow</button>
     </div>
     <div class='container-fluid banner-heading banner-heading-options'>
-      <div class='banner-heading-text active'>
+      <div class='banner-heading-text'>
         <a href='profile-productsasked.html'>Products Asked</a>
       </div>
       <div class='banner-heading-text'>
@@ -84,8 +81,66 @@
       <div class='banner-heading-text'>
         <a href='profile-favorites.html'>Favorites</a>
       </div>
-      <div class='banner-heading-text'>
+      <div class='banner-heading-text active'>
         <a href='profile-account-basic-information.html'>Account</a>
+      </div>
+    </div>
+    <div class='container discover-container'>
+      <div class='row'>
+        <div class='col-md-4 col-lg-3 store-account-nav'>
+          <div class='row'>
+            <div class='col-xs-6 store-account-nav-primary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-primary'>Settings</div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='profile-account-basic-information.html'>Basic Information</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='profile-account-change-password.html'>Change Password</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary'>
+              <a href='profile-account-privacy-settings.html'>Privacy Settings</a>
+            </div>
+            <div class='col-xs-2 col-xs-offset-4 store-account-nav-secondary active'>&nbsp;</div>
+            <div class='col-xs-6 store-account-nav-secondary active'>
+              <a href='profile-account-mail-settings.html'>Mail Settings</a>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-7 col-lg-8 col-md-offset-1 store-account-right-pane'>
+          <form>
+            <div class='form-group'>
+              <label for='new-email-address'>
+                Change Email Address
+              </label>
+              <p>current email address: jeff@seeqe.com</p>
+              <input class='form-control' id='new-email-address' type='email'>
+            </div>
+            <div>
+              <input id='checkbox-stop-emails' type='checkbox'>
+              <label for='checkbox-stop-emails'>
+                Stop Receiving Emails From Seeqe
+              </label>
+            </div>
+            <div>
+              <input id='checkbox-emails-when-found' type='checkbox'>
+              <label for='checkbox-emails-when-found'>
+                Receive email when your product has been found
+              </label>
+            </div>
+            <div>
+              <input id='checkbox-emails-when-post' type='checkbox'>
+              <label for='checkbox-emails-when-post'>
+                Receive email when stores you follow post new products
+              </label>
+            </div>
+            <div>
+              <input class='rounded-input' type='submit' value='Update'>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <div class='container pre-footer'></div>

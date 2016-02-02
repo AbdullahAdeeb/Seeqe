@@ -438,16 +438,33 @@ html
           #new-email-address
             max-width: 400px
 
+          .profile-pic
+            position: relative
+            display: block
+            line-height: 120px
+            padding: 0
+            height: 120px
+
+            > img
+              display: block
+              height: 120px
+              border: 4px solid $color-orange
+              border-radius: 60px
+
+          .profile-pic-buttons
+
+            button
+              display: inline-block
+
         #checkbox-stop-emails
           margin-top: 30px
 
-        input[type=submit]
+        input[type=submit], button
           display: block
-          margin: 30px auto
           color: white
           border: none
           background-color: $color-orange
-
+          margin: 30px auto
 
     .ask-box
       width: 680px

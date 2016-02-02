@@ -410,14 +410,27 @@ html {
         margin-bottom: 20px; }
         html body .store-account-right-pane form .form-group #new-email-address {
           max-width: 400px; }
+        html body .store-account-right-pane form .form-group .profile-pic {
+          position: relative;
+          display: block;
+          line-height: 120px;
+          padding: 0;
+          height: 120px; }
+          html body .store-account-right-pane form .form-group .profile-pic > img {
+            display: block;
+            height: 120px;
+            border: 4px solid #FF6F00;
+            border-radius: 60px; }
+        html body .store-account-right-pane form .form-group .profile-pic-buttons button {
+          display: inline-block; }
       html body .store-account-right-pane form #checkbox-stop-emails {
         margin-top: 30px; }
-      html body .store-account-right-pane form input[type=submit] {
+      html body .store-account-right-pane form input[type=submit], html body .store-account-right-pane form button {
         display: block;
-        margin: 30px auto;
         color: white;
         border: none;
-        background-color: #FF6F00; }
+        background-color: #FF6F00;
+        margin: 30px auto; }
     html body .ask-box {
       width: 680px;
       max-width: 100%;
