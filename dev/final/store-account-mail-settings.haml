@@ -39,9 +39,10 @@
                 Change Email Address
               %p current email address: support@teastore.com
               %input#new-email-address.form-control{:type => 'email'}
-            %input#checkbox-stop-emails{:type => 'checkbox'}
-            %label{:for => 'checkbox-stop-emails'}
-              Stop Receiving Emails From Seeqe
+            %div
+              %input#checkbox-stop-emails{:type => 'checkbox'}
+              %label{:for => 'checkbox-stop-emails'}
+                Stop Receiving Emails From Seeqe
             %div
               %input.rounded-input{:type => 'submit', :value => 'Update'}
     = Haml::Engine.new(File.read('_footer.haml')).render

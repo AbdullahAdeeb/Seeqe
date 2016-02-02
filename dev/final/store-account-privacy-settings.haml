@@ -34,9 +34,10 @@
               %a{:href => 'store-account-mail-settings.html'} Mail Settings
         .col-md-7.col-lg-8.col-md-offset-1.store-account-right-pane
           %form
-            %input#checkbox-stop-emails{:type => 'checkbox'}
-            %label{:for => 'checkbox-stop-emails'}
-              Set Account Private
+            %div
+              %input#checkbox-stop-emails{:type => 'checkbox'}
+              %label{:for => 'checkbox-stop-emails'}
+                Set Account Private
             %div
               %input.rounded-input{:type => 'submit', :value => 'Update'}
     = Haml::Engine.new(File.read('_footer.haml')).render
